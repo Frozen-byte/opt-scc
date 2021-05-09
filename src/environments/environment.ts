@@ -4,7 +4,9 @@
 
 export const environment = {
   production: false,
+  useEmulators: true,
   firebase: {
+    useEmulators: true,
     apiKey: 'AIzaSyBvUv_Li0UnU_ypDnFwQ47EuwJDX_imdBg',
     authDomain: 'opt-stats.firebaseapp.com',
     databaseURL: 'https://opt-stats.firebaseio.com',

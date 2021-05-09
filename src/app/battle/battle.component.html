@@ -1,42 +1,48 @@
-<h1>{{battle.campaignName}}</h1>
-<a href="https://www.figma.com/file/eEBV0TBkbzKngKqyvCbHZh/OPT4---Livonia-(Copy)">Aktuelle Kampagnen Karte</a>
-<h2>{{battle.battleName}}</h2>
-Schlachttag: {{battle.battleDate | date}}<br/>
-Briefing: {{battle.battleDate | date:'shortTime'}} Uhr<br/>
-Spielzeit: {{battle.duration | duration}} Minuten
+<ng-container *ngIf="battle$ | async as battle">
+  <h1>{{battle.campaignName}}</h1>
+  <a href="https://www.figma.com/file/eEBV0TBkbzKngKqyvCbHZh/OPT4---Livonia-(Copy)">Aktuelle Kampagnen Karte</a>
+  <h2>{{battle.battleName}}</h2>
+  Schlachttag: {{battle.battleDate | date}}<br/>
+  Briefing: {{battle.battleDate | date:'shortTime'}} Uhr<br/>
+  Spielzeit: {{battle.duration | duration}} Minuten
 
-<h3>Anmeldung</h3>
-SWORD: 12
-ARF: 22
-<button>jetzt Anmelden!</button>
-<a href="https://opt4.net/forum/index.php?thread/2939-du-m%C3%B6chtest-mitspielen/">Noch keine Fraktion? - Du möchtest mitspielen!</a>
+  <h3>Anmeldung</h3>
+  SWORD: 12
+  ARF: 22
+  <a routerLink="enroll">jetzt Anmelden!</a>
+  <router-outlet></router-outlet>
 
-<h3>Wahl der Seite</h3>
-<p *ngFor="let faction of battle.factions">{{faction.factionName}} spielt die {{faction.factionSide}}</p>
+  <ng-container *ngIf="battle.factions">
+    <h3>Wahl der Seite</h3>
+    <p *ngFor="let faction of battle.factions">
+      {{faction.factionName}} spielt die {{faction.factionSide}}
+    </p>
 
-<h3>Wahl des Sektors</h3>
-<p *ngFor="let faction of battle.factions">{{faction.factionName}} greift Sektor {{faction.factionAttackingSectors}} an</p>
+    <h3>Wahl des Sektors</h3>
+    <p *ngFor="let faction of battle.factions">
+      {{faction.factionName}} greift Sektor {{faction.factionAttackingSectors}} an
+    </p>
+  </ng-container>
 
-<button>Sektorwahl abgeben</button>
-<h3>Verbrannte Fahnen</h3>
-<span *ngFor="let faction of battle.factions">{{faction.factionAttackedSectors}},</span>
+  <button>Sektorwahl abgeben</button>
+  <h3>Verbrannte Fahnen</h3>
+  <span *ngFor="let faction of battle.factions">{{faction.factionAttackedSectors}},</span>
 
+  <h3>Wetterbericht</h3>
+  <p>{{battle.weather}}</p>
 
-<h3>Wetterbericht</h3>
-Spielzeit beginn 13:00 Uhr
-Wetterlage: bewölkt
-
-<h2>Technik &amp; Co.</h2>
-<ul>
-  <li><a href="https://opt4.net/forum/index.php?thread/4851-fairplay-leitfaden/">Fairplay Leitfaden</a></li>
-  <li><a href="https://opt4.net/forum/index.php?thread/8-opt4-server-ips/">OPT4-Teamspeak</a> ts3.opt4.net</li>
-  <li><a href="https://opt4.net/forum/index.php?thread/8-opt4-server-ips/">OPT4-Server-IPs</a></li>
-  <li><a href="https://opt4.net/forum/index.php?thread/1214-unsere-aktuellen-server-versionen/">"Unsere aktuellen
-    Server-Versionen"</a></li>
-  <li><a href="https://docs.google.com/document/d/1CxqtbaIv9ZjSiWZbnSsAOiK3QQ9yl2W4xie6wabF0aI">Aktuelles
-    Kampagnendokument</a></li>
-</ul>
-<h3>
-  Punktestand
-</h3>
-<a href="https://stats.opt4.net:2021/campaigns.html">https://stats.opt4.net:2021/campaigns.html</a>
+  <h2>Technik &amp; Co.</h2>
+  <ul>
+    <li><a href="https://opt4.net/forum/index.php?thread/4851-fairplay-leitfaden/">Fairplay Leitfaden</a></li>
+    <li><a href="https://opt4.net/forum/index.php?thread/8-opt4-server-ips/">OPT4-Teamspeak</a> ts3.opt4.net</li>
+    <li><a href="https://opt4.net/forum/index.php?thread/8-opt4-server-ips/">OPT4-Server-IPs</a></li>
+    <li><a href="https://opt4.net/forum/index.php?thread/1214-unsere-aktuellen-server-versionen/">"Unsere aktuellen
+      Server-Versionen"</a></li>
+    <li><a href="https://docs.google.com/document/d/1CxqtbaIv9ZjSiWZbnSsAOiK3QQ9yl2W4xie6wabF0aI">Aktuelles
+      Kampagnendokument</a></li>
+  </ul>
+  <h3>
+    Punktestand
+  </h3>
+  <a href="https://stats.opt4.net:2021/campaigns.html">https://stats.opt4.net:2021/campaigns.html</a>
+</ng-container>

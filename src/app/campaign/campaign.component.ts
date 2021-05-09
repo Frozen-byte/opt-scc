@@ -1,4 +1,27 @@
 import {Component, OnInit} from '@angular/core';
+import {AngularFireDatabase} from '@angular/fire/database';
+import {Observable} from 'rxjs';
+import {ActivatedRoute} from '@angular/router';
+import {map, pluck, switchMap} from 'rxjs/operators';
+
+export interface Faction {
+  factionName: string;
+  factionId: string;
+  factionSide: string;
+  factionAttackingSectors: number[];
+  factionAttackedSectors: number[];
+}
+
+export interface Battle {
+  battleName: string;
+  battleId: string;
+  campaignName: string;
+  campaignId: string;
+  battleDate: Date;
+  duration: number;
+  weather: string;
+  factions: Faction[];
+}
 
 @Component({
   selector: 'app-campaign',
@@ -7,24 +30,23 @@ import {Component, OnInit} from '@angular/core';
 })
 export class CampaignComponent implements OnInit {
   public campaignName = 'Aufstand des Lumpenproletatiats';
-  public battles: { battleName: string, battleId: string }[] = [
-    {battleId: 'adl-schlacht-1', battleName: 'Schlacht #1 - Kampagnenbegin', },
-    {battleId: 'adl-schlacht-2', battleName: 'Schlacht #2', },
-    {battleId: 'adl-schlacht-3', battleName: 'Schlacht #3', },
-    {battleId: 'adl-schlacht-4', battleName: 'Schlacht #4', },
-    {battleId: 'adl-schlacht-5', battleName: 'Schlacht #5', },
-    {battleId: 'adl-schlacht-6', battleName: 'Schlacht #6', },
-    {battleId: 'adl-schlacht-7', battleName: 'Schlacht #7', },
-    {battleId: 'adl-schlacht-1-seitenwechsel', battleName: 'Schlacht #1 - Seitenwechsel', },
-    {battleId: 'adl-schlacht-2-1', battleName: 'Schlacht #2', },
-    {battleId: 'adl-schlacht-3-1', battleName: 'Schlacht #3', },
-    {battleId: 'adl-schlacht-4-1', battleName: 'Schlacht #4', },
-    {battleId: 'adl-schlacht-5-1', battleName: 'Schlacht #5', },
-    {battleId: 'adl-schlacht-6-1', battleName: 'Schlacht #6', },
-    {battleId: 'adl-schlacht-7-finalschlacht', battleName: 'Schlacht #7 - Finalschlacht', },
-  ];
 
-  constructor() {
+  public battles$: Observable<Battle[]>;
+
+  constructor(db: AngularFireDatabase, route: ActivatedRoute) {
+    this.battles$ = route.params.pipe(
+      pluck('campaignId'),
+      switchMap((campaignId) => {
+        return db.list<Battle>(
+          'battles',
+            ref => ref.orderByChild('campaignId').equalTo(campaignId)
+        ).valueChanges();
+      }),
+      map((battles) => battles.sort((a, b) => {
+        // ISO Date sorts Lexicographically https://stackoverflow.com/a/12192544
+        return (a.battleDate < b.battleDate) ? -1 : ((a.battleDate > b.battleDate) ? 1 : 0);
+      })),
+    );
   }
 
   ngOnInit(): void {

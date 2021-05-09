@@ -8,5 +8,6 @@ export const environment = {
     storageBucket: 'opt-stats.appspot.com',
     messagingSenderId: '412471479558',
     appId: '1:412471479558:web:7404e841f4c882c9df6287'
-  }
+  },
+  useEmulators: false
 };
