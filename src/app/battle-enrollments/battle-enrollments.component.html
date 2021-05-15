@@ -1,0 +1,8 @@
+<ng-container *ngIf="battleEnrollmentCounts$ | async as battleEnrollmentCounts">
+  {{battleEnrollmentCounts | json}}
+</ng-container>
+<ng-container *ngFor="let enrollment of battleEnrollment$ | async">
+  <p>
+    {{enrollment | json}}
+  </p>
+</ng-container>

@@ -10,8 +10,7 @@
   Spielzeit: {{ battle.duration | duration }} Minuten
 
   <h3>Anmeldung</h3>
-  SWORD: 12 ARF: 22
-  <a routerLink="enroll">jetzt Anmelden!</a>
+  <app-battle-enrollments [battleId]="battle.battleId"></app-battle-enrollments>
   <app-enroll-on-battle
     [battleId]="battle.battleId"
     [userId]="userId"

@@ -49,7 +49,7 @@ export class EnrollOnBattleComponent implements OnInit {
           // TODO: improve performance, patchValue from above will trigger this, again
           return this.db
             .object<Enrollment>(`enrollments/${this.battleId}/${this.userId}`)
-            .update(nextValue);
+            .update({ ...nextValue, userId: this.userId });
         })
       )
       .subscribe();

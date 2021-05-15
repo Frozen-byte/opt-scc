@@ -13,6 +13,7 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
 import { environment } from 'src/environments/environment';
 import { SteamVerifyComponent } from './steam-verify/steam-verify.component';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
+import { BattleEnrollmentsComponent } from './battle-enrollments/battle-enrollments.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { AngularFireDatabaseModule } from '@angular/fire/database';
     EnrollOnBattleComponent,
     SteamSignInComponent,
     SteamVerifyComponent,
+    BattleEnrollmentsComponent,
   ],
   providers: [],
   imports: [

@@ -4,7 +4,6 @@ import { ActivatedRoute } from '@angular/router';
 import { pluck, switchMap } from 'rxjs/operators';
 import { Battle } from '../campaign/campaign.component';
 import { Observable } from 'rxjs';
-import { Enrollment } from '../enroll-on-battle/enroll-on-battle.component';
 import { AngularFireAuth } from '@angular/fire/auth';
 
 @Component({
@@ -13,31 +12,22 @@ import { AngularFireAuth } from '@angular/fire/auth';
   styleUrls: ['./battle.component.css'],
 })
 export class BattleComponent implements OnInit {
-  public battleParticipation$: Observable<Enrollment[] | null>;
   public battle$: Observable<Battle | null>;
   public userId: string | undefined;
 
   constructor(
-    db: AngularFireDatabase,
-    route: ActivatedRoute,
-    auth: AngularFireAuth
+    public db: AngularFireDatabase,
+    public auth: AngularFireAuth,
+    public route: ActivatedRoute
   ) {
     auth.user.subscribe((user) => {
       this.userId = user?.uid;
     });
 
-    this.battle$ = route.params.pipe(
-      pluck('battleId'),
+    const battleId$ = this.route.params.pipe(pluck('battleId'));
+    this.battle$ = battleId$.pipe(
       switchMap((battleId) => {
-        return db.object<Battle>(`battles/${battleId}`).valueChanges();
-      })
-    );
-    this.battleParticipation$ = route.params.pipe(
-      pluck('battleId'),
-      switchMap((battleId) => {
-        return db
-          .object<Enrollment[]>(`enrollments/${battleId}`)
-          .valueChanges();
+        return this.db.object<Battle>(`battles/${battleId}`).valueChanges();
       })
     );
   }
