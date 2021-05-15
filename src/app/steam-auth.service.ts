@@ -1,7 +1,7 @@
-import {Injectable} from '@angular/core';
-import {map} from 'rxjs/operators';
-import {ajax} from 'rxjs/ajax';
-import {Observable} from 'rxjs';
+import { Injectable } from '@angular/core';
+import { map } from 'rxjs/operators';
+import { ajax } from 'rxjs/ajax';
+import { Observable } from 'rxjs';
 
 export type Timestamp = number;
 export type Hyperlink = string;
@@ -27,7 +27,7 @@ export interface GetPlayerSummaries {
   timecreated: Timestamp;
 }
 
-export interface OpenIdResponse extends Record<string, string>{
+export interface OpenIdResponse extends Record<string, string> {
   'openid.assoc_handle': string;
   'openid.claimed_id': string;
   'openid.identity': string;
@@ -45,12 +45,10 @@ export const STEAM_AUTHENTICATE_URL = 'https://steam.byte.pm/api/steam/auth';
 export const STEAM_VERIFY_URL = 'https://steam.byte.pm/api/steam/verify';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class SteamAuthService {
-
-  constructor() {
-  }
+  constructor() {}
 
   authenticate(): Promise<void> {
     return fetch(STEAM_AUTHENTICATE_URL)
@@ -63,17 +61,15 @@ export class SteamAuthService {
   }
 
   /*
-  * Returns GetPlayerSummaries on success, null if auth failed
+   * Returns GetPlayerSummaries on success, null if auth failed
    */
-  verify(openIdParams: OpenIdResponse): Observable<{ jwt: string, steamid: string } | null> {
+  verify(
+    openIdParams: OpenIdResponse
+  ): Observable<{ jwt: string; steamid: string } | null> {
     const urlParams = new URLSearchParams(openIdParams).toString();
     return ajax({
       url: STEAM_VERIFY_URL + '?' + urlParams,
       crossDomain: true,
-    }).pipe(map(res => res.response));
-  }
-
-  logout(): Promise<void> {
-    return Promise.resolve();
+    }).pipe(map((res) => res.response));
   }
 }

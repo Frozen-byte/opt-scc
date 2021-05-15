@@ -1,7 +1,7 @@
-<h1>{{campaignName}}</h1>
+<h1>{{ campaignName }}</h1>
 <ul>
   <li *ngFor="let battle of battles$ | async">
-    <a [routerLink]="['/battle', battle.battleId]">{{battle.battleName}}</a>
+    <a [routerLink]="['/battle', battle.battleId]">{{ battle.battleName }}</a>
   </li>
 </ul>
 <router-outlet></router-outlet>

@@ -3,5 +3,10 @@
   <button (click)="logout()">Logout</button>
 </div>
 <ng-template #showLogin>
-  <button (click)="login()">Login with Steam</button>
+  <a [href]="STEAM_AUTHENTICATE_URL" (click)="login()">
+    <img
+      src="https://steamcommunity-a.akamaihd.net/public/images/signinthroughsteam/sits_01.png"
+      alt="Login with Steam"
+    />
+  </a>
 </ng-template>

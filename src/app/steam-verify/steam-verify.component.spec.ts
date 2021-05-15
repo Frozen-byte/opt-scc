@@ -8,9 +8,8 @@ describe('SteamVerifyComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ SteamVerifyComponent ]
-    })
-    .compileComponents();
+      declarations: [SteamVerifyComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {

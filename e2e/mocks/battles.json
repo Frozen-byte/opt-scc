@@ -12,27 +12,15 @@
         "factionName": "SWORD",
         "factionId": "sword",
         "factionSide": "AAF",
-        "factionAttackingSectors": [
-          17
-        ],
-        "factionAttackedSectors": [
-          11,
-          13,
-          14
-        ]
+        "factionAttackingSectors": [17],
+        "factionAttackedSectors": [11, 13, 14]
       },
       {
         "factionName": "ARF",
         "factionId": "arf",
         "factionSide": "CSAT",
-        "factionAttackingSectors": [
-          14
-        ],
-        "factionAttackedSectors": [
-          2,
-          23,
-          11
-        ]
+        "factionAttackingSectors": [14],
+        "factionAttackedSectors": [2, 23, 11]
       }
     ]
   },

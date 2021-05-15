@@ -1,9 +1,13 @@
-import {Component, OnInit} from '@angular/core';
-import {FormControl, FormGroup} from '@angular/forms';
+import { Component, Input, OnInit } from '@angular/core';
+import { FormControl, FormGroup } from '@angular/forms';
+import { AngularFireDatabase } from '@angular/fire/database';
+import { distinctUntilChanged, switchMap } from 'rxjs/operators';
+import { ActivatedRoute } from '@angular/router';
+import { isEqual } from 'lodash';
 
 export interface Enrollment {
   battleId: string;
-  steamID64: string;
+  userId: string;
   faction: string;
   status: 'yes' | 'no' | 'maybe' | 'pending';
   comment: string;
@@ -12,26 +16,42 @@ export interface Enrollment {
 @Component({
   selector: 'app-enroll-on-battle',
   templateUrl: './enroll-on-battle.component.html',
-  styleUrls: ['./enroll-on-battle.component.css']
+  styleUrls: ['./enroll-on-battle.component.css'],
 })
 export class EnrollOnBattleComponent implements OnInit {
-  public enrollment: Enrollment = {
-    battleId: 'adl-schlacht-1',
-    steamID64: '56875189413685',
-    faction: 'SWORD',
-    status: 'yes',
-    comment: 'WRYYYYYYYYYYYYYYYYYYYY'
-  };
+  @Input() battleId: string | undefined;
+  @Input() userId: string | undefined;
 
   public enrollmentForm = new FormGroup({
-    status: new FormControl(this.enrollment.status),
-    comment: new FormControl(this.enrollment.comment),
+    faction: new FormControl(),
+    status: new FormControl(),
+    comment: new FormControl(undefined, { updateOn: 'blur' }),
   });
 
-  constructor() {
-  }
+  constructor(public db: AngularFireDatabase, public route: ActivatedRoute) {}
 
   ngOnInit(): void {
-  }
+    const enrollmentDatabase = this.db.object<Enrollment>(
+      `enrollments/${this.battleId}/${this.userId}`
+    );
+    enrollmentDatabase.valueChanges().subscribe((nextDbValues) => {
+      if (nextDbValues) {
+        this.enrollmentForm.patchValue(nextDbValues, {});
+      }
+    });
 
+    this.enrollmentForm.valueChanges
+      .pipe(
+        distinctUntilChanged((prevValue, nextValue) =>
+          isEqual(prevValue, nextValue)
+        ),
+        switchMap((nextValue) => {
+          // TODO: improve performance, patchValue from above will trigger this, again
+          return this.db
+            .object<Enrollment>(`enrollments/${this.battleId}/${this.userId}`)
+            .update(nextValue);
+        })
+      )
+      .subscribe();
+  }
 }

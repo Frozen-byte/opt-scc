@@ -1,31 +1,42 @@
 <p>
-  <a href="https://opt4.net/forum/index.php?thread/2939-du-m%C3%B6chtest-mitspielen/">
+  <a
+    href="https://opt4.net/forum/index.php?thread/2939-du-m%C3%B6chtest-mitspielen/"
+  >
     Noch keine Fraktion? - Du möchtest mitspielen!
   </a>
-
 </p>
-
-<p>Fraktion: {{enrollment.faction}}</p>
 
 <form [formGroup]="enrollmentForm">
   <p>
+    <label>Fraktion:</label>
+    <label>
+      <input type="radio" formControlName="faction" value="arf" />
+      ARF
+    </label>
+    <label>
+      <input type="radio" formControlName="faction" value="sword" />
+      SWORD
+    </label>
+  </p>
+  <p>
     Teilnahme:
     <label>
-      <input type="radio" name="status" value="yes"/>
+      <input type="radio" formControlName="status" value="yes" />
       Yes
     </label>
     <label>
-      <input type="radio" name="status" value="no"/>
+      <input type="radio" formControlName="status" value="no" />
       Nein
     </label>
     <label>
-      <input type="radio" name="status" value="maybe"/>
+      <input type="radio" formControlName="status" value="maybe" />
       Vielleicht
     </label>
   </p>
   <p>
-  <label>Kommentar:
-    <input name="comment">
-  </label>
+    <label
+      >Kommentar:
+      <input formControlName="comment" />
+    </label>
   </p>
 </form>
