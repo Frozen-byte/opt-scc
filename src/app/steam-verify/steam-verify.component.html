@@ -1,0 +1,9 @@
+<ng-container [ngSwitch]="status">
+  <p *ngSwitchCase="'verify'">Verifiziere Account...</p>
+  <p *ngSwitchCase="'valid'">
+    Du hast dich erfolgreich angemeldet!
+    Zurück ins Schlachtfeld Soldat!
+  </p>
+  <p *ngSwitchCase="'error'">Fehler!</p>
+  <p *ngSwitchDefault></p>
+</ng-container>
