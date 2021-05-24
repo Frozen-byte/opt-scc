@@ -2,9 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { AngularFireDatabase } from '@angular/fire/database';
 import { ActivatedRoute } from '@angular/router';
 import { pluck, switchMap } from 'rxjs/operators';
-import { Battle } from '../campaign/campaign.component';
 import { Observable } from 'rxjs';
 import { AngularFireAuth } from '@angular/fire/auth';
+import { Battle } from './battle.interface';
 
 @Component({
   selector: 'app-battle',

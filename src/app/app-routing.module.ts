@@ -5,6 +5,7 @@ import { BattleComponent } from './battle/battle.component';
 import { SteamVerifyComponent } from './steam-verify/steam-verify.component';
 
 const routes: Routes = [
+  { path: 'players', component: SteamVerifyComponent },
   { path: 'steam-verify', component: SteamVerifyComponent },
   { path: 'campaign/:campaignId', component: CampaignComponent },
   { path: 'battle/:battleId', component: BattleComponent },

@@ -1,7 +1,24 @@
 <h1>{{ campaignName }}</h1>
-<ul>
-  <li *ngFor="let battle of battles$ | async">
-    <a [routerLink]="['/battle', battle.battleId]">{{ battle.battleName }}</a>
-  </li>
-</ul>
+<div class="battles">
+  <ng-container *ngFor="let battle of battles$ | async; index as i">
+    <a
+      [color]="isActive(battle) ? 'primary' : null"
+      [ngClass]="{
+        'mat-stroked-button': !isActive(battle),
+        'mat-raised-button': isActive(battle)
+        }"
+      [routerLink]="['/battle', battle.battleId]"
+      mat-button
+    >
+      {{ battle.battleDate | date }}<br>
+      {{ battle.battleName }}
+      <ng-template *ngFor="let faction of battle.factions">
+        {{ faction.factionName}}: {{ faction.factionBattleScore}}
+      </ng-template>
+    </a>
+
+  </ng-container>
+</div>
+
+
 <router-outlet></router-outlet>

@@ -14,6 +14,16 @@ import { environment } from 'src/environments/environment';
 import { SteamVerifyComponent } from './steam-verify/steam-verify.component';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { BattleEnrollmentsComponent } from './battle-enrollments/battle-enrollments.component';
+import { SectorSelectComponent } from './sector-select/sector-select.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatTooltipModule } from '@angular/material/tooltip';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatIconModule } from '@angular/material/icon';
+import { MatTabsModule } from '@angular/material/tabs';
+import { PlayerListComponent } from './player-list/player-list.component';
+import { MatButtonModule } from '@angular/material/button';
+import { MatCardModule } from '@angular/material/card';
 
 @NgModule({
   declarations: [
@@ -25,15 +35,29 @@ import { BattleEnrollmentsComponent } from './battle-enrollments/battle-enrollme
     SteamSignInComponent,
     SteamVerifyComponent,
     BattleEnrollmentsComponent,
+    SectorSelectComponent,
+    PlayerListComponent,
   ],
   providers: [],
   imports: [
+    // Native Modules
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
+    BrowserAnimationsModule,
+    // 3rd Party Modules
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAuthModule,
     AngularFireDatabaseModule,
+    // Material Modules
+    MatTooltipModule,
+    MatToolbarModule,
+    MatMenuModule,
+    MatIconModule,
+    MatTabsModule,
+    MatButtonModule,
+    MatCardModule,
+    MatGridListModu,
   ],
   bootstrap: [AppComponent],
 })
