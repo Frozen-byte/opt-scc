@@ -57,7 +57,6 @@ import { MatCardModule } from '@angular/material/card';
     MatTabsModule,
     MatButtonModule,
     MatCardModule,
-    MatGridListModu,
   ],
   bootstrap: [AppComponent],
 })
