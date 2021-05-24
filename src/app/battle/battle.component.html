@@ -2,7 +2,7 @@
   <h1>{{ battle.campaignName }}</h1>
   <a
     href="https://www.figma.com/file/eEBV0TBkbzKngKqyvCbHZh/OPT4---Livonia-(Copy)"
-    >Aktuelle Kampagnen Karte</a
+  >Aktuelle Kampagnen Karte</a
   >
   <h2>{{ battle.battleName }}</h2>
   Schlachttag: {{ battle.battleDate | date }}<br />
@@ -10,11 +10,11 @@
   Spielzeit: {{ battle.duration | duration }} Minuten
 
   <h3>Anmeldung</h3>
-  <app-battle-enrollments [battleId]="battle.battleId"></app-battle-enrollments>
-  <app-enroll-on-battle
+  <opt-battle-enrollments [battleId]="battle.battleId"></opt-battle-enrollments>
+  <opt-enroll-on-battle
     [battleId]="battle.battleId"
     [userId]="userId"
-  ></app-enroll-on-battle>
+  ></opt-enroll-on-battle>
 
   <ng-container *ngIf="battle.factions">
     <h3>Wahl der Seite</h3>
@@ -29,7 +29,7 @@
     </p>
   </ng-container>
 
-  <app-sector-select></app-sector-select>
+  <opt-sector-select></opt-sector-select>
   <h3>Verbrannte Fahnen</h3>
   <span *ngFor="let faction of battle.factions"
     >{{ faction.factionAttackedSectors }},</span

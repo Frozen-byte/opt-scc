@@ -10,7 +10,7 @@ export interface FactionEnrollmentCount {
 }
 
 @Component({
-  selector: 'app-battle-enrollments',
+  selector: 'opt-battle-enrollments',
   templateUrl: './battle-enrollments.component.html',
   styleUrls: ['./battle-enrollments.component.css'],
 })

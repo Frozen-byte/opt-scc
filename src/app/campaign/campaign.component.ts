@@ -14,7 +14,7 @@ export interface Faction {
 }
 
 @Component({
-  selector: 'app-campaign',
+  selector: 'opt-campaign',
   templateUrl: './campaign.component.html',
   styleUrls: ['./campaign.component.scss'],
 })

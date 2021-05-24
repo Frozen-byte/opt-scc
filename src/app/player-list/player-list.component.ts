@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-player-list',
+  selector: 'opt-player-list',
   templateUrl: './player-list.component.html',
   styleUrls: ['./player-list.component.css'],
 })

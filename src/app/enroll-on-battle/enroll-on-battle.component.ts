@@ -14,7 +14,7 @@ export interface Enrollment {
 }
 
 @Component({
-  selector: 'app-enroll-on-battle',
+  selector: 'opt-enroll-on-battle',
   templateUrl: './enroll-on-battle.component.html',
   styleUrls: ['./enroll-on-battle.component.css'],
 })

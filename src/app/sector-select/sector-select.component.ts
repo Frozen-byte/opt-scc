@@ -12,7 +12,7 @@ export interface Sector {
 }
 
 @Component({
-  selector: 'app-sector-select',
+  selector: 'opt-sector-select',
   templateUrl: './sector-select.component.html',
   styleUrls: ['./sector-select.component.css'],
 })

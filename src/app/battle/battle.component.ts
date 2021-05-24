@@ -7,7 +7,7 @@ import { AngularFireAuth } from '@angular/fire/auth';
 import { Battle } from './battle.interface';
 
 @Component({
-  selector: 'app-battle',
+  selector: 'opt-battle',
   templateUrl: './battle.component.html',
   styleUrls: ['./battle.component.css'],
 })

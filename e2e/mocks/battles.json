@@ -1,143 +1,157 @@
 {
   "adl-schlacht-1": {
-    "campaignId": "adl",
+    "battleDate": "2021-02-23T19:30:00+02:00",
     "battleId": "adl-schlacht-1",
     "battleName": "Schlacht #1 - Kampagnenbegin",
+    "battleStatus": "decided",
+    "campaignId": "adl",
     "campaignName": "Aufstand des Lumpenproletariats",
-    "battleDate": "2021-04-01T19:30:00+02:00",
     "duration": 9000,
-    "weather": "Spielzeit beginn: 12 Uhr, Bewölkt bis Heiter",
     "factions": [
       {
-        "factionName": "SWORD",
+        "factionAttackedSectors": [
+          11,
+          13,
+          14
+        ],
+        "factionAttackingSectors": [
+          17
+        ],
+        "factionBattleScore": 1,
         "factionId": "sword",
-        "factionSide": "AAF",
-        "factionAttackingSectors": [17],
-        "factionAttackedSectors": [11, 13, 14]
+        "factionName": "SWORD",
+        "factionSide": "AAF"
       },
       {
-        "factionName": "ARF",
+        "factionAttackedSectors": [
+          2,
+          23,
+          11
+        ],
+        "factionAttackingSectors": [
+          14
+        ],
         "factionId": "arf",
-        "factionSide": "CSAT",
-        "factionAttackingSectors": [14],
-        "factionAttackedSectors": [2, 23, 11]
+        "factionName": "ARF",
+        "factionSide": "CSAT"
       }
-    ]
-  },
-  "adl-schlacht-2": {
-    "campaignId": "adl",
-    "battleId": "adl-schlacht-2",
-    "battleName": "Schlacht #2",
-    "campaignName": "Aufstand des Lumpenproletariats",
-    "battleDate": "2021-04-02T19:30:00+02:00",
-    "duration": 9000,
-    "weather": "Spielzeit beginn: 12 Uhr, Bewölkt bis Heiter"
-  },
-  "adl-schlacht-3": {
-    "campaignId": "adl",
-    "battleId": "adl-schlacht-3",
-    "battleName": "Schlacht #3",
-    "campaignName": "Aufstand des Lumpenproletariats",
-    "battleDate": "2021-04-03T19:30:00+02:00",
-    "duration": 9000,
-    "weather": "Spielzeit beginn: 12 Uhr, Bewölkt bis Heiter"
-  },
-  "adl-schlacht-4": {
-    "campaignId": "adl",
-    "battleId": "adl-schlacht-4",
-    "battleName": "Schlacht #4",
-    "campaignName": "Aufstand des Lumpenproletariats",
-    "battleDate": "2021-04-04T19:30:00+02:00",
-    "duration": 9000,
-    "weather": "Spielzeit beginn: 12 Uhr, Bewölkt bis Heiter"
-  },
-  "adl-schlacht-5": {
-    "campaignId": "adl",
-    "battleId": "adl-schlacht-5",
-    "battleName": "Schlacht #5",
-    "campaignName": "Aufstand des Lumpenproletariats",
-    "battleDate": "2021-04-05T19:30:00+02:00",
-    "duration": 9000,
-    "weather": "Spielzeit beginn: 12 Uhr, Bewölkt bis Heiter"
-  },
-  "adl-schlacht-6": {
-    "campaignId": "adl",
-    "battleId": "adl-schlacht-6",
-    "battleName": "Schlacht #6",
-    "campaignName": "Aufstand des Lumpenproletariats",
-    "battleDate": "2021-04-06T19:30:00+02:00",
-    "duration": 9000,
-    "weather": "Spielzeit beginn: 12 Uhr, Bewölkt bis Heiter"
-  },
-  "adl-schlacht-7": {
-    "campaignId": "adl",
-    "battleId": "adl-schlacht-7",
-    "battleName": "Schlacht #7",
-    "campaignName": "Aufstand des Lumpenproletariats",
-    "battleDate": "2021-04-07T19:30:00+02:00",
-    "duration": 9000,
+    ],
     "weather": "Spielzeit beginn: 12 Uhr, Bewölkt bis Heiter"
   },
   "adl-schlacht-1-seitenwechsel": {
-    "campaignId": "adl",
+    "battleDate": "2021-04-27T19:30:00+02:00",
     "battleId": "adl-schlacht-1-seitenwechsel",
     "battleName": "Schlacht #1 - Seitenwechsel",
+    "campaignId": "adl",
     "campaignName": "Aufstand des Lumpenproletariats",
-    "battleDate": "2021-04-08T19:30:00+02:00",
+    "duration": 9000,
+    "weather": "Spielzeit beginn: 12 Uhr, Bewölkt bis Heiter"
+  },
+  "adl-schlacht-2": {
+    "battleDate": "2021-03-02T19:30:00+02:00",
+    "battleId": "adl-schlacht-2",
+    "battleName": "Schlacht #2",
+    "campaignId": "adl",
+    "campaignName": "Aufstand des Lumpenproletariats",
     "duration": 9000,
     "weather": "Spielzeit beginn: 12 Uhr, Bewölkt bis Heiter"
   },
   "adl-schlacht-2-1": {
-    "campaignId": "adl",
+    "battleDate": "2021-05-06T19:30:00+02:00",
     "battleId": "adl-schlacht-2-1",
     "battleName": "Schlacht #2",
+    "campaignId": "adl",
     "campaignName": "Aufstand des Lumpenproletariats",
-    "battleDate": "2021-04-09T19:30:00+02:00",
+    "duration": 9000,
+    "weather": "Spielzeit beginn: 12 Uhr, Bewölkt bis Heiter"
+  },
+  "adl-schlacht-3": {
+    "battleDate": "2021-03-11T19:30:00+02:00",
+    "battleId": "adl-schlacht-3",
+    "battleName": "Schlacht #3",
+    "campaignId": "adl",
+    "campaignName": "Aufstand des Lumpenproletariats",
     "duration": 9000,
     "weather": "Spielzeit beginn: 12 Uhr, Bewölkt bis Heiter"
   },
   "adl-schlacht-3-1": {
-    "campaignId": "adl",
+    "battleDate": "2021-05-16T19:30:00+02:00",
     "battleId": "adl-schlacht-3-1",
     "battleName": "Schlacht #3",
+    "campaignId": "adl",
     "campaignName": "Aufstand des Lumpenproletariats",
-    "battleDate": "2021-04-10T19:30:00+02:00",
+    "duration": 9000,
+    "weather": "Spielzeit beginn: 12 Uhr, Bewölkt bis Heiter"
+  },
+  "adl-schlacht-4": {
+    "battleDate": "2021-03-21T19:30:00+02:00",
+    "battleId": "adl-schlacht-4",
+    "battleName": "Schlacht #4",
+    "campaignId": "adl",
+    "campaignName": "Aufstand des Lumpenproletariats",
     "duration": 9000,
     "weather": "Spielzeit beginn: 12 Uhr, Bewölkt bis Heiter"
   },
   "adl-schlacht-4-1": {
-    "campaignId": "adl",
+    "battleDate": "2021-05-25T19:30:00+02:00",
     "battleId": "adl-schlacht-4-1",
     "battleName": "Schlacht #4",
+    "campaignId": "adl",
     "campaignName": "Aufstand des Lumpenproletariats",
-    "battleDate": "2021-04-11T19:30:00+02:00",
+    "duration": 9000,
+    "weather": "Spielzeit beginn: 12 Uhr, Bewölkt bis Heiter"
+  },
+  "adl-schlacht-5": {
+    "battleDate": "2021-03-30T19:30:00+02:00",
+    "battleId": "adl-schlacht-5",
+    "battleName": "Schlacht #5",
+    "campaignId": "adl",
+    "campaignName": "Aufstand des Lumpenproletariats",
     "duration": 9000,
     "weather": "Spielzeit beginn: 12 Uhr, Bewölkt bis Heiter"
   },
   "adl-schlacht-5-1": {
-    "campaignId": "adl",
+    "battleDate": "2021-06-06T19:30:00+02:00",
     "battleId": "adl-schlacht-5-1",
     "battleName": "Schlacht #5",
+    "campaignId": "adl",
     "campaignName": "Aufstand des Lumpenproletariats",
-    "battleDate": "2021-04-12T19:30:00+02:00",
+    "duration": 9000,
+    "weather": "Spielzeit beginn: 12 Uhr, Bewölkt bis Heiter"
+  },
+  "adl-schlacht-6": {
+    "battleDate": "2021-04-08T19:30:00+02:00",
+    "battleId": "adl-schlacht-6",
+    "battleName": "Schlacht #6",
+    "campaignId": "adl",
+    "campaignName": "Aufstand des Lumpenproletariats",
     "duration": 9000,
     "weather": "Spielzeit beginn: 12 Uhr, Bewölkt bis Heiter"
   },
   "adl-schlacht-6-1": {
-    "campaignId": "adl",
+    "battleDate": "2021-06-15T19:30:00+02:00",
     "battleId": "adl-schlacht-6-1",
     "battleName": "Schlacht #6",
+    "campaignId": "adl",
     "campaignName": "Aufstand des Lumpenproletariats",
-    "battleDate": "2021-04-13T19:30:00+02:00",
+    "duration": 9000,
+    "weather": "Spielzeit beginn: 12 Uhr, Bewölkt bis Heiter"
+  },
+  "adl-schlacht-7": {
+    "battleDate": "2021-04-18T19:30:00+02:00",
+    "battleId": "adl-schlacht-7",
+    "battleName": "Schlacht #7",
+    "campaignId": "adl",
+    "campaignName": "Aufstand des Lumpenproletariats",
     "duration": 9000,
     "weather": "Spielzeit beginn: 12 Uhr, Bewölkt bis Heiter"
   },
   "adl-schlacht-7-finalschlacht": {
-    "campaignId": "adl",
+    "battleDate": "2021-06-27T19:30:00+02:00",
     "battleId": "adl-schlacht-7-finalschlacht",
     "battleName": "Schlacht #7 - Finalschlacht",
+    "campaignId": "adl",
     "campaignName": "Aufstand des Lumpenproletariats",
-    "battleDate": "2021-04-14T19:30:00+02:00",
     "duration": 9000,
     "weather": "Spielzeit beginn: 12 Uhr, Bewölkt bis Heiter"
   }

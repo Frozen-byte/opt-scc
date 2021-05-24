@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
+import { OptRoutingModule } from './opt-routing.module';
+import { OptComponent } from './opt.component';
 import { CampaignComponent } from './campaign/campaign.component';
 import { BattleComponent } from './battle/battle.component';
 import { DurationPipe } from './duration.pipe';
@@ -27,7 +27,7 @@ import { MatCardModule } from '@angular/material/card';
 
 @NgModule({
   declarations: [
-    AppComponent,
+    OptComponent,
     CampaignComponent,
     BattleComponent,
     DurationPipe,
@@ -42,7 +42,7 @@ import { MatCardModule } from '@angular/material/card';
   imports: [
     // Native Modules
     BrowserModule,
-    AppRoutingModule,
+    OptRoutingModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
     // 3rd Party Modules
@@ -58,6 +58,6 @@ import { MatCardModule } from '@angular/material/card';
     MatButtonModule,
     MatCardModule,
   ],
-  bootstrap: [AppComponent],
+  bootstrap: [OptComponent],
 })
-export class AppModule {}
+export class OptModule {}

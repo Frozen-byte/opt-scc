@@ -6,7 +6,7 @@ import {
 import { AngularFireAuth } from '@angular/fire/auth';
 
 @Component({
-  selector: 'app-steam-sign-in',
+  selector: 'opt-steam-sign-in',
   templateUrl: './steam-sign-in.component.html',
   styleUrls: ['./steam-sign-in.component.css'],
 })

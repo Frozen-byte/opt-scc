@@ -13,7 +13,7 @@ function isOpenIdResponse(
 }
 
 @Component({
-  selector: 'app-steam-verify',
+  selector: 'opt-steam-verify',
   templateUrl: './steam-verify.component.html',
   styleUrls: ['./steam-verify.component.css'],
 })

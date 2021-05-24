@@ -18,7 +18,7 @@ export interface Battle {
   battleId: string;
   battleName: string;
   battleDate: DATE_ISO8601;
-  status: BattleStatus;
+  battleStatus: BattleStatus;
   campaignName: string;
   campaignId: string;
   duration: number;
