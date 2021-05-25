@@ -15,18 +15,18 @@ export interface Sector {
  * @prop {Sector} selectedSector - currently selected Sector
  */
 @Component({
-  selector: "opt-sector-select",
-  templateUrl: "./sector-select.component.html",
-  styleUrls: ["./sector-select.component.css"]
+  selector: 'opt-sector-select',
+  templateUrl: './sector-select.component.html',
+  styleUrls: ['./sector-select.component.css'],
 })
 export class SectorSelectComponent implements OnInit {
   public sectors?: Sector[];
 
-  @Input() selectedSector?: Sector["id"];
-  @Output() selectedSectorChange = new EventEmitter<Sector["id"]>();
+  @Input() selectedSector?: Sector['id'];
+  @Output() selectedSectorChange = new EventEmitter<Sector['id']>();
 
   constructor(public db: AngularFireDatabase) {
-    const campaignId = "adl";
+    const campaignId = 'adl';
     db.list<Sector>(`maps/${campaignId}`)
       .valueChanges()
       .subscribe((v) => (this.sectors = v));
@@ -43,8 +43,7 @@ export class SectorSelectComponent implements OnInit {
     this._disabled = v !== undefined;
   }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
   onClick($event: MouseEvent, sector: Sector): void {
     if (!this.disabled && !sector.disabled) {
