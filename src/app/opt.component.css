@@ -5,3 +5,12 @@ mat-toolbar {
 nav {
   border-bottom: 0;
 }
+
+.themeToggle {
+  display: flex;
+  align-items: center;
+}
+
+.spacer {
+  flex: 1 1 100%;
+}

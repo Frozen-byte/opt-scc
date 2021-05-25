@@ -1,8 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, HostBinding } from '@angular/core';
 
 @Component({
   selector: 'opt-root',
   templateUrl: './opt.component.html',
   styleUrls: ['./opt.component.css'],
 })
-export class OptComponent {}
+export class OptComponent {
+  @HostBinding('class.theme-alternate') themeToggle = false;
+}

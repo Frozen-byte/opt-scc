@@ -13,7 +13,7 @@ import { BattleSectorSelectDialogComponent } from './battle-sector-select-dialog
 import { FactionScoreComponent } from './faction-score/faction-score.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { OptRoutingModule } from './opt-routing.module';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AngularFireModule } from '@angular/fire';
 import { environment } from '../environments/environment';
@@ -28,12 +28,14 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatRippleModule } from '@angular/material/core';
 import { MatDialogModule } from '@angular/material/dialog';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 
 @NgModule({
   imports: [
     // Native Modules
     BrowserModule,
     OptRoutingModule,
+    FormsModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
     // 3rd Party Modules
@@ -50,6 +52,7 @@ import { MatDialogModule } from '@angular/material/dialog';
     MatCardModule,
     MatRippleModule,
     MatDialogModule,
+    MatSlideToggleModule,
   ],
   declarations: [
     OptComponent,

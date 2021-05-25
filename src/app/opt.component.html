@@ -16,5 +16,14 @@
       routerLinkActive
     >Kampagnenübersicht</a>
   </nav>
+  <p class="spacer"></p>
+  <p class="themeToggle">
+    <mat-icon>nightlight_round</mat-icon>
+    <mat-slide-toggle [(ngModel)]="themeToggle"></mat-slide-toggle>
+    <mat-icon>lightbulb</mat-icon>
+  </p>
+
 </mat-toolbar>
-<router-outlet></router-outlet>
+<div class="mat-drawer-container">
+  <router-outlet></router-outlet>
+</div>
