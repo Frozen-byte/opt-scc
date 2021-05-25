@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {
   STEAM_AUTHENTICATE_URL,
   SteamAuthService,
-} from '../steam-auth.service';
+} from '../services/steam-auth.service';
 import { AngularFireAuth } from '@angular/fire/auth';
 
 @Component({

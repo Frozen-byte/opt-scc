@@ -1,14 +1,17 @@
 svg {
-  height: 1000px;
-  width: 1000px;
+  height: 100%;
+  width: 100%;
 }
 
 .burned {
   pointer-events: none;
 }
 
-.sector {
+.sector:not(.disabledHover) {
   cursor: pointer;
+}
+
+.sector {
   stroke-width: 1.2rem;
 }
 
@@ -21,7 +24,7 @@ svg {
   stroke: rgba(255, 78, 78, 0.17);
 }
 
-.red:hover {
+.red:not(.disabledHover):not(.disabledSector):hover {
   fill: rgba(255, 78, 78, 0.44);
   stroke: rgba(255, 78, 78, 0.44);
 }
@@ -31,7 +34,7 @@ svg {
   stroke: rgba(255, 78, 78, 0.64);
 }
 
-.red.disabled {
+.red.disabledSector {
   fill: rgba(255, 78, 78, 0.08);
   stroke: rgba(255, 78, 78, 0.08);
 }
@@ -41,7 +44,7 @@ svg {
   stroke: rgba(106, 206, 104, 0.26);
 }
 
-.green:hover {
+.green:not(.disabledHover):not(.disabledSector):hover {
   fill: rgba(106, 206, 104, 0.51);
   stroke: rgba(106, 206, 104, 0.51);
 }
@@ -51,7 +54,7 @@ svg {
   stroke: rgba(106, 206, 104, 0.81);
 }
 
-.green.disabled {
+.green.disabledSector {
   fill: rgba(106, 206, 104, 0.16);
   stroke: rgba(106, 206, 104, 0.16);
 }

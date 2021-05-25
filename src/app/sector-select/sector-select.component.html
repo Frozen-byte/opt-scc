@@ -2,22 +2,25 @@
   fill="none"
   height="4096"
   viewBox="0 0 4121 4096"
+  preserveAspectRatio
   width="4121"
   xmlns="http://www.w3.org/2000/svg"
 >
-  <ng-container *ngFor="let sector of sectors$ | async">
+  <ng-container *ngFor="let sector of sectors">
     <path
       #sector
       (click)="onClick($event, sector)"
       [attr.d]="sector.path"
       [attr.id]="sector.id"
       [matTooltip]="sector.name"
+      [matTooltipDisabled]="disabled"
       [ngClass]="{
           sector: true,
           red: sector.color === 'red',
           green: sector.color === 'green',
           selected:  sector.selected || sector.id === selectedSector,
-          disabled:  sector.disabled
+          disabledSector:  sector.disabled,
+          disabledHover: disabled
         }"
     ></path>
   </ng-container>

@@ -6,37 +6,24 @@
     "battleStatus": "decided",
     "campaignId": "adl",
     "campaignName": "Aufstand des Lumpenproletariats",
-    "duration": 9000,
+    "battleDuration": 9000,
+    "weather": "Spielzeit beginn: 12 Uhr, Bewölkt bis Heiter",
     "factions": [
       {
-        "factionAttackedSectors": [
-          11,
-          13,
-          14
-        ],
-        "factionAttackingSectors": [
-          17
-        ],
-        "factionBattleScore": 1,
+        "factionAttackingSector": 11,
+        "factionBattleScore": 7,
         "factionId": "sword",
         "factionName": "SWORD",
-        "factionSide": "AAF"
+        "factionSide": "CSAT"
       },
       {
-        "factionAttackedSectors": [
-          2,
-          23,
-          11
-        ],
-        "factionAttackingSectors": [
-          14
-        ],
+        "factionAttackingSector": 14,
+        "factionBattleScore": 43,
         "factionId": "arf",
         "factionName": "ARF",
-        "factionSide": "CSAT"
+        "factionSide": "AAF"
       }
-    ],
-    "weather": "Spielzeit beginn: 12 Uhr, Bewölkt bis Heiter"
+    ]
   },
   "adl-schlacht-1-seitenwechsel": {
     "battleDate": "2021-04-27T19:30:00+02:00",
@@ -44,8 +31,24 @@
     "battleName": "Schlacht #1 - Seitenwechsel",
     "campaignId": "adl",
     "campaignName": "Aufstand des Lumpenproletariats",
-    "duration": 9000,
-    "weather": "Spielzeit beginn: 12 Uhr, Bewölkt bis Heiter"
+    "battleDuration": 9000,
+    "weather": "Spielzeit beginn: 12 Uhr, Bewölkt bis Heiter",
+    "factions": [
+      {
+        "factionAttackingSector": 16,
+        "factionBattleScore": 29,
+        "factionId": "sword",
+        "factionName": "SWORD",
+        "factionSide": "AAF"
+      },
+      {
+        "factionAttackingSector": 12,
+        "factionBattleScore": 44,
+        "factionId": "arf",
+        "factionName": "ARF",
+        "factionSide": "CSAT"
+      }
+    ]
   },
   "adl-schlacht-2": {
     "battleDate": "2021-03-02T19:30:00+02:00",
@@ -53,8 +56,24 @@
     "battleName": "Schlacht #2",
     "campaignId": "adl",
     "campaignName": "Aufstand des Lumpenproletariats",
-    "duration": 9000,
-    "weather": "Spielzeit beginn: 12 Uhr, Bewölkt bis Heiter"
+    "battleDuration": 9000,
+    "weather": "Spielzeit beginn: 12 Uhr, Bewölkt bis Heiter",
+    "factions": [
+      {
+        "factionAttackingSector": 12,
+        "factionBattleScore": 6,
+        "factionId": "sword",
+        "factionName": "SWORD",
+        "factionSide": "CSAT"
+      },
+      {
+        "factionAttackingSector": 8,
+        "factionBattleScore": 49,
+        "factionId": "arf",
+        "factionName": "ARF",
+        "factionSide": "AAF"
+      }
+    ]
   },
   "adl-schlacht-2-1": {
     "battleDate": "2021-05-06T19:30:00+02:00",
@@ -62,8 +81,24 @@
     "battleName": "Schlacht #2",
     "campaignId": "adl",
     "campaignName": "Aufstand des Lumpenproletariats",
-    "duration": 9000,
-    "weather": "Spielzeit beginn: 12 Uhr, Bewölkt bis Heiter"
+    "battleDuration": 9000,
+    "weather": "Spielzeit beginn: 12 Uhr, Bewölkt bis Heiter",
+    "factions": [
+      {
+        "factionAttackingSector": 13,
+        "factionBattleScore": 68,
+        "factionId": "sword",
+        "factionName": "SWORD",
+        "factionSide": "AAF"
+      },
+      {
+        "factionAttackingSector": 11,
+        "factionBattleScore": 6,
+        "factionId": "arf",
+        "factionName": "ARF",
+        "factionSide": "CSAT"
+      }
+    ]
   },
   "adl-schlacht-3": {
     "battleDate": "2021-03-11T19:30:00+02:00",
@@ -71,8 +106,24 @@
     "battleName": "Schlacht #3",
     "campaignId": "adl",
     "campaignName": "Aufstand des Lumpenproletariats",
-    "duration": 9000,
-    "weather": "Spielzeit beginn: 12 Uhr, Bewölkt bis Heiter"
+    "battleDuration": 9000,
+    "weather": "Spielzeit beginn: 12 Uhr, Bewölkt bis Heiter",
+    "factions": [
+      {
+        "factionAttackingSector": 11,
+        "factionBattleScore": 28,
+        "factionId": "sword",
+        "factionName": "SWORD",
+        "factionSide": "CSAT"
+      },
+      {
+        "factionAttackingSector": 9,
+        "factionBattleScore": 54,
+        "factionId": "arf",
+        "factionName": "ARF",
+        "factionSide": "AAF"
+      }
+    ]
   },
   "adl-schlacht-3-1": {
     "battleDate": "2021-05-16T19:30:00+02:00",
@@ -80,8 +131,24 @@
     "battleName": "Schlacht #3",
     "campaignId": "adl",
     "campaignName": "Aufstand des Lumpenproletariats",
-    "duration": 9000,
-    "weather": "Spielzeit beginn: 12 Uhr, Bewölkt bis Heiter"
+    "battleDuration": 9000,
+    "weather": "Spielzeit beginn: 12 Uhr, Bewölkt bis Heiter",
+    "factions": [
+      {
+        "factionAttackingSector": 15,
+        "factionBattleScore": 31,
+        "factionId": "sword",
+        "factionName": "SWORD",
+        "factionSide": "AAF"
+      },
+      {
+        "factionAttackingSector": 17,
+        "factionBattleScore": 30,
+        "factionId": "arf",
+        "factionName": "ARF",
+        "factionSide": "CSAT"
+      }
+    ]
   },
   "adl-schlacht-4": {
     "battleDate": "2021-03-21T19:30:00+02:00",
@@ -89,8 +156,24 @@
     "battleName": "Schlacht #4",
     "campaignId": "adl",
     "campaignName": "Aufstand des Lumpenproletariats",
-    "duration": 9000,
-    "weather": "Spielzeit beginn: 12 Uhr, Bewölkt bis Heiter"
+    "battleDuration": 9000,
+    "weather": "Spielzeit beginn: 12 Uhr, Bewölkt bis Heiter",
+    "factions": [
+      {
+        "factionAttackingSector": 17,
+        "factionBattleScore": 52,
+        "factionId": "sword",
+        "factionName": "SWORD",
+        "factionSide": "CSAT"
+      },
+      {
+        "factionAttackingSector": 13,
+        "factionBattleScore": 3,
+        "factionId": "arf",
+        "factionName": "ARF",
+        "factionSide": "AAF"
+      }
+    ]
   },
   "adl-schlacht-4-1": {
     "battleDate": "2021-05-25T19:30:00+02:00",
@@ -98,8 +181,24 @@
     "battleName": "Schlacht #4",
     "campaignId": "adl",
     "campaignName": "Aufstand des Lumpenproletariats",
-    "duration": 9000,
-    "weather": "Spielzeit beginn: 12 Uhr, Bewölkt bis Heiter"
+    "battleDuration": 9000,
+    "weather": "Spielzeit beginn: 12 Uhr, Bewölkt bis Heiter",
+    "factions": [
+      {
+        "factionAttackingSector": 9,
+        "factionBattleScore": null,
+        "factionId": "sword",
+        "factionName": "SWORD",
+        "factionSide": "AAF"
+      },
+      {
+        "factionAttackingSector": 18,
+        "factionBattleScore": null,
+        "factionId": "arf",
+        "factionName": "ARF",
+        "factionSide": "CSAT"
+      }
+    ]
   },
   "adl-schlacht-5": {
     "battleDate": "2021-03-30T19:30:00+02:00",
@@ -107,8 +206,24 @@
     "battleName": "Schlacht #5",
     "campaignId": "adl",
     "campaignName": "Aufstand des Lumpenproletariats",
-    "duration": 9000,
-    "weather": "Spielzeit beginn: 12 Uhr, Bewölkt bis Heiter"
+    "battleDuration": 9000,
+    "weather": "Spielzeit beginn: 12 Uhr, Bewölkt bis Heiter",
+    "factions": [
+      {
+        "factionAttackingSector": 22,
+        "factionBattleScore": 15,
+        "factionId": "sword",
+        "factionName": "SWORD",
+        "factionSide": "CSAT"
+      },
+      {
+        "factionAttackingSector": 13,
+        "factionBattleScore": 29,
+        "factionId": "arf",
+        "factionName": "ARF",
+        "factionSide": "AAF"
+      }
+    ]
   },
   "adl-schlacht-5-1": {
     "battleDate": "2021-06-06T19:30:00+02:00",
@@ -116,8 +231,24 @@
     "battleName": "Schlacht #5",
     "campaignId": "adl",
     "campaignName": "Aufstand des Lumpenproletariats",
-    "duration": 9000,
-    "weather": "Spielzeit beginn: 12 Uhr, Bewölkt bis Heiter"
+    "battleDuration": 9000,
+    "weather": "Spielzeit beginn: 12 Uhr, Bewölkt bis Heiter",
+    "factions": [
+      {
+        "factionAttackingSector": null,
+        "factionBattleScore": null,
+        "factionId": "sword",
+        "factionName": "SWORD",
+        "factionSide": "AAF"
+      },
+      {
+        "factionAttackingSector": null,
+        "factionBattleScore": null,
+        "factionId": "arf",
+        "factionName": "ARF",
+        "factionSide": "CSAT"
+      }
+    ]
   },
   "adl-schlacht-6": {
     "battleDate": "2021-04-08T19:30:00+02:00",
@@ -125,8 +256,24 @@
     "battleName": "Schlacht #6",
     "campaignId": "adl",
     "campaignName": "Aufstand des Lumpenproletariats",
-    "duration": 9000,
-    "weather": "Spielzeit beginn: 12 Uhr, Bewölkt bis Heiter"
+    "battleDuration": 9000,
+    "weather": "Spielzeit beginn: 12 Uhr, Bewölkt bis Heiter",
+    "factions": [
+      {
+        "factionAttackingSector": 9,
+        "factionBattleScore": 25,
+        "factionId": "sword",
+        "factionName": "SWORD",
+        "factionSide": "CSAT"
+      },
+      {
+        "factionAttackingSector": 16,
+        "factionBattleScore": 15,
+        "factionId": "arf",
+        "factionName": "ARF",
+        "factionSide": "AAF"
+      }
+    ]
   },
   "adl-schlacht-6-1": {
     "battleDate": "2021-06-15T19:30:00+02:00",
@@ -134,8 +281,24 @@
     "battleName": "Schlacht #6",
     "campaignId": "adl",
     "campaignName": "Aufstand des Lumpenproletariats",
-    "duration": 9000,
-    "weather": "Spielzeit beginn: 12 Uhr, Bewölkt bis Heiter"
+    "battleDuration": 9000,
+    "weather": "Spielzeit beginn: 12 Uhr, Bewölkt bis Heiter",
+    "factions": [
+      {
+        "factionAttackingSector": null,
+        "factionBattleScore": null,
+        "factionId": "sword",
+        "factionName": "SWORD",
+        "factionSide": "AAF"
+      },
+      {
+        "factionAttackingSector": null,
+        "factionBattleScore": null,
+        "factionId": "arf",
+        "factionName": "ARF",
+        "factionSide": "CSAT"
+      }
+    ]
   },
   "adl-schlacht-7": {
     "battleDate": "2021-04-18T19:30:00+02:00",
@@ -143,8 +306,24 @@
     "battleName": "Schlacht #7",
     "campaignId": "adl",
     "campaignName": "Aufstand des Lumpenproletariats",
-    "duration": 9000,
-    "weather": "Spielzeit beginn: 12 Uhr, Bewölkt bis Heiter"
+    "battleDuration": 9000,
+    "weather": "Spielzeit beginn: 12 Uhr, Bewölkt bis Heiter",
+    "factions": [
+      {
+        "factionAttackingSector": 14,
+        "factionBattleScore": 40,
+        "factionId": "sword",
+        "factionName": "SWORD",
+        "factionSide": "CSAT"
+      },
+      {
+        "factionAttackingSector": 17,
+        "factionBattleScore": 18,
+        "factionId": "arf",
+        "factionName": "ARF",
+        "factionSide": "AAF"
+      }
+    ]
   },
   "adl-schlacht-7-finalschlacht": {
     "battleDate": "2021-06-27T19:30:00+02:00",
@@ -152,7 +331,23 @@
     "battleName": "Schlacht #7 - Finalschlacht",
     "campaignId": "adl",
     "campaignName": "Aufstand des Lumpenproletariats",
-    "duration": 9000,
-    "weather": "Spielzeit beginn: 12 Uhr, Bewölkt bis Heiter"
+    "battleDuration": 9000,
+    "weather": "Spielzeit beginn: 12 Uhr, Bewölkt bis Heiter",
+    "factions": [
+      {
+        "factionAttackingSector": null,
+        "factionBattleScore": null,
+        "factionId": "sword",
+        "factionName": "SWORD",
+        "factionSide": "AAF"
+      },
+      {
+        "factionAttackingSector": null,
+        "factionBattleScore": null,
+        "factionId": "arf",
+        "factionName": "ARF",
+        "factionSide": "CSAT"
+      }
+    ]
   }
 }

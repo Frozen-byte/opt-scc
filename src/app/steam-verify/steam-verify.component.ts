@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { OpenIdResponse, SteamAuthService } from '../steam-auth.service';
+import {
+  OpenIdResponse,
+  SteamAuthService,
+} from '../services/steam-auth.service';
 import { ActivatedRoute } from '@angular/router';
 import { filter, switchMap, tap } from 'rxjs/operators';
 import { isNotNullOrUndefined } from 'codelyzer/util/isNotNullOrUndefined';

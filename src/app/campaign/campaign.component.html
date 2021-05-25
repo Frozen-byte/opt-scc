@@ -1,6 +1,6 @@
 <h1>{{ campaignName }}</h1>
 <div class="battles">
-  <ng-container *ngFor="let battle of battles$ | async; index as i">
+  <ng-container *ngFor="let battle of battles">
     <a
       [color]="isActive(battle) ? 'primary' : null"
       [ngClass]="{
@@ -10,13 +10,12 @@
       [routerLink]="['/battle', battle.battleId]"
       mat-button
     >
-      {{ battle.battleDate | date }}<br>
-      {{ battle.battleName }}
-      <ng-template *ngFor="let faction of battle.factions">
-        {{ faction.factionName}}: {{ faction.factionBattleScore}}
-      </ng-template>
+      <span class="battleDate">{{ battle.battleDate | date }}</span>
+      <span class="battleName">{{ battle.battleName }}</span>
+      <opt-faction-score [faction]="battle.factions[0]"></opt-faction-score>
+      :
+      <opt-faction-score [faction]="battle.factions[1]" reverse></opt-faction-score>
     </a>
-
   </ng-container>
 </div>
 

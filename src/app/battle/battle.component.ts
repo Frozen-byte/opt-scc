@@ -1,10 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import { AngularFireDatabase } from '@angular/fire/database';
 import { ActivatedRoute } from '@angular/router';
-import { pluck, switchMap } from 'rxjs/operators';
+import { distinctUntilChanged, pluck, switchMap } from 'rxjs/operators';
 import { Observable } from 'rxjs';
 import { AngularFireAuth } from '@angular/fire/auth';
-import { Battle } from './battle.interface';
+import { MatDialog } from '@angular/material/dialog';
+import { BattleSectorSelectDialogComponent } from '../battle-sector-select-dialog/battle-sector-select-dialog.component';
+import { Battle } from './battle.types';
+import { BattleListService } from '../services/battle-list.service';
 
 @Component({
   selector: 'opt-battle',
@@ -16,21 +18,31 @@ export class BattleComponent implements OnInit {
   public userId: string | undefined;
 
   constructor(
-    public db: AngularFireDatabase,
-    public auth: AngularFireAuth,
-    public route: ActivatedRoute
+    public dialog: MatDialog,
+    auth: AngularFireAuth,
+    route: ActivatedRoute,
+    battleService: BattleListService
   ) {
     auth.user.subscribe((user) => {
       this.userId = user?.uid;
     });
 
-    const battleId$ = this.route.params.pipe(pluck('battleId'));
-    this.battle$ = battleId$.pipe(
+    this.battle$ = route.params.pipe(
+      pluck('battleId'),
+      distinctUntilChanged(),
       switchMap((battleId) => {
-        return this.db.object<Battle>(`battles/${battleId}`).valueChanges();
+        return battleService.getBattle(battleId);
       })
     );
   }
 
   ngOnInit(): void {}
+
+  openSectorSelectDialog(): void {
+    const dialogRef = this.dialog.open(BattleSectorSelectDialogComponent);
+
+    dialogRef.afterClosed().subscribe((result) => {
+      console.log(`Dialog result: ${result}`);
+    });
+  }
 }

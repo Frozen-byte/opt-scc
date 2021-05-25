@@ -1,9 +1,8 @@
 import { DATE_ISO8601, Faction } from '../campaign/campaign.component';
 
-interface BattleFaction extends Faction {
+export interface BattleFaction extends Faction {
   factionBattleScore: number;
-  factionAttackingSectors: number[];
-  factionAttackedSectors: number[];
+  factionAttackingSector: number;
 }
 
 /**
@@ -21,7 +20,7 @@ export interface Battle {
   battleStatus: BattleStatus;
   campaignName: string;
   campaignId: string;
-  duration: number;
+  battleDuration: number;
   weather: string;
   factions: BattleFaction[];
 }

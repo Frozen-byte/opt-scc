@@ -6,3 +6,13 @@ body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
 }
+
+.faction {
+  &-arf {
+    color: rgb(9, 90, 172);
+  }
+
+  &-sword {
+    color: rgb(255, 95, 0);
+  }
+}
