@@ -1,0 +1,6 @@
+<h1>{{ campaignName }}</h1>
+<div class="battles">
+  <ng-container *ngFor="let battle of battles$ | async">
+    <opt-battle-link [battle]="battle"></opt-battle-link>
+  </ng-container>
+</div>

@@ -1,4 +1,5 @@
 import { Component, HostBinding } from '@angular/core';
+import { ThemeService } from './services/theme.service';
 
 @Component({
   selector: 'opt-root',
@@ -6,5 +7,9 @@ import { Component, HostBinding } from '@angular/core';
   styleUrls: ['./opt.component.css'],
 })
 export class OptComponent {
-  @HostBinding('class.theme-alternate') themeToggle = false;
+  constructor(public themeService: ThemeService) {}
+
+  @HostBinding('class.theme-alternate') get themeToggle(): boolean {
+    return this.themeService.alternateTheme;
+  }
 }

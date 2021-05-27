@@ -1,0 +1,17 @@
+<a
+  *ngIf="battle"
+  [color]="isActiveBattle ? 'primary' : null"
+  [ngClass]="{
+        'mat-stroked-button': isActiveBattle,
+        'mat-raised-button': isActiveBattle
+        }"
+  [routerLink]="['/battle', battle.battleId]"
+  mat-button
+>
+  <span class="battleDate">{{ battle.battleDate | date }}</span>
+  <span class="battleName">{{ battle.battleName }}</span>
+  <opt-faction-score [faction]="battle.factions[0]"></opt-faction-score>
+  :
+  <opt-faction-score [faction]="battle.factions[1]" reverse></opt-faction-score>
+
+</a>

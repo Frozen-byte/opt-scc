@@ -1,7 +1,8 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Battle } from '../battle/battle.types';
-import { BattleListService } from '../services/battle-list.service';
+import { BattleListService } from '../../services/battle-list.service';
 import { ActivatedRoute } from '@angular/router';
+import { Observable } from 'rxjs';
 
 export type DATE_ISO8601 = string;
 
@@ -18,9 +19,7 @@ export interface Faction {
 })
 export class CampaignComponent implements OnInit {
   public campaignName = 'Aufstand des Lumpenproletatiats';
-
-  public battles: Battle[] = [];
-  public currentBattle?: Battle;
+  public battles$: Observable<Battle[]>;
 
   @Input() campaignId: Battle['campaignId'];
 
@@ -30,17 +29,8 @@ export class CampaignComponent implements OnInit {
   ) {
     this.campaignId = route.snapshot.paramMap.get('campaignId') ?? '';
 
-    battleListService.battles$.subscribe((b) => (this.battles = b));
-    battleListService.currentBattle$.subscribe(
-      (cb) => (this.currentBattle = cb)
-    );
+    this.battles$ = battleListService.getBattles(this.campaignId);
   }
 
-  ngOnInit(): void {
-    this.battleListService.setCampaignId(this.campaignId);
-  }
-
-  isActive(battle: Battle): boolean {
-    return battle.battleId === this.currentBattle?.battleId;
-  }
+  ngOnInit(): void {}
 }

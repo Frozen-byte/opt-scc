@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { CampaignComponent } from './campaign/campaign.component';
-import { BattleComponent } from './battle/battle.component';
-import { SteamVerifyComponent } from './steam-verify/steam-verify.component';
+import { CampaignComponent } from './route-outlets/campaign/campaign.component';
+import { BattleComponent } from './route-outlets/battle/battle.component';
+import { SteamVerifyComponent } from './components/steam-verify/steam-verify.component';
 
 const routes: Routes = [
   { path: 'players', component: SteamVerifyComponent },

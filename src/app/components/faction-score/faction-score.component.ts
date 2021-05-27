@@ -1,5 +1,5 @@
 import { Component, HostBinding, Input, OnInit } from '@angular/core';
-import { BattleFaction } from '../battle/battle.types';
+import { BattleFaction } from '../../route-outlets/battle/battle.types';
 
 @Component({
   selector: 'opt-faction-score',

@@ -1,0 +1,26 @@
+<mat-toolbar class="mat-elevation-z2">
+  <p>Strategic Campaign Companion</p>
+  <nav mat-tab-nav-bar>
+    <a
+      #a="routerLinkActive"
+      [active]="a.isActive"
+      [routerLink]="['/players']"
+      mat-tab-link
+      routerLinkActive
+    >Spielerübersicht</a>
+    <a
+      #b="routerLinkActive"
+      [active]="b.isActive"
+      [routerLink]="['/campaign/adl']"
+      mat-tab-link
+      routerLinkActive
+    >Kampagnenübersicht</a>
+  </nav>
+  <p class="spacer"></p>
+  <p class="themeToggle">
+    <mat-icon>nightlight_round</mat-icon>
+    <mat-slide-toggle [(ngModel)]="themeService.alternateTheme"></mat-slide-toggle>
+    <mat-icon>lightbulb</mat-icon>
+  </p>
+
+</mat-toolbar>

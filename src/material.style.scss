@@ -253,7 +253,12 @@ $altTheme: (
 .material-icons {
   font-size: 24px;
   font-family: 'Material Icons Sharp', 'Material Icons';
+
   .mat-badge-content {
-    font-family: 'Karma';
+    font-family: 'Karma', 'serif';
   }
+}
+
+.mat-tab-nav-bar.mat-primary .mat-ink-bar {
+  background-color: var(--accent-lighter-color);
 }
