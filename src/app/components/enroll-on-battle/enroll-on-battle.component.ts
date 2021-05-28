@@ -1,16 +1,20 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
-import { AngularFireDatabase } from '@angular/fire/database';
-import { distinctUntilChanged, switchMap } from 'rxjs/operators';
-import { ActivatedRoute } from '@angular/router';
-import { isEqual } from 'lodash';
+import {Component, Input, OnInit} from '@angular/core';
+import {FormControl, FormGroup} from '@angular/forms';
+import {AngularFireDatabase} from '@angular/fire/database';
+import {distinctUntilChanged, switchMap} from 'rxjs/operators';
+import {ActivatedRoute} from '@angular/router';
+import {isEqual} from 'lodash';
 
 export interface Enrollment {
   battleId: string;
-  userId: string;
-  faction: string;
+  factionId: string;
   status: 'yes' | 'no' | 'maybe' | 'pending';
   comment: string;
+  user: {
+    userId: string;
+    displayName: string;
+    photoUrl: string;
+  };
 }
 
 @Component({

@@ -1,8 +1,29 @@
-<ng-container *ngIf="battleEnrollmentCounts$ | async as battleEnrollmentCounts">
-  {{battleEnrollmentCounts | json}}
-</ng-container>
-<ng-container *ngFor="let enrollment of battleEnrollment$ | async">
-  <p>
-    {{enrollment | json}}
-  </p>
-</ng-container>
+<div class="cardGrid">
+  <ng-container *ngIf="battleEnrollmentCounts$ | async as battleEnrollmentCounts">
+    <mat-card
+      *ngFor="let battleEnrollmentCount of battleEnrollmentCounts | keyvalue"
+      [style.grid-column]="factionIdColumn[battleEnrollmentCount.key]"
+      class="userCard mat-elevation-z4 {{battleEnrollmentCount.key}}"
+    >
+      <img alt="Fraktions Avatar" mat-card-image src="/assets/{{battleEnrollmentCount.key}}_flag_autoscaled.jpg"/>
+      <mat-card-header>
+        <mat-card-title>
+          {{battleEnrollmentCount.key}}
+          {{battleEnrollmentCount.value.yes}} (+{{battleEnrollmentCount.value.maybe}})
+        </mat-card-title>
+      </mat-card-header>
+
+    </mat-card>
+  </ng-container>
+  <mat-card-header
+    *ngFor="let enrollment of battleEnrollment$ | async"
+    [style.grid-column]="factionIdColumn[enrollment.factionId]"
+    class="userCard"
+  >
+    <img [src]="enrollment.user.photoUrl" alt="Spieler Avatar" mat-card-avatar/>
+    <mat-card-title [matBadge]="enrollment.factionId" class="faction-{{ enrollment.factionId}}" matBadgeSize="small">
+      {{enrollment.user.displayName}}
+    </mat-card-title>
+    <mat-card-subtitle>{{enrollment.status}}: {{enrollment.comment}}</mat-card-subtitle>
+  </mat-card-header>
+</div>

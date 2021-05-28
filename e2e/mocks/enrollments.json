@@ -1,16 +1,614 @@
 {
-  "1": {
-    "battleId": "adl-schlacht-1",
-    "steamID64": "56875189413685",
-    "faction": "SWORD",
-    "status": "yes",
-    "comment": "WRYYYYYYYYYYYYYYYYYYYY"
-  },
-  "2": {
-    "battleId": "adl-schlacht-1",
-    "steamID64": "56875189413685",
-    "faction": "SWORD",
-    "status": "yes",
-    "comment": "WRYYYYYYYYYYYYYYYYYYYY"
+  "adl-schlacht-1": {
+    "980": {
+      "comment": "Hrg254Im",
+      "factionId": "sword",
+      "status": "yes",
+      "user": {
+        "displayName": "lack suffer",
+        "userId": "980",
+        "photoUrl": "https://picsum.photos/seed/picsum980/64/64"
+      }
+    },
+    "374": {
+      "comment": "8tZaX",
+      "factionId": "sword",
+      "status": "maybe",
+      "user": {
+        "displayName": "friendly accustom",
+        "userId": "374",
+        "photoUrl": "https://picsum.photos/seed/picsum374/64/64"
+      }
+    },
+    "111": {
+      "comment": "JWHW6",
+      "factionId": "sword",
+      "status": "maybe",
+      "user": {
+        "displayName": "educator thus",
+        "userId": "111",
+        "photoUrl": "https://picsum.photos/seed/picsum111/64/64"
+      }
+    },
+    "397": {
+      "comment": "eAqpZ3G",
+      "factionId": "sword",
+      "status": "maybe",
+      "user": {
+        "displayName": "suck saddle",
+        "userId": "397",
+        "photoUrl": "https://picsum.photos/seed/picsum397/64/64"
+      }
+    },
+    "381": {
+      "comment": "1eDn6",
+      "factionId": "sword",
+      "status": "maybe",
+      "user": {
+        "displayName": "thorough village",
+        "userId": "381",
+        "photoUrl": "https://picsum.photos/seed/picsum381/64/64"
+      }
+    },
+    "458": {
+      "comment": "XNn",
+      "factionId": "sword",
+      "status": "maybe",
+      "user": {
+        "displayName": "miss kneel",
+        "userId": "458",
+        "photoUrl": "https://picsum.photos/seed/picsum458/64/64"
+      }
+    },
+    "382": {
+      "comment": "B7L",
+      "factionId": "sword",
+      "status": "maybe",
+      "user": {
+        "displayName": "valley priest",
+        "userId": "382",
+        "photoUrl": "https://picsum.photos/seed/picsum382/64/64"
+      }
+    },
+    "851": {
+      "comment": "LBH",
+      "factionId": "sword",
+      "status": "yes",
+      "user": {
+        "displayName": "cave hurry",
+        "userId": "851",
+        "photoUrl": "https://picsum.photos/seed/picsum851/64/64"
+      }
+    },
+    "255": {
+      "comment": "Gzy7y0",
+      "factionId": "sword",
+      "status": "yes",
+      "user": {
+        "displayName": "ear popular",
+        "userId": "255",
+        "photoUrl": "https://picsum.photos/seed/picsum255/64/64"
+      }
+    },
+    "432": {
+      "comment": "2xxX3qpC",
+      "factionId": "sword",
+      "status": "yes",
+      "user": {
+        "displayName": "fire wet",
+        "userId": "432",
+        "photoUrl": "https://picsum.photos/seed/picsum432/64/64"
+      }
+    },
+    "776": {
+      "comment": "K3xz3u4",
+      "factionId": "sword",
+      "status": "yes",
+      "user": {
+        "displayName": "dinner practice",
+        "userId": "776",
+        "photoUrl": "https://picsum.photos/seed/picsum776/64/64"
+      }
+    },
+    "585": {
+      "comment": "7IaDFutR",
+      "factionId": "sword",
+      "status": "yes",
+      "user": {
+        "displayName": "car possible",
+        "userId": "585",
+        "photoUrl": "https://picsum.photos/seed/picsum585/64/64"
+      }
+    },
+    "946": {
+      "comment": "v62g2",
+      "factionId": "sword",
+      "status": "yes",
+      "user": {
+        "displayName": "party card",
+        "userId": "946",
+        "photoUrl": "https://picsum.photos/seed/picsum946/64/64"
+      }
+    },
+    "519": {
+      "comment": "TB4YS5",
+      "factionId": "sword",
+      "status": "yes",
+      "user": {
+        "displayName": "mere rivalry",
+        "userId": "519",
+        "photoUrl": "https://picsum.photos/seed/picsum519/64/64"
+      }
+    },
+    "547": {
+      "comment": "VG4WdLLN",
+      "factionId": "sword",
+      "status": "yes",
+      "user": {
+        "displayName": "notebook cat",
+        "userId": "547",
+        "photoUrl": "https://picsum.photos/seed/picsum547/64/64"
+      }
+    },
+    "749": {
+      "comment": "hg7r",
+      "factionId": "sword",
+      "status": "yes",
+      "user": {
+        "displayName": "child nail",
+        "userId": "749",
+        "photoUrl": "https://picsum.photos/seed/picsum749/64/64"
+      }
+    },
+    "701": {
+      "comment": "9oh",
+      "factionId": "sword",
+      "status": "yes",
+      "user": {
+        "displayName": "audience office",
+        "userId": "701",
+        "photoUrl": "https://picsum.photos/seed/picsum701/64/64"
+      }
+    },
+    "61": {
+      "comment": "95sCxB",
+      "factionId": "sword",
+      "status": "yes",
+      "user": {
+        "displayName": "although pity",
+        "userId": "61",
+        "photoUrl": "https://picsum.photos/seed/picsum61/64/64"
+      }
+    },
+    "572": {
+      "comment": "FQFQ",
+      "factionId": "sword",
+      "status": "yes",
+      "user": {
+        "displayName": "deaf drive",
+        "userId": "572",
+        "photoUrl": "https://picsum.photos/seed/picsum572/64/64"
+      }
+    },
+    "170": {
+      "comment": "gmZ0l54t",
+      "factionId": "sword",
+      "status": "yes",
+      "user": {
+        "displayName": "succeed follow",
+        "userId": "170",
+        "photoUrl": "https://picsum.photos/seed/picsum170/64/64"
+      }
+    },
+    "402": {
+      "comment": "wo84",
+      "factionId": "sword",
+      "status": "yes",
+      "user": {
+        "displayName": "complain argue",
+        "userId": "402",
+        "photoUrl": "https://picsum.photos/seed/picsum402/64/64"
+      }
+    },
+    "9": {
+      "comment": "7eRyuy5",
+      "factionId": "sword",
+      "status": "yes",
+      "user": {
+        "displayName": "exact inward",
+        "userId": "9",
+        "photoUrl": "https://picsum.photos/seed/picsum9/64/64"
+      }
+    },
+    "269": {
+      "comment": "mOTuJkCB",
+      "factionId": "sword",
+      "status": "yes",
+      "user": {
+        "displayName": "virtue health",
+        "userId": "269",
+        "photoUrl": "https://picsum.photos/seed/picsum269/64/64"
+      }
+    },
+    "893": {
+      "comment": "OZ6ufG3k",
+      "factionId": "sword",
+      "status": "yes",
+      "user": {
+        "displayName": "grow compare",
+        "userId": "893",
+        "photoUrl": "https://picsum.photos/seed/picsum893/64/64"
+      }
+    },
+    "358": {
+      "comment": "Qkvn8guz",
+      "factionId": "sword",
+      "status": "yes",
+      "user": {
+        "displayName": "root wash",
+        "userId": "358",
+        "photoUrl": "https://picsum.photos/seed/picsum358/64/64"
+      }
+    },
+    "835": {
+      "comment": "2359m2",
+      "factionId": "sword",
+      "status": "yes",
+      "user": {
+        "displayName": "expense cross",
+        "userId": "835",
+        "photoUrl": "https://picsum.photos/seed/picsum835/64/64"
+      }
+    },
+    "818": {
+      "comment": "m6z",
+      "factionId": "arf",
+      "status": "maybe",
+      "user": {
+        "displayName": "jealous relative",
+        "userId": "818",
+        "photoUrl": "https://picsum.photos/seed/picsum818/64/64"
+      }
+    },
+    "361": {
+      "comment": "91UCW",
+      "factionId": "arf",
+      "status": "maybe",
+      "user": {
+        "displayName": "pig river",
+        "userId": "361",
+        "photoUrl": "https://picsum.photos/seed/picsum361/64/64"
+      }
+    },
+    "609": {
+      "comment": "65ax584",
+      "factionId": "arf",
+      "status": "maybe",
+      "user": {
+        "displayName": "engine favor",
+        "userId": "609",
+        "photoUrl": "https://picsum.photos/seed/picsum609/64/64"
+      }
+    },
+    "216": {
+      "comment": "CXwgUTuP",
+      "factionId": "arf",
+      "status": "maybe",
+      "user": {
+        "displayName": "person nose",
+        "userId": "216",
+        "photoUrl": "https://picsum.photos/seed/picsum216/64/64"
+      }
+    },
+    "442": {
+      "comment": "YrD5",
+      "factionId": "arf",
+      "status": "maybe",
+      "user": {
+        "displayName": "woolen sure",
+        "userId": "442",
+        "photoUrl": "https://picsum.photos/seed/picsum442/64/64"
+      }
+    },
+    "419": {
+      "comment": "YFCw1YL",
+      "factionId": "arf",
+      "status": "maybe",
+      "user": {
+        "displayName": "noble promise",
+        "userId": "419",
+        "photoUrl": "https://picsum.photos/seed/picsum419/64/64"
+      }
+    },
+    "297": {
+      "comment": "x9RM8J6X",
+      "factionId": "arf",
+      "status": "maybe",
+      "user": {
+        "displayName": "fall noble",
+        "userId": "297",
+        "photoUrl": "https://picsum.photos/seed/picsum297/64/64"
+      }
+    },
+    "929": {
+      "comment": "n1m",
+      "factionId": "arf",
+      "status": "no",
+      "user": {
+        "displayName": "absent tight",
+        "userId": "929",
+        "photoUrl": "https://picsum.photos/seed/picsum929/64/64"
+      }
+    },
+    "415": {
+      "comment": "Kk6UK0s",
+      "factionId": "arf",
+      "status": "no",
+      "user": {
+        "displayName": "grain slow",
+        "userId": "415",
+        "photoUrl": "https://picsum.photos/seed/picsum415/64/64"
+      }
+    },
+    "473": {
+      "comment": "D1mn4C",
+      "factionId": "arf",
+      "status": "no",
+      "user": {
+        "displayName": "wood charge",
+        "userId": "473",
+        "photoUrl": "https://picsum.photos/seed/picsum473/64/64"
+      }
+    },
+    "852": {
+      "comment": "rxF30cZu",
+      "factionId": "arf",
+      "status": "no",
+      "user": {
+        "displayName": "upright gay",
+        "userId": "852",
+        "photoUrl": "https://picsum.photos/seed/picsum852/64/64"
+      }
+    },
+    "653": {
+      "comment": "w6s2URp",
+      "factionId": "arf",
+      "status": "no",
+      "user": {
+        "displayName": "grave basin",
+        "userId": "653",
+        "photoUrl": "https://picsum.photos/seed/picsum653/64/64"
+      }
+    },
+    "396": {
+      "comment": "5LbPi",
+      "factionId": "arf",
+      "status": "no",
+      "user": {
+        "displayName": "wonder tune",
+        "userId": "396",
+        "photoUrl": "https://picsum.photos/seed/picsum396/64/64"
+      }
+    },
+    "332": {
+      "comment": "HQ0TB",
+      "factionId": "arf",
+      "status": "no",
+      "user": {
+        "displayName": "belt doubt",
+        "userId": "332",
+        "photoUrl": "https://picsum.photos/seed/picsum332/64/64"
+      }
+    },
+    "403": {
+      "comment": "4syhAr42",
+      "factionId": "arf",
+      "status": "no",
+      "user": {
+        "displayName": "ice take",
+        "userId": "403",
+        "photoUrl": "https://picsum.photos/seed/picsum403/64/64"
+      }
+    },
+    "679": {
+      "comment": "sxN",
+      "factionId": "arf",
+      "status": "no",
+      "user": {
+        "displayName": "persuade canal",
+        "userId": "679",
+        "photoUrl": "https://picsum.photos/seed/picsum679/64/64"
+      }
+    },
+    "953": {
+      "comment": "RN4511",
+      "factionId": "arf",
+      "status": "no",
+      "user": {
+        "displayName": "afford minister",
+        "userId": "953",
+        "photoUrl": "https://picsum.photos/seed/picsum953/64/64"
+      }
+    },
+    "376": {
+      "comment": "UEs",
+      "factionId": "arf",
+      "status": "no",
+      "user": {
+        "displayName": "amongst coffee",
+        "userId": "376",
+        "photoUrl": "https://picsum.photos/seed/picsum376/64/64"
+      }
+    },
+    "592": {
+      "comment": "fKfY1J",
+      "factionId": "arf",
+      "status": "no",
+      "user": {
+        "displayName": "wealth tap",
+        "userId": "592",
+        "photoUrl": "https://picsum.photos/seed/picsum592/64/64"
+      }
+    },
+    "535": {
+      "comment": "6CDBA",
+      "factionId": "arf",
+      "status": "no",
+      "user": {
+        "displayName": "into yes",
+        "userId": "535",
+        "photoUrl": "https://picsum.photos/seed/picsum535/64/64"
+      }
+    },
+    "238": {
+      "comment": "L3WJV0",
+      "factionId": "arf",
+      "status": "no",
+      "user": {
+        "displayName": "high gun",
+        "userId": "238",
+        "photoUrl": "https://picsum.photos/seed/picsum238/64/64"
+      }
+    },
+    "874": {
+      "comment": "c3K",
+      "factionId": "arf",
+      "status": "no",
+      "user": {
+        "displayName": "true material",
+        "userId": "874",
+        "photoUrl": "https://picsum.photos/seed/picsum874/64/64"
+      }
+    },
+    "497": {
+      "comment": "4zE",
+      "factionId": "arf",
+      "status": "no",
+      "user": {
+        "displayName": "drag almost",
+        "userId": "497",
+        "photoUrl": "https://picsum.photos/seed/picsum497/64/64"
+      }
+    },
+    "617": {
+      "comment": "5G0d",
+      "factionId": "arf",
+      "status": "no",
+      "user": {
+        "displayName": "lazy relieve",
+        "userId": "617",
+        "photoUrl": "https://picsum.photos/seed/picsum617/64/64"
+      }
+    },
+    "759": {
+      "comment": "Ciu0cYm",
+      "factionId": "arf",
+      "status": "no",
+      "user": {
+        "displayName": "grain family",
+        "userId": "759",
+        "photoUrl": "https://picsum.photos/seed/picsum759/64/64"
+      }
+    },
+    "405": {
+      "comment": "5n6T",
+      "factionId": "arf",
+      "status": "no",
+      "user": {
+        "displayName": "school measure",
+        "userId": "405",
+        "photoUrl": "https://picsum.photos/seed/picsum405/64/64"
+      }
+    },
+    "555": {
+      "comment": "2pc660iC",
+      "factionId": "arf",
+      "status": "no",
+      "user": {
+        "displayName": "growth gentle",
+        "userId": "555",
+        "photoUrl": "https://picsum.photos/seed/picsum555/64/64"
+      }
+    },
+    "982": {
+      "comment": "l9F6B",
+      "factionId": "arf",
+      "status": "no",
+      "user": {
+        "displayName": "wage boundary",
+        "userId": "982",
+        "photoUrl": "https://picsum.photos/seed/picsum982/64/64"
+      }
+    },
+    "512": {
+      "comment": "8fet9Q",
+      "factionId": "arf",
+      "status": "no",
+      "user": {
+        "displayName": "heap scent",
+        "userId": "512",
+        "photoUrl": "https://picsum.photos/seed/picsum512/64/64"
+      }
+    },
+    "247": {
+      "comment": "COul1",
+      "factionId": "arf",
+      "status": "no",
+      "user": {
+        "displayName": "anger request",
+        "userId": "247",
+        "photoUrl": "https://picsum.photos/seed/picsum247/64/64"
+      }
+    },
+    "505": {
+      "comment": "0r0p",
+      "factionId": "arf",
+      "status": "no",
+      "user": {
+        "displayName": "citizen class",
+        "userId": "505",
+        "photoUrl": "https://picsum.photos/seed/picsum505/64/64"
+      }
+    },
+    "957": {
+      "comment": "EOrYXO5",
+      "factionId": "arf",
+      "status": "no",
+      "user": {
+        "displayName": "space invite",
+        "userId": "957",
+        "photoUrl": "https://picsum.photos/seed/picsum957/64/64"
+      }
+    },
+    "545": {
+      "comment": "GrZBX",
+      "factionId": "arf",
+      "status": "maybe",
+      "user": {
+        "displayName": "son day",
+        "userId": "545",
+        "photoUrl": "https://picsum.photos/seed/picsum545/64/64"
+      }
+    },
+    "911": {
+      "comment": "04i0q",
+      "factionId": "arf",
+      "status": "maybe",
+      "user": {
+        "displayName": "together moderate",
+        "userId": "911",
+        "photoUrl": "https://picsum.photos/seed/picsum911/64/64"
+      }
+    },
+    "76561198052374323": {
+      "comment": "sdfasd",
+      "factionId": "sword",
+      "status": "yes",
+      "user": {
+        "displayName": "Frozen_byte",
+        "userId": "76561198052374323",
+        "photoUrl": "https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/avatars/ad/ad31fda82eda3600385bc00cc4551614b3e02bf9.jpg"
+      }
+    }
   }
 }

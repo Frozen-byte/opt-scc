@@ -1,8 +1,9 @@
 @import "material.style";
 
-
-$arf-color: rgb(9, 90, 172);
-$sword-color: rgb(255, 95, 0);
+body {
+  --arf-color: rgb(9, 90, 172);
+  --sword-color: rgb(255, 95, 0);
+}
 
 html, body {
   height: 100%;
@@ -11,10 +12,10 @@ html, body {
 
 .faction {
   &-arf {
-    color: $arf-color;
+    color: var(--arf-color);
   }
 
   &-sword {
-    color: $sword-color;
+    color: var(--sword-color);
   }
 }

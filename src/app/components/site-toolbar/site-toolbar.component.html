@@ -1,26 +1,32 @@
-<mat-toolbar class="mat-elevation-z2">
-  <p>Strategic Campaign Companion</p>
-  <nav mat-tab-nav-bar>
-    <a
-      #a="routerLinkActive"
-      [active]="a.isActive"
-      [routerLink]="['/players']"
-      mat-tab-link
-      routerLinkActive
-    >Spielerübersicht</a>
-    <a
-      #b="routerLinkActive"
-      [active]="b.isActive"
-      [routerLink]="['/campaign/adl']"
-      mat-tab-link
-      routerLinkActive
-    >Kampagnenübersicht</a>
-  </nav>
-  <p class="spacer"></p>
-  <p class="themeToggle">
-    <mat-icon>nightlight_round</mat-icon>
-    <mat-slide-toggle [(ngModel)]="themeService.alternateTheme"></mat-slide-toggle>
-    <mat-icon>lightbulb</mat-icon>
-  </p>
-
+<mat-toolbar class="mat-elevation-z3">
+  <img alt="OPT4-Logo" class="opt4-logo" src="/assets/opt-logo-full.svg"/>
+  <ng-template #desktop>
+    <p>Strategic Campaign Companion</p>
+    <nav mat-tab-nav-bar>
+      <a
+        #a="routerLinkActive"
+        [active]="a.isActive"
+        [routerLink]="['/players']"
+        mat-tab-link
+        routerLinkActive
+      >Spielerübersicht</a>
+      <a
+        #b="routerLinkActive"
+        [active]="b.isActive"
+        [routerLink]="['/campaign/adl']"
+        mat-tab-link
+        routerLinkActive
+      >Kampagnenübersicht</a>
+    </nav>
+    <p class="spacer"></p>
+    <p class="login">
+      <opt-steam-sign-in></opt-steam-sign-in>
+    </p>
+    <p class="themeToggle">
+      <mat-icon>nightlight_round</mat-icon>
+      <mat-slide-toggle [(ngModel)]="themeService.alternateTheme"></mat-slide-toggle>
+      <mat-icon>lightbulb</mat-icon>
+    </p>
+  </ng-template>
+  <ng-container *ngTemplateOutlet="desktop"></ng-container>
 </mat-toolbar>
