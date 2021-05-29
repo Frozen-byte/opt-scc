@@ -11,7 +11,7 @@ import { BattleListService } from '../../services/battle-list.service';
 @Component({
   selector: 'opt-battle',
   templateUrl: './battle.component.html',
-  styleUrls: ['./battle.component.css'],
+  styleUrls: ['./battle.component.scss'],
 })
 export class BattleComponent implements OnInit {
   public battle$: Observable<Battle | null>;

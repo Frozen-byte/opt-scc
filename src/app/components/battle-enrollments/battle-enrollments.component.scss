@@ -1,9 +1,3 @@
-.mat-badge-small .mat-badge-content {
-  width: min-content;
-  padding: 0 0.6rem;
-  border-radius: 8px;
-}
-
 .mat-card {
   border-bottom: 0.13rem solid transparent;
 
@@ -14,22 +8,28 @@
   &.sword {
     border-bottom-color: var(--sword-color);
   }
-}
 
-.mat-card-image {
-  max-height: 120px;
-  object-fit: cover;
-}
+  .mat-card-image {
+    max-height: 120px;
+    object-fit: cover;
+  }
 
-.factionHeader {
-  align-items: flex-end;
-}
+  .mat-card-content {
+    display: flex;
+    flex-wrap: wrap;
 
-.mat-card-content {
-  display: flex;
-  flex-wrap: wrap;
+    .playerCard {
+      margin: 0.33rem;
 
-  .playerCard {
-    margin: 0.33rem;
+      .mat-badge-small .mat-badge-content {
+        width: min-content;
+        padding: 0 0.6rem;
+        border-radius: 8px;
+      }
+    }
+  }
+
+  .factionCard.mat-card-header {
+    cursor: pointer;
   }
 }

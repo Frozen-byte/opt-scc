@@ -44,7 +44,6 @@ export class BattleEnrollmentsComponent
       _changeDetectorRef,
       _expansionDispatcher
     );
-    this.expanded = true;
   }
 
   getExpandedState(): MatExpansionPanelState {
@@ -52,6 +51,8 @@ export class BattleEnrollmentsComponent
   }
 
   ngOnInit(): void {
+    this.open();
+
     this.enrollmentsService
       .getEnrollments(this.battleId, this.factionId)
       .pipe(untilDestroyed(this))

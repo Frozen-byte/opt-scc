@@ -4,7 +4,7 @@ import { ThemeService } from './services/theme.service';
 @Component({
   selector: 'opt-root',
   templateUrl: './opt.component.html',
-  styleUrls: ['./opt.component.css'],
+  styleUrls: ['./opt.component.scss'],
 })
 export class OptComponent {
   constructor(public themeService: ThemeService) {}

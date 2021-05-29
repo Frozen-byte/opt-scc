@@ -4,17 +4,20 @@
     mat-card-image
     src="/assets/{{ factionId }}_flag_autoscaled.jpg"
   />
-  <mat-card-header class="factionHeader">
+  <mat-card-header (click)="toggle()" class="factionCard">
     <mat-card-title>
-      {{ factionId }}
-      {{ counts.yes }} (+{{ counts.maybe }})
+      <span>{{ factionId }} </span>
+      <span matTooltip="yes">{{ counts.yes }} </span>
+      <span matTooltip="maybe">(+{{ counts.maybe }})</span>
     </mat-card-title>
-    <button mat-icon-button>
+    <span class="spacer"></span>
+    <button disableRipple mat-icon-button>
       <mat-icon
         [@indicatorRotate]="getExpandedState()"
         class="expansion-indicator"
-        >{{ expanded ? "expand_more" : "expand_less" }}</mat-icon
       >
+        expand_more
+      </mat-icon>
     </button>
   </mat-card-header>
 
@@ -34,9 +37,9 @@
       >
         {{ enrollment.displayName }}
       </mat-card-title>
-      <mat-card-subtitle
-        >{{ enrollment.status }}: {{ enrollment.comment }}</mat-card-subtitle
-      >
+      <mat-card-subtitle>
+        {{ enrollment.status }}: {{ enrollment.comment }}
+      </mat-card-subtitle>
     </mat-card-header>
   </mat-card-content>
 </mat-card>

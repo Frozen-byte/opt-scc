@@ -1,22 +1,25 @@
 <ng-container *ngIf="battle$ | async as battle">
-  <h1>{{ battle.campaignName }}</h1>
-  <a
-    href="https://www.figma.com/file/eEBV0TBkbzKngKqyvCbHZh/OPT4---Livonia-(Copy)"
-  >
-    Aktuelle Kampagnen Karte
-  </a>
-  <h2>{{ battle.battleName }}</h2>
-  Schlachttag: {{ battle.battleDate | date }}<br />
-  Briefing: {{ battle.battleDate | date: "shortTime" }} Uhr<br />
-  Spielzeit: {{ battle.battleDuration | duration }} Minuten
+  <section>
+    <h2>{{ battle.campaignName }}</h2>
+    <a
+      href="https://www.figma.com/file/eEBV0TBkbzKngKqyvCbHZh/OPT4---Livonia-(Copy)"
+    >
+      Aktuelle Kampagnen Karte
+    </a>
+    <h3>{{ battle.battleName }}</h3>
+    Schlachttag: {{ battle.battleDate | date }}<br />
+    Briefing: {{ battle.battleDate | date: "shortTime" }} Uhr<br />
+    Spielzeit: {{ battle.battleDuration | duration }} Minuten
+  </section>
 
-  <h3>Anmeldung</h3>
-  <p *ngFor="let faction of battle.factions">
+  <section class="enrollments">
+    <h3>Anmeldung</h3>
     <opt-battle-enrollments
+      *ngFor="let faction of battle.factions"
       [battleId]="battle.battleId"
       [factionId]="faction.factionId"
     ></opt-battle-enrollments>
-  </p>
+  </section>
 
   <ng-container *ngIf="battle.factions">
     <h3>Wahl der Seite</h3>
