@@ -1,10 +1,10 @@
-import {Component, OnInit} from '@angular/core';
-import {ThemeService} from '../../services/theme.service';
-import {MatBottomSheet} from '@angular/material/bottom-sheet';
-import {SteamSignInComponent} from '../steam-sign-in/steam-sign-in.component';
-import {AngularFireAuth} from '@angular/fire/auth';
-import {takeWhile, tap} from 'rxjs/operators';
-import {UntilDestroy, untilDestroyed} from '@ngneat/until-destroy';
+import { Component, OnInit } from '@angular/core';
+import { ThemeService } from '../../services/theme.service';
+import { MatBottomSheet } from '@angular/material/bottom-sheet';
+import { SteamSignInComponent } from '../steam-sign-in/steam-sign-in.component';
+import { AngularFireAuth } from '@angular/fire/auth';
+import { takeWhile, tap } from 'rxjs/operators';
+import { UntilDestroy, untilDestroyed } from '@ngneat/until-destroy';
 
 @UntilDestroy()
 @Component({
@@ -19,18 +19,19 @@ export class SiteToolbarComponent implements OnInit {
     public themeService: ThemeService,
     public bottomSheet: MatBottomSheet,
     public fireAuth: AngularFireAuth
-  ) {
-  }
+  ) {}
 
   ngOnInit(): void {
-    this.fireAuth.authState.pipe(
-      takeWhile(() => !this.authDismissed),
-      tap((user) => {
-        if (!user) {
-          this.bottomSheet.open(SteamSignInComponent, {hasBackdrop: false});
-        }
-      }),
-      untilDestroyed(this),
-    ).subscribe();
+    this.fireAuth.authState
+      .pipe(
+        takeWhile(() => !this.authDismissed),
+        tap((user) => {
+          if (!user) {
+            this.bottomSheet.open(SteamSignInComponent, { hasBackdrop: false });
+          }
+        }),
+        untilDestroyed(this)
+      )
+      .subscribe();
   }
 }

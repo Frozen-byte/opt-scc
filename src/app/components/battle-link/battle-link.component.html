@@ -2,9 +2,9 @@
   *ngIf="battle"
   [color]="isActiveBattle ? 'primary' : null"
   [ngClass]="{
-        'mat-stroked-button': isActiveBattle,
-        'mat-raised-button': isActiveBattle
-        }"
+    'mat-stroked-button': isActiveBattle,
+    'mat-raised-button': isActiveBattle
+  }"
   [routerLink]="['/battle', battle.battleId]"
   mat-button
 >
@@ -13,5 +13,4 @@
   <opt-faction-score [faction]="battle.factions[0]"></opt-faction-score>
   :
   <opt-faction-score [faction]="battle.factions[1]" reverse></opt-faction-score>
-
 </a>

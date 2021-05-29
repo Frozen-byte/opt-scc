@@ -1,12 +1,12 @@
-import {Component, OnInit} from '@angular/core';
-import {ActivatedRoute} from '@angular/router';
-import {distinctUntilChanged, pluck, switchMap} from 'rxjs/operators';
-import {Observable} from 'rxjs';
-import {AngularFireAuth} from '@angular/fire/auth';
-import {MatDialog} from '@angular/material/dialog';
-import {BattleSectorSelectDialogComponent} from '../../components/battle-sector-select-dialog/battle-sector-select-dialog.component';
-import {Battle} from './battle.types';
-import {BattleListService} from '../../services/battle-list.service';
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { distinctUntilChanged, pluck, switchMap } from 'rxjs/operators';
+import { Observable } from 'rxjs';
+import { AngularFireAuth } from '@angular/fire/auth';
+import { MatDialog } from '@angular/material/dialog';
+import { BattleSectorSelectDialogComponent } from '../../components/battle-sector-select-dialog/battle-sector-select-dialog.component';
+import { Battle } from './battle.types';
+import { BattleListService } from '../../services/battle-list.service';
 
 @Component({
   selector: 'opt-battle',

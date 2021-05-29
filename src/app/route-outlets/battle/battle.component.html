@@ -11,11 +11,12 @@
   Spielzeit: {{ battle.battleDuration | duration }} Minuten
 
   <h3>Anmeldung</h3>
-  <opt-battle-enrollments [battleId]="battle.battleId"></opt-battle-enrollments>
-  <opt-enroll-on-battle
-    [battleId]="battle.battleId"
-    [userId]="userId"
-  ></opt-enroll-on-battle>
+  <p *ngFor="let faction of battle.factions">
+    <opt-battle-enrollments
+      [battleId]="battle.battleId"
+      [factionId]="faction.factionId"
+    ></opt-battle-enrollments>
+  </p>
 
   <ng-container *ngIf="battle.factions">
     <h3>Wahl der Seite</h3>
@@ -31,7 +32,10 @@
   </ng-container>
 
   <button class="mat-elevation-z1" mat-button matTooltip="Sektorenkarte öffnen">
-    <opt-sector-select (click)="openSectorSelectDialog()" [disabled]="true"></opt-sector-select>
+    <opt-sector-select
+      (click)="openSectorSelectDialog()"
+      [disabled]="true"
+    ></opt-sector-select>
   </button>
 
   <h3>Verbrannte Sektoren</h3>
@@ -43,7 +47,9 @@
   <h2>Technik &amp; Co.</h2>
   <ul>
     <li>
-      <a href="https://opt4.net/forum/index.php?thread/4851-fairplay-leitfaden/">
+      <a
+        href="https://opt4.net/forum/index.php?thread/4851-fairplay-leitfaden/"
+      >
         Fairplay Leitfaden
       </a>
     </li>
@@ -59,12 +65,16 @@
       </a>
     </li>
     <li>
-      <a href="https://opt4.net/forum/index.php?thread/1214-unsere-aktuellen-server-versionen/">
+      <a
+        href="https://opt4.net/forum/index.php?thread/1214-unsere-aktuellen-server-versionen/"
+      >
         "Unsere aktuellen Server-Versionen"
       </a>
     </li>
     <li>
-      <a href="https://docs.google.com/document/d/1CxqtbaIv9ZjSiWZbnSsAOiK3QQ9yl2W4xie6wabF0aI">
+      <a
+        href="https://docs.google.com/document/d/1CxqtbaIv9ZjSiWZbnSsAOiK3QQ9yl2W4xie6wabF0aI"
+      >
         Aktuelles Kampagnendokument
       </a>
     </li>

@@ -15,13 +15,13 @@
       [matTooltip]="sector.name"
       [matTooltipDisabled]="disabled"
       [ngClass]="{
-          sector: true,
-          red: sector.color === 'red',
-          green: sector.color === 'green',
-          selected:  sector.selected || sector.id === selectedSector,
-          disabledSector:  sector.disabled,
-          disabledHover: disabled
-        }"
+        sector: true,
+        red: sector.color === 'red',
+        green: sector.color === 'green',
+        selected: sector.selected || sector.id === selectedSector,
+        disabledSector: sector.disabled,
+        disabledHover: disabled
+      }"
     ></path>
   </ng-container>
 </svg>
