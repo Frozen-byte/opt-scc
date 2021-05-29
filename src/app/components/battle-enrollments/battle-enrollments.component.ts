@@ -1,28 +1,17 @@
-import { ChangeDetectorRef, Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Enrollment } from '../enroll-on-battle/enroll-on-battle.component';
 import { UntilDestroy, untilDestroyed } from '@ngneat/until-destroy';
-import { CdkAccordionItem } from '@angular/cdk/accordion';
-import { UniqueSelectionDispatcher } from '@angular/cdk/collections';
-import {
-  matExpansionAnimations,
-  MatExpansionPanelState,
-} from '@angular/material/expansion';
 import { EnrollmentsService } from '../../services/enrollments.service';
+import { matExpansionAnimations } from '@angular/material/expansion';
 
 @UntilDestroy()
 @Component({
   selector: 'opt-battle-enrollments',
   templateUrl: './battle-enrollments.component.html',
   styleUrls: ['./battle-enrollments.component.scss'],
-  animations: [
-    matExpansionAnimations.bodyExpansion,
-    matExpansionAnimations.indicatorRotate,
-  ],
+  animations: [matExpansionAnimations.indicatorRotate],
 })
-export class BattleEnrollmentsComponent
-  extends CdkAccordionItem
-  implements OnInit
-{
+export class BattleEnrollmentsComponent implements OnInit {
   @Input() battleId = '';
   @Input() factionId = '';
   public counts: Record<Enrollment['status'], number> = {
@@ -33,26 +22,9 @@ export class BattleEnrollmentsComponent
   };
   public battleEnrollments: Enrollment[] = [];
 
-  constructor(
-    _changeDetectorRef: ChangeDetectorRef,
-    _expansionDispatcher: UniqueSelectionDispatcher,
-    public enrollmentsService: EnrollmentsService
-  ) {
-    super(
-      // @ts-ignore
-      null,
-      _changeDetectorRef,
-      _expansionDispatcher
-    );
-  }
-
-  getExpandedState(): MatExpansionPanelState {
-    return this.expanded ? 'expanded' : 'collapsed';
-  }
+  constructor(public enrollmentsService: EnrollmentsService) {}
 
   ngOnInit(): void {
-    this.open();
-
     this.enrollmentsService
       .getEnrollments(this.battleId, this.factionId)
       .pipe(untilDestroyed(this))
