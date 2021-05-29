@@ -1,35 +1,54 @@
-.mat-card {
-  border-bottom: 0.13rem solid transparent;
+.mat-expansion-panel-header {
+  flex-direction: column;
+  align-items: flex-end;
+  padding: 0;
 
-  &.arf {
-    border-bottom-color: var(--arf-color);
-  }
-
-  &.sword {
-    border-bottom-color: var(--sword-color);
-  }
-
-  .mat-card-image {
-    max-height: 120px;
-    object-fit: cover;
-  }
-
-  .mat-card-content {
+  .header-title {
     display: flex;
-    flex-wrap: wrap;
-
-    .playerCard {
-      margin: 0.33rem;
-
-      .mat-badge-small .mat-badge-content {
-        width: min-content;
-        padding: 0 0.6rem;
-        border-radius: 8px;
-      }
-    }
+    margin: 8px 16px;
   }
+}
 
-  .factionCard.mat-card-header {
-    cursor: pointer;
+.factionImage {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+}
+
+.playerCards {
+  display: flex;
+  flex-wrap: wrap;
+
+  .playerCard {
+    margin: 0.33rem;
+
+    display: grid;
+    grid-template-areas:
+      "avatar avatar title    title    title    title"
+      "avatar avatar subtitle subtitle subtitle subtitle";
+
+    .avatar {
+      margin: 8px;
+      border-radius: 50%;
+      grid-area: avatar;
+      height: 32px;
+    }
+
+    .title {
+      margin: 0;
+      grid-area: title;
+    }
+
+    .subtitle {
+      margin: 0;
+      grid-area: subtitle;
+      color: var(--text-primary-darker-color);
+    }
+
+    .mat-badge-small .mat-badge-content {
+      width: min-content;
+      padding: 0 0.6rem;
+      border-radius: 8px;
+    }
   }
 }

@@ -34,6 +34,7 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatBottomSheetModule } from '@angular/material/bottom-sheet';
 import { MatBadgeModule } from '@angular/material/badge';
 import { CdkAccordionModule } from '@angular/cdk/accordion';
+import { MatExpansionModule } from '@angular/material/expansion';
 
 @NgModule({
   declarations: [
@@ -77,6 +78,7 @@ import { CdkAccordionModule } from '@angular/cdk/accordion';
     MatBottomSheetModule,
     MatBadgeModule,
     CdkAccordionModule,
+    MatExpansionModule,
   ],
   providers: [],
   bootstrap: [OptComponent],

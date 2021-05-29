@@ -1,45 +1,44 @@
-<mat-card>
-  <img
-    alt="Fraktions Avatar"
-    mat-card-image
-    src="/assets/{{ factionId }}_flag_autoscaled.jpg"
-  />
-  <mat-card-header (click)="toggle()" class="factionCard">
-    <mat-card-title>
-      <span>{{ factionId }} </span>
-      <span matTooltip="yes">{{ counts.yes }} </span>
-      <span matTooltip="maybe">(+{{ counts.maybe }})</span>
-    </mat-card-title>
-    <span class="spacer"></span>
-    <button disableRipple mat-icon-button>
-      <mat-icon
-        [@indicatorRotate]="getExpandedState()"
-        class="expansion-indicator"
-      >
-        expand_more
-      </mat-icon>
-    </button>
-  </mat-card-header>
-
-  <mat-card-content
-    [@bodyExpansion]="getExpandedState()"
-    [class.expanded]="expandedChange | async"
-  >
-    <mat-card-header
-      *ngFor="let enrollment of battleEnrollments"
-      class="playerCard"
-    >
-      <img [src]="enrollment.photoUrl" alt="Spieler Avatar" mat-card-avatar />
-      <mat-card-title
+<mat-expansion-panel #expansionPanel hideToggle>
+  <mat-expansion-panel-header collapsedHeight="auto" expandedHeight="auto">
+    <div>
+      <!-- keep this div for correct wrapping -->
+      <img
+        alt="Fraktions Avatar"
+        class="factionImage mat-elevation-z1"
+        src="/assets/{{ factionId }}_flag_autoscaled.jpg"
+      />
+      <p class="header-title mat-display-1">
+        <span>{{ factionId }}</span
+        >&nbsp; <span matTooltip="yes">{{ counts.yes }}</span
+      >&nbsp;
+        <span matTooltip="maybe">(+{{ counts.maybe }})</span>
+        <span class="spacer"></span>
+        <button disableRipple mat-icon-button>
+          <mat-icon [@indicatorRotate]="expansionPanel._getExpandedState()"
+          >expand_more
+          </mat-icon
+          >
+        </button>
+      </p>
+    </div>
+  </mat-expansion-panel-header>
+  <div class="playerCards">
+    <div *ngFor="let enrollment of battleEnrollments" class="playerCard">
+      <img
+        [src]="enrollment.photoUrl"
+        alt="Spieler Avatar"
+        class="avatar mat-elevation-z3"
+      />
+      <p
         [matBadge]="enrollment.factionId"
-        class="faction-{{ enrollment.factionId }}"
+        class="title mat-subheading-1 faction-{{ enrollment.factionId }}"
         matBadgeSize="small"
       >
         {{ enrollment.displayName }}
-      </mat-card-title>
-      <mat-card-subtitle>
+      </p>
+      <p class="subtitle mat-small">
         {{ enrollment.status }}: {{ enrollment.comment }}
-      </mat-card-subtitle>
-    </mat-card-header>
-  </mat-card-content>
-</mat-card>
+      </p>
+    </div>
+  </div>
+</mat-expansion-panel>
