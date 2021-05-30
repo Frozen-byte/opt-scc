@@ -8,11 +8,8 @@ import { Battle } from '../../route-outlets/battle/battle.types';
 })
 export class BattleLinkComponent implements OnInit {
   @Input() battle?: Battle;
-  public isActiveBattle = false;
 
   constructor() {}
 
-  ngOnInit(): void {
-    this.isActiveBattle = this.battle?.battleStatus === 'planning';
-  }
+  ngOnInit(): void {}
 }

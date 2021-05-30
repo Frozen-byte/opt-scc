@@ -1,12 +1,34 @@
 a {
   width: 100%;
   height: 100%;
+  padding-top: 8px;
+  padding-bottom: 8px;
 }
 
-.battleDate {
-  display: block;
-}
+.wrapper {
+  text-align: left;
+  line-height: 1.4rem;
+  display: grid;
+  grid-template-areas:
+    "battleDate  sector"
+    "battleName  sector"
+    "battleScore  sector";
 
-.battleName {
-  display: block;
+  .battleDate {
+    grid-area: battleDate;
+  }
+
+  .battleName {
+    grid-area: battleName;
+  }
+
+  .battleScore {
+    grid-area: battleScore;
+  }
+
+  .sector {
+    justify-self: end;
+    width: 64px;
+    grid-area: sector;
+  }
 }

@@ -1,7 +1,6 @@
 import { Component, Inject, OnInit } from '@angular/core';
 import { MAT_DIALOG_DATA } from '@angular/material/dialog';
-
-class DialogData {}
+import { Battle } from '../../route-outlets/battle/battle.types';
 
 @Component({
   selector: 'opt-battle-sector-select-dialog',
@@ -9,7 +8,9 @@ class DialogData {}
   styleUrls: ['./battle-sector-select-dialog.component.scss'],
 })
 export class BattleSectorSelectDialogComponent implements OnInit {
-  constructor(@Inject(MAT_DIALOG_DATA) public data: DialogData) {}
+  constructor(
+    @Inject(MAT_DIALOG_DATA) public data: { battleId: Battle['battleId'] }
+  ) {}
 
   ngOnInit(): void {}
 }

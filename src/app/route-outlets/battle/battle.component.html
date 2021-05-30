@@ -1,7 +1,7 @@
 <ng-container *ngIf="battle$ | async as battle">
   <section class="battleMeta">
-    <span class="mat-display-1">{{ battle.campaignName }}</span>
-    <h2 class="mat-display-2">{{ battle.battleName }}</h2>
+    <h2 class="mat-display-1">{{ battle.campaignName }}</h2>
+    <h3 class="mat-display-2">{{ battle.battleName }}</h3>
     <mat-card class="mat-elevation-z0">
       Schlachttag: {{ battle.battleDate | date }}<br />
       Briefing: {{ battle.battleDate | date: "shortTime" }} Uhr<br />
@@ -10,7 +10,7 @@
   </section>
 
   <section class="enrollments">
-    <h3 class="mat-display-3">Anmeldung</h3>
+    <h3 class="mat-headline">Anmeldung</h3>
     <opt-battle-enrollments
       *ngFor="let faction of battle.factions"
       [battleId]="battle.battleId"
@@ -18,33 +18,34 @@
     ></opt-battle-enrollments>
   </section>
 
-  <ng-container *ngIf="battle.factions">
-    <h3>Wahl der Seite</h3>
-    <p *ngFor="let faction of battle.factions">
-      {{ faction.factionName }} spielt die {{ faction.factionSide }}
-    </p>
+  <section>
+    <h3 class="mat-headline">Wahl der Seite</h3>
+    <mat-card class="mat-elevation-z0">
+      <p *ngFor="let faction of battle.factions">
+        {{ faction.factionName }} spielt die {{ faction.factionSide }}
+      </p>
+    </mat-card>
+  </section>
 
-    <h3>Wahl des Sektors</h3>
-    <p *ngFor="let faction of battle.factions">
-      {{ faction.factionName }} greift Sektor
-      {{ faction.factionAttackingSector }} an
-    </p>
-  </ng-container>
+  <section>
+    <h3 class="mat-headline">Wahl des Sektors</h3>
+    <mat-card class="mat-elevation-z0">
+      <p *ngFor="let faction of battle.factions">
+        {{ faction.factionName }} greift Sektor
+        {{ faction.factionAttackingSector }} an
+      </p>
 
-  <button class="mat-elevation-z1" mat-button matTooltip="Sektorenkarte öffnen">
-    <opt-sector-select
-      (click)="openSectorSelectDialog()"
-      [disabled]="true"
-    ></opt-sector-select>
-  </button>
+      <button class="mat-elevation-z1" mat-button matTooltip="Sektorenkarte öffnen">
+        <opt-sector-select
+          (click)="openSectorSelectDialog(battle.battleId)"
+          [battleId]="battle.battleId"
+          [disabled]="true"
+        ></opt-sector-select>
+      </button>
+    </mat-card>
+  </section>
 
-  <h3>Verbrannte Sektoren</h3>
-  // TODO
-
-  <h3>Wetterbericht</h3>
-  <p>{{ battle.weather }}</p>
-
-  <h2>Technik &amp; Co.</h2>
+  <h3 class="mat-headline">Technik &amp; Co.</h3>
   <ul>
     <li>
       <a

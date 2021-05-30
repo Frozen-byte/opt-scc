@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { AngularFireDatabase } from '@angular/fire/database';
+import { Battle } from '../../route-outlets/battle/battle.types';
 
 export interface Sector {
   color: 'red' | 'green';
@@ -22,15 +23,11 @@ export interface Sector {
 export class SectorSelectComponent implements OnInit {
   public sectors?: Sector[];
 
+  @Input() battleId?: Battle['battleId'];
   @Input() selectedSector?: Sector['id'];
   @Output() selectedSectorChange = new EventEmitter<Sector['id']>();
 
-  constructor(public db: AngularFireDatabase) {
-    const campaignId = 'adl';
-    db.list<Sector>(`maps/${campaignId}`)
-      .valueChanges()
-      .subscribe((v) => (this.sectors = v));
-  }
+  constructor(public db: AngularFireDatabase) {}
 
   private _disabled = false;
 
@@ -43,7 +40,12 @@ export class SectorSelectComponent implements OnInit {
     this._disabled = v !== undefined;
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.db
+      .list<Sector>(`maps/${this.battleId}`)
+      .valueChanges()
+      .subscribe((v) => (this.sectors = v));
+  }
 
   onClick($event: MouseEvent, sector: Sector): void {
     if (!this.disabled && !sector.disabled) {

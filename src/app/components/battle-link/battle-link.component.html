@@ -1,16 +1,30 @@
 <a
   *ngIf="battle"
-  [color]="isActiveBattle ? 'primary' : null"
+  [color]="battle.battleStatus === 'planning' ? 'primary' : null"
   [ngClass]="{
-    'mat-stroked-button': isActiveBattle,
-    'mat-raised-button': isActiveBattle
+    'mat-stroked-button': battle.battleStatus !== 'planning',
+    'mat-raised-button': battle.battleStatus === 'planning'
   }"
+  class="battleStatus-{{battle.battleStatus}}"
   [routerLink]="['/battle', battle.battleId]"
   mat-button
 >
-  <span class="battleDate">{{ battle.battleDate | date }}</span>
-  <span class="battleName">{{ battle.battleName }}</span>
-  <opt-faction-score [faction]="battle.factions[0]"></opt-faction-score>
-  :
-  <opt-faction-score [faction]="battle.factions[1]" reverse></opt-faction-score>
+  <div class="wrapper">
+    <div class="battleDate">{{ battle.battleDate | date }}</div>
+    <div class="battleName">{{ battle.battleName }}</div>
+    <div class="battleScore">
+      <opt-faction-score [faction]="battle.factions[0]"></opt-faction-score>
+      :
+      <opt-faction-score
+        [faction]="battle.factions[1]"
+        reverse
+      ></opt-faction-score>
+    </div>
+    <opt-sector-select
+      *ngIf="battle.battleStatus !== 'scheduled'"
+      [battleId]="battle.battleId"
+      [disabled]="true"
+      class="sector"
+    ></opt-sector-select>
+  </div>
 </a>
