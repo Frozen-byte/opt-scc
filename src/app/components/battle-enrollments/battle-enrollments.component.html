@@ -1,4 +1,4 @@
-<mat-expansion-panel #expansionPanel hideToggle>
+<mat-expansion-panel #expansionPanel expanded hideToggle>
   <mat-expansion-panel-header collapsedHeight="auto" expandedHeight="auto">
     <div>
       <!-- keep this div for correct wrapping -->
@@ -16,8 +16,7 @@
         <button disableRipple mat-icon-button>
           <mat-icon [@indicatorRotate]="expansionPanel._getExpandedState()"
           >expand_more
-          </mat-icon
-          >
+          </mat-icon>
         </button>
       </p>
     </div>
@@ -31,13 +30,16 @@
       />
       <p
         [matBadge]="enrollment.factionId"
-        class="title mat-subheading-1 faction-{{ enrollment.factionId }}"
+        class="title faction-{{ enrollment.factionId }}"
         matBadgeSize="small"
       >
-        {{ enrollment.displayName }}
+        <span class="mat-subheading-1">
+          {{ enrollment.displayName }}
+        </span>
       </p>
-      <p class="subtitle mat-small">
-        {{ enrollment.status }}: {{ enrollment.comment }}
+      <p class="subtitle">
+        <span class="mat-body-strong">{{ enrollment.status }} </span>
+        <span class="mat-small">{{ enrollment.comment }}</span>
       </p>
     </div>
   </div>

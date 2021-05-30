@@ -1,19 +1,16 @@
 <ng-container *ngIf="battle$ | async as battle">
-  <section>
-    <h2>{{ battle.campaignName }}</h2>
-    <a
-      href="https://www.figma.com/file/eEBV0TBkbzKngKqyvCbHZh/OPT4---Livonia-(Copy)"
-    >
-      Aktuelle Kampagnen Karte
-    </a>
-    <h3>{{ battle.battleName }}</h3>
-    Schlachttag: {{ battle.battleDate | date }}<br />
-    Briefing: {{ battle.battleDate | date: "shortTime" }} Uhr<br />
-    Spielzeit: {{ battle.battleDuration | duration }} Minuten
+  <section class="battleMeta">
+    <span class="mat-display-1">{{ battle.campaignName }}</span>
+    <h2 class="mat-display-2">{{ battle.battleName }}</h2>
+    <mat-card class="mat-elevation-z0">
+      Schlachttag: {{ battle.battleDate | date }}<br />
+      Briefing: {{ battle.battleDate | date: "shortTime" }} Uhr<br />
+      Spielzeit: {{ battle.battleDuration | duration }} Minuten
+    </mat-card>
   </section>
 
   <section class="enrollments">
-    <h3>Anmeldung</h3>
+    <h3 class="mat-display-3">Anmeldung</h3>
     <opt-battle-enrollments
       *ngFor="let faction of battle.factions"
       [battleId]="battle.battleId"
