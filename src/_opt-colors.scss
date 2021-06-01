@@ -1,0 +1,11 @@
+$arf-color: rgb(9, 90, 172);
+$sword-color: rgb(255, 95, 0);
+$csat-color: rgb(255, 78, 78);
+$aaf-color: rgb(106, 206, 104);
+
+body {
+  --arf-color: $arf-color;
+  --sword-color: $sword-color;
+  --csat-color: $csat-color;
+  --aaf-color: $aaf-color;
+}

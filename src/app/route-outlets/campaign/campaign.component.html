@@ -1,4 +1,4 @@
-<h1>{{ campaignName }}</h1>
+<p class="campaignName mat-display-1">{{ campaignName }}</p>
 <div class="battles">
   <ng-container *ngFor="let battle of battles$ | async">
     <opt-battle-link [battle]="battle"></opt-battle-link>

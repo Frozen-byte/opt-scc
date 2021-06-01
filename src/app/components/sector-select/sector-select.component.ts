@@ -18,7 +18,7 @@ export interface Sector {
 @Component({
   selector: 'opt-sector-select',
   templateUrl: './sector-select.component.html',
-  styleUrls: ['./sector-select.component.css'],
+  styleUrls: ['./sector-select.component.scss'],
 })
 export class SectorSelectComponent implements OnInit {
   public sectors?: Sector[];

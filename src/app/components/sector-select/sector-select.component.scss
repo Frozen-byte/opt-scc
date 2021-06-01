@@ -1,0 +1,57 @@
+@use "src/opt-colors" as opt;
+@use "sass:color";
+
+svg {
+  height: 100%;
+  width: 100%;
+}
+
+.burned {
+  pointer-events: none;
+}
+
+.sector {
+  stroke-width: 1.2rem;
+
+  &:not(.disabledHover) {
+    cursor: pointer;
+  }
+
+  &:focus {
+    outline: 0;
+  }
+}
+
+@mixin shadings($color) {
+  fill: rgba($color, 0.2);
+  stroke: rgba($color, 0.1);
+
+  &.selected {
+    fill: rgba($color, 0.78);
+    stroke: rgba($color, 0.8);
+
+    &:hover:not(.disabledHover):not(.disabledSector) {
+      fill: rgba($color, 1);
+      stroke: rgba($color, 0.2);
+    }
+  }
+
+  &.disabledSector {
+    fill: rgba($color, 0.08);
+    stroke: rgba($color, 0.08);
+  }
+
+
+  &:hover:not(.disabledHover):not(.disabledSector) {
+    fill: rgba($color, 0.5);
+    stroke: rgba($color, 0.5);
+  }
+}
+
+.red {
+  @include shadings(opt.$csat-color);
+}
+
+.green {
+  @include shadings(opt.$aaf-color);
+}

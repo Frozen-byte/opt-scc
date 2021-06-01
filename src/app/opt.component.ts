@@ -8,7 +8,6 @@ import { ThemeService } from './services/theme.service';
 })
 export class OptComponent {
   constructor(public themeService: ThemeService) {}
-
   @HostBinding('class.theme-alternate') get themeToggle(): boolean {
     return this.themeService.alternateTheme;
   }

@@ -13,6 +13,9 @@
 @import "https://fonts.googleapis.com/css?family=Material+Icons+Sharp";
 @import url("https://fonts.googleapis.com/css?family=Karma:300,400,500");
 
+// Experimental Mixins
+@import '~@angular/material-experimental/mdc-theming/all-theme';
+
 $fontConfig: (
   display-4: mat.define-typography-level(104px, 104px, 300, 'Karma', -0.0144em),
   display-3: mat.define-typography-level(65px, 65px, 300, 'Karma', -0.0077em),
@@ -236,9 +239,11 @@ $altTheme: (
 
 // Theme Init
 @include mat.all-component-themes($theme);
+@include angular-material-mdc-theme($theme);
 
 .theme-alternate {
   @include mat.all-component-themes($altTheme);
+  @include angular-material-mdc-theme($altTheme);
 }
 
 // Specific component overrides, pieces that are not in line with the general theming
@@ -260,7 +265,7 @@ $altTheme: (
 
 .material-icons {
   font-size: 24px;
-  font-family: "Material Icons Sharp", "Material Icons";
+  font-family: "Material Icons Sharp", "Material Icons", emoji, monospace;
 
   .mat-badge-content {
     font-family: "Karma", "serif";

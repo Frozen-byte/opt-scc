@@ -1,9 +1,5 @@
+@use "opt-colors" as opt;
 @import "material.style";
-
-body {
-  --arf-color: rgb(9, 90, 172);
-  --sword-color: rgb(255, 95, 0);
-}
 
 html,
 body {
@@ -13,11 +9,11 @@ body {
 
 .faction {
   &-arf {
-    color: var(--arf-color);
+    color: opt.$arf-color;
   }
 
   &-sword {
-    color: var(--sword-color);
+    color: opt.$sword-color;
   }
 }
 
