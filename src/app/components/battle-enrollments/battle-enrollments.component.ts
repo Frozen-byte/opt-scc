@@ -1,8 +1,9 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnDestroy, OnInit } from '@angular/core';
 import { Enrollment } from '../enroll-on-battle/enroll-on-battle.component';
 import { UntilDestroy, untilDestroyed } from '@ngneat/until-destroy';
 import { EnrollmentsService } from '../../services/enrollments.service';
 import { matExpansionAnimations } from '@angular/material/expansion';
+import { BehaviorSubject } from 'rxjs';
 
 @UntilDestroy()
 @Component({
@@ -11,7 +12,9 @@ import { matExpansionAnimations } from '@angular/material/expansion';
   styleUrls: ['./battle-enrollments.component.scss'],
   animations: [matExpansionAnimations.indicatorRotate],
 })
-export class BattleEnrollmentsComponent implements OnInit {
+export class BattleEnrollmentsComponent implements OnInit, OnDestroy {
+  public status = new BehaviorSubject<'loading' | 'ready' | 'empty'>('loading');
+
   @Input() battleId = '';
   @Input() factionId = '';
   public counts: Record<Enrollment['status'], number> = {
@@ -33,6 +36,15 @@ export class BattleEnrollmentsComponent implements OnInit {
           this.counts[enrollment.status] += 1;
         });
         this.battleEnrollments = enrollments;
+        if (this.battleEnrollments?.length > 0) {
+          this.status.next('ready');
+        } else {
+          this.status.next('empty');
+        }
       });
+  }
+
+  ngOnDestroy(): void {
+    this.status.complete();
   }
 }

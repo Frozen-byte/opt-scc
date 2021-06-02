@@ -51,7 +51,7 @@ export class SectorSelectComponent implements OnInit {
     if (!this.disabled && !sector.disabled) {
       this.selectedSector =
         this.selectedSector === sector.id ? undefined : sector.id;
-      this.selectedSectorChange.emit(this.selectedSector);
+      this.selectedSectorChange.next(this.selectedSector);
     }
   }
 }

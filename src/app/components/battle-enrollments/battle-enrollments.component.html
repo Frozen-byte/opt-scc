@@ -21,26 +21,36 @@
       </p>
     </div>
   </mat-expansion-panel-header>
-  <div class="playerCards">
-    <div *ngFor="let enrollment of battleEnrollments" class="playerCard">
-      <img
-        [src]="enrollment.photoUrl"
-        alt="Spieler Avatar"
-        class="avatar mat-elevation-z3"
-      />
-      <p
-        [matBadge]="enrollment.factionId"
-        class="title faction-{{ enrollment.factionId }}"
-        matBadgeSize="small"
-      >
+  <ng-container [ngSwitch]="status | async">
+    <ng-container *ngSwitchCase="'loading'">
+      <img alt="lädt..." src="assets/loader.svg">
+    </ng-container>
+    <ng-container *ngSwitchCase="'empty'">
+      Sei der Erste im Schlachtfeld!
+    </ng-container>
+    <ng-container *ngSwitchCase="'ready'">
+      <div class="playerCards">
+        <div *ngFor="let enrollment of battleEnrollments" class="playerCard">
+          <img
+            [src]="enrollment.photoUrl"
+            alt="Spieler Avatar"
+            class="avatar mat-elevation-z3"
+          />
+          <p
+            [matBadge]="enrollment.factionId"
+            class="title faction-{{ enrollment.factionId }}"
+            matBadgeSize="small"
+          >
         <span class="mat-subheading-1">
           {{ enrollment.displayName }}
         </span>
-      </p>
-      <p class="subtitle">
-        <span class="mat-body-strong">{{ enrollment.status }} </span>
-        <span class="mat-small">{{ enrollment.comment }}</span>
-      </p>
-    </div>
-  </div>
+          </p>
+          <p class="subtitle">
+            <span class="mat-body-strong">{{ enrollment.status }} </span>
+            <span class="mat-small">{{ enrollment.comment }}</span>
+          </p>
+        </div>
+      </div>
+    </ng-container>
+  </ng-container>
 </mat-expansion-panel>
