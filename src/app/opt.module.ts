@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { OptComponent } from './opt.component';
 import { CampaignComponent } from './route-outlets/campaign/campaign.component';
 import { BattleComponent } from './route-outlets/battle/battle.component';
-import { DurationPipe } from './duration.pipe';
+import { DurationPipe } from './pipes/duration.pipe';
 import { EnrollOnBattleComponent } from './components/enroll-on-battle/enroll-on-battle.component';
 import { SteamSignInComponent } from './components/steam-sign-in/steam-sign-in.component';
 import { SteamVerifyComponent } from './components/steam-verify/steam-verify.component';
@@ -35,6 +35,9 @@ import { MatBottomSheetModule } from '@angular/material/bottom-sheet';
 import { MatBadgeModule } from '@angular/material/badge';
 import { CdkAccordionModule } from '@angular/cdk/accordion';
 import { MatExpansionModule } from '@angular/material/expansion';
+import { BattleBottomSheetComponent } from './components/battle-bottom-sheet/battle-bottom-sheet.component';
+import { USE_EMULATOR as USE_AUTH_EMULATOR } from '@angular/fire/auth';
+import { USE_EMULATOR as USE_DATABASE_EMULATOR } from '@angular/fire/database';
 
 @NgModule({
   declarations: [
@@ -52,6 +55,7 @@ import { MatExpansionModule } from '@angular/material/expansion';
     FactionScoreComponent,
     BattleLinkComponent,
     SiteToolbarComponent,
+    BattleBottomSheetComponent,
   ],
   imports: [
     // Native Modules
@@ -80,7 +84,16 @@ import { MatExpansionModule } from '@angular/material/expansion';
     CdkAccordionModule,
     MatExpansionModule,
   ],
-  providers: [],
+  providers: [
+    {
+      provide: USE_AUTH_EMULATOR,
+      useValue: environment.useEmulators ? ['localhost', 9099] : undefined,
+    },
+    {
+      provide: USE_DATABASE_EMULATOR,
+      useValue: environment.useEmulators ? ['localhost', 9000] : undefined,
+    },
+  ],
   bootstrap: [OptComponent],
 })
 export class OptModule {}

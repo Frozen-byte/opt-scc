@@ -1,13 +1,13 @@
-<form *ngIf="userId" [formGroup]="enrollmentForm">
+<form *ngIf="enrollment" [formGroup]="enrollmentForm">
   <p>
     <label>Fraktion:</label>
     <label>
-      <input type="radio" formControlName="faction" value="arf" />
-      ARF
+      <input type="radio" formControlName="factionId" value="arf" />
+      <span class="faction-arf">ARF</span>
     </label>
     <label>
-      <input type="radio" formControlName="faction" value="sword" />
-      SWORD
+      <input type="radio" formControlName="factionId" value="sword" />
+      <span class="faction-sword">SWORD</span>
     </label>
   </p>
   <p>
@@ -32,3 +32,4 @@
     </label>
   </p>
 </form>
+

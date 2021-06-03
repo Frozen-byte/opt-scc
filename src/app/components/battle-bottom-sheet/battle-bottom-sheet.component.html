@@ -1,0 +1,6 @@
+<opt-enroll-on-battle
+  *ngIf="fireAuth.user | async; else login"
+  [enrollment]="enrollment"
+  (enrollmentChange)="enrollmentChange($event)"
+></opt-enroll-on-battle>
+<ng-template #login><opt-steam-sign-in></opt-steam-sign-in></ng-template>

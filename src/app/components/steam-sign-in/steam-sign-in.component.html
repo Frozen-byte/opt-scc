@@ -6,7 +6,7 @@
   </button>
 </div>
 <ng-template #showLogin>
-  <a [href]="STEAM_AUTHENTICATE_URL" (click)="login()">
+  <button class="signInWithSteam" mat-flat-button role="link" (click)="login()">
     <img alt="Anmelden mit Steam" src="/assets/login_with_steam_ger.png" />
-  </a>
+  </button>
 </ng-template>

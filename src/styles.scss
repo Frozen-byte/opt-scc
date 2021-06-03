@@ -17,6 +17,18 @@ body {
   }
 }
 
+.side {
+  &-AAF {
+    color: opt.$aaf-color;
+  }
+  &-CSAT {
+    color: opt.$csat-color;
+  }
+  &-nato {
+    color: opt.$nato-color;
+  }
+}
+
 .spacer {
   flex: 1 1 0;
 }

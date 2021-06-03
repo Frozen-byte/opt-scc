@@ -18,7 +18,13 @@
     <mat-card appearance="outlined" class="mat-elevation-z0">
       <mat-card-content>
         <p *ngFor="let faction of battle.factions">
-          {{ faction.factionName }} spielt die {{ faction.factionSide }}
+          <span class="faction-{{ faction.factionId }}">
+            {{ faction.factionName }}
+          </span>
+          spielt die
+          <span class="side-{{ faction.factionSide }}">
+            {{ faction.factionSide }}
+          </span>
         </p>
       </mat-card-content>
     </mat-card>
@@ -29,8 +35,10 @@
     <mat-card appearance="outlined" class="mat-elevation-z0">
       <mat-card-content>
         <p *ngFor="let faction of battle.factions">
-          {{ faction.factionName }} greift Sektor
-          {{ faction.factionAttackingSector }} an
+          <span class="faction-{{ faction.factionId }}">{{
+            faction.factionName
+            }}</span>
+          greift Sektor <span>{{ faction.factionAttackingSector }}</span> an
         </p>
 
         <button

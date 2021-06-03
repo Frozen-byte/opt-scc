@@ -1,13 +1,22 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { distinctUntilChanged, pluck, switchMap } from 'rxjs/operators';
+import {
+  distinctUntilChanged,
+  filter,
+  map,
+  pluck,
+  switchMap,
+} from 'rxjs/operators';
 import { Observable } from 'rxjs';
-import { AngularFireAuth } from '@angular/fire/auth';
 import { MatDialog } from '@angular/material/dialog';
 import { BattleSectorSelectDialogComponent } from '../../components/battle-sector-select-dialog/battle-sector-select-dialog.component';
 import { Battle } from './battle.types';
 import { BattleListService } from '../../services/battle-list.service';
+import { MatBottomSheet } from '@angular/material/bottom-sheet';
+import { UntilDestroy, untilDestroyed } from '@ngneat/until-destroy';
+import { BattleBottomSheetComponent } from '../../components/battle-bottom-sheet/battle-bottom-sheet.component';
 
+@UntilDestroy()
 @Component({
   selector: 'opt-battle',
   templateUrl: './battle.component.html',
@@ -15,18 +24,13 @@ import { BattleListService } from '../../services/battle-list.service';
 })
 export class BattleComponent implements OnInit {
   public battle$: Observable<Battle | null>;
-  public userId: string | undefined;
 
   constructor(
     public dialog: MatDialog,
-    fireAuth: AngularFireAuth,
+    public bottomSheet: MatBottomSheet,
     route: ActivatedRoute,
     battleService: BattleListService
   ) {
-    fireAuth.user.subscribe((user) => {
-      this.userId = user?.uid;
-    });
-
     this.battle$ = route.params.pipe(
       pluck('battleId'),
       distinctUntilChanged(),
@@ -36,7 +40,26 @@ export class BattleComponent implements OnInit {
     );
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.battle$
+      .pipe(
+        filter((battle) => !!battle?.battleId),
+        map((battle) => battle?.battleId as string),
+        untilDestroyed(this)
+      )
+      .subscribe((battleId) => {
+        this.openEnrollOnBattleBottomSheet(battleId);
+      });
+  }
+
+  openEnrollOnBattleBottomSheet(battleId: Battle['battleId']): void {
+    this.bottomSheet.open(BattleBottomSheetComponent, {
+      hasBackdrop: false,
+      data: {
+        battleId,
+      },
+    });
+  }
 
   openSectorSelectDialog(battleId: Battle['battleId']): void {
     const dialogRef = this.dialog.open(BattleSectorSelectDialogComponent, {

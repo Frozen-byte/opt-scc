@@ -55,7 +55,7 @@ export class SteamAuthService {
       .then((response) => response.text())
       .then((redirectUrl) => {
         if (redirectUrl) {
-          window.open(redirectUrl, '_self');
+          window.open(redirectUrl);
         }
       });
   }
