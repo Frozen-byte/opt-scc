@@ -36,8 +36,8 @@ export class BattleEnrollmentsComponent implements OnInit, OnDestroy {
   public enrollmentStatusIconMap: Record<Enrollment['status'], string> = {
     pending: 'radio_button_unchecked',
     yes: 'check_circle_outline',
-    no: 'help_outline',
-    maybe: 'highlight_off',
+    no: 'highlight_off',
+    maybe: 'help_outline',
   };
 
   public enrollmentTrackBy: TrackByFunction<Enrollment> = (
