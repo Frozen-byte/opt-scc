@@ -1,8 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Enrollment } from '../components/enroll-on-battle/enroll-on-battle.component';
-import { AngularFireDatabase } from '@angular/fire/database';
+import { AngularFireDatabase, QueryFn } from '@angular/fire/database';
 import { Observable } from 'rxjs';
-import { map } from 'rxjs/operators';
 import { Battle } from '../route-outlets/battle/battle.types';
 
 @Injectable({
@@ -15,18 +14,13 @@ export class EnrollmentsService {
     battleId: string,
     factionId?: string
   ): Observable<Enrollment[]> {
-    const factionIdFilter = (enrollment: Enrollment) => {
-      return !factionId || enrollment.factionId === factionId;
-    };
+    const factionIdFilter: QueryFn | undefined = factionId
+      ? (ref) => ref.orderByChild('factionId').equalTo(factionId)
+      : undefined;
 
     return this.db
-      .list<Enrollment>(`enrollments/${battleId}`)
-      .valueChanges()
-      .pipe(
-        map((enrollments) => {
-          return enrollments.filter(factionIdFilter);
-        })
-      );
+      .list<Enrollment>(`enrollments/${battleId}`, factionIdFilter)
+      .valueChanges();
   }
 
   getEnrollment(
@@ -38,12 +32,12 @@ export class EnrollmentsService {
       .valueChanges();
   }
 
-  setEnrollment(
+  patchEnrollment(
     battleId: Battle['battleId'],
     enrollment: Enrollment
   ): Promise<void> {
     return this.db
       .object<Enrollment>(`enrollments/${battleId}/${enrollment.userId}`)
-      .set(enrollment);
+      .update(enrollment);
   }
 }

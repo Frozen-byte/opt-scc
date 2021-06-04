@@ -14,7 +14,7 @@ import { filter, map, switchMap } from 'rxjs/operators';
   styleUrls: ['./battle-bottom-sheet.component.scss'],
 })
 export class BattleBottomSheetComponent implements OnInit {
-  enrollment: any | Enrollment = {};
+  enrollment?: Enrollment;
   battleId: Battle['battleId'];
 
   constructor(
@@ -35,12 +35,16 @@ export class BattleBottomSheetComponent implements OnInit {
         ),
         untilDestroyed(this)
       )
-      .subscribe((enrollment) => (this.enrollment = enrollment));
+      .subscribe((enrollment) => {
+        if (enrollment) {
+          this.enrollment = enrollment;
+        }
+      });
   }
 
   ngOnInit(): void {}
 
   enrollmentChange(enrollment: Enrollment): void {
-    this.enrollmentService.setEnrollment(this.battleId, enrollment);
+    this.enrollmentService.patchEnrollment(this.battleId, enrollment);
   }
 }

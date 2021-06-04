@@ -1,9 +1,16 @@
-import { Component, Input, OnDestroy, OnInit } from '@angular/core';
+import {
+  Component,
+  Input,
+  OnDestroy,
+  OnInit,
+  TrackByFunction,
+} from '@angular/core';
 import { Enrollment } from '../enroll-on-battle/enroll-on-battle.component';
 import { UntilDestroy, untilDestroyed } from '@ngneat/until-destroy';
 import { EnrollmentsService } from '../../services/enrollments.service';
 import { matExpansionAnimations } from '@angular/material/expansion';
-import { BehaviorSubject } from 'rxjs';
+import { Observable } from 'rxjs';
+import { debounceTime, tap } from 'rxjs/operators';
 
 const EMPTY_COUNTS = () => ({
   maybe: 0,
@@ -20,33 +27,40 @@ const EMPTY_COUNTS = () => ({
   animations: [matExpansionAnimations.indicatorRotate],
 })
 export class BattleEnrollmentsComponent implements OnInit, OnDestroy {
-  public status = new BehaviorSubject<'loading' | 'ready' | 'empty'>('loading');
+  constructor(public enrollmentsService: EnrollmentsService) {}
   @Input() battleId = '';
   @Input() factionId = '';
   public counts: Record<Enrollment['status'], number> = EMPTY_COUNTS();
-  public battleEnrollments: Enrollment[] = [];
+  public battleEnrollments$?: Observable<Enrollment[]>;
 
-  constructor(public enrollmentsService: EnrollmentsService) {}
+  public enrollmentStatusIconMap: Record<Enrollment['status'], string> = {
+    pending: 'radio_button_unchecked',
+    yes: 'check_circle_outline',
+    no: 'help_outline',
+    maybe: 'highlight_off',
+  };
+
+  public enrollmentTrackBy: TrackByFunction<Enrollment> = (
+    index,
+    enrollment
+  ) => {
+    return `${enrollment.status}${enrollment.factionId}${enrollment.comment}${enrollment.userId}`;
+  };
 
   ngOnInit(): void {
-    this.enrollmentsService
+    this.battleEnrollments$ = this.enrollmentsService
       .getEnrollments(this.battleId, this.factionId)
-      .pipe(untilDestroyed(this))
-      .subscribe((enrollments) => {
-        this.counts = EMPTY_COUNTS();
-        enrollments?.forEach((enrollment) => {
-          this.counts[enrollment.status] += 1;
-        });
-        this.battleEnrollments = enrollments;
-        if (this.battleEnrollments?.length > 0) {
-          this.status.next('ready');
-        } else {
-          this.status.next('empty');
-        }
-      });
+      .pipe(
+        tap((enrollments) => {
+          this.counts = EMPTY_COUNTS();
+          enrollments?.forEach((enrollment) => {
+            this.counts[enrollment.status] += 1;
+          });
+        }),
+        debounceTime(25),
+        untilDestroyed(this)
+      );
   }
 
-  ngOnDestroy(): void {
-    this.status.complete();
-  }
+  ngOnDestroy(): void {}
 }

@@ -1,118 +1,125 @@
 <ng-container *ngIf="battle$ | async as battle">
-  <section class="header">
-    <h2 class="mat-subheading-2">{{ battle.campaignName }}</h2>
-    <h3 class="mat-display-2">{{ battle.battleName }}</h3>
-  </section>
-  <section class="battleMeta">
-    <mat-card appearance="outlined" class="mat-elevation-z0">
-      <mat-card-content>
-        <p>Schlachttag: {{ battle.battleDate | date }}</p>
-        <p>Briefing: {{ battle.battleDate | date: "shortTime" }} Uhr</p>
-        <p>Spielzeit: {{ battle.battleDuration | duration }} Minuten</p>
-      </mat-card-content>
-    </mat-card>
-  </section>
+  <div class="row">
+    <section class="header">
+      <h2 class="mat-subheading-2">{{ battle.campaignName }}</h2>
+      <h3 class="mat-display-2">{{ battle.battleName }}</h3>
+    </section>
+    <section class="battleMeta">
+      <mat-card appearance="outlined" class="mat-elevation-z0">
+        <mat-card-content>
+          <p>Schlachttag: {{ battle.battleDate | date }}</p>
+          <p>Briefing: {{ battle.battleDate | date: "shortTime" }} Uhr</p>
+          <p>Spielzeit: {{ battle.battleDuration | duration }} Minuten</p>
+        </mat-card-content>
+      </mat-card>
+    </section>
+  </div>
 
-  <section class="sides">
-    <h3 class="mat-headline">Wahl der Seite</h3>
-    <mat-card appearance="outlined" class="mat-elevation-z0">
-      <mat-card-content>
-        <p *ngFor="let faction of battle.factions">
-          <span class="faction-{{ faction.factionId }}">
-            {{ faction.factionName }}
-          </span>
-          spielt die
-          <span class="side-{{ faction.factionSide }}">
-            {{ faction.factionSide }}
-          </span>
-        </p>
-      </mat-card-content>
-    </mat-card>
-  </section>
+  <div class="row">
+    <section class="sides">
+      <h3 class="mat-headline">Wahl der Seite</h3>
+      <mat-card appearance="outlined" class="mat-elevation-z0">
+        <mat-card-content>
+          <p *ngFor="let faction of battle.factions">
+            <span class="faction-{{ faction.factionId }}">
+              {{ faction.factionName }}
+            </span>
+            spielt die
+            <span class="side-{{ faction.factionSide }}">
+              {{ faction.factionSide }}
+            </span>
+          </p>
+        </mat-card-content>
+      </mat-card>
+    </section>
 
-  <section class="sectors">
-    <h3 class="mat-headline">Wahl des Sektors</h3>
-    <mat-card appearance="outlined" class="mat-elevation-z0">
-      <mat-card-content>
-        <p *ngFor="let faction of battle.factions">
-          <span class="faction-{{ faction.factionId }}">{{
-            faction.factionName
+    <section class="sectors">
+      <h3 class="mat-headline">Wahl des Sektors</h3>
+      <mat-card appearance="outlined" class="mat-elevation-z0">
+        <mat-card-content>
+          <p *ngFor="let faction of battle.factions">
+            <span class="faction-{{ faction.factionId }}">{{
+              faction.factionName
             }}</span>
-          greift Sektor <span>{{ faction.factionAttackingSector }}</span> an
-        </p>
+            greift Sektor <span>{{ faction.factionAttackingSector }}</span> an
+          </p>
 
-        <button
-          class="mat-elevation-z1"
-          mat-raised-button
-          matTooltip="Sektorenkarte öffnen"
-        >
-          <opt-sector-select
-            (click)="openSectorSelectDialog(battle.battleId)"
-            [battleId]="battle.battleId"
-            [disabled]="true"
-          ></opt-sector-select>
-        </button>
-      </mat-card-content>
-    </mat-card>
-  </section>
+          <button
+            class="mat-elevation-z1"
+            mat-raised-button
+            matTooltip="Sektorenkarte öffnen"
+          >
+            <opt-sector-select
+              (click)="openSectorSelectDialog(battle.battleId)"
+              [battleId]="battle.battleId"
+              [disabled]="true"
+            ></opt-sector-select>
+          </button>
+        </mat-card-content>
+      </mat-card>
+    </section>
+    <section class="weblinks">
+      <h3 class="mat-headline">Technik &amp; Co.</h3>
+      <mat-card appearance="outlined" class="mat-elevation-z0">
+        <mat-card-content>
+          <ul>
+            <li>
+              <a
+                href="https://opt4.net/forum/index.php?thread/4851-fairplay-leitfaden/"
+              >
+                Fairplay Leitfaden
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://opt4.net/forum/index.php?thread/8-opt4-server-ips/"
+              >
+                OPT4-Teamspeak
+              </a>
+              ts3.opt4.net
+            </li>
+            <li>
+              <a
+                href="https://opt4.net/forum/index.php?thread/8-opt4-server-ips/"
+              >
+                OPT4-Server-IPs
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://opt4.net/forum/index.php?thread/1214-unsere-aktuellen-server-versionen/"
+              >
+                "Unsere aktuellen Server-Versionen"
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://docs.google.com/document/d/1CxqtbaIv9ZjSiWZbnSsAOiK3QQ9yl2W4xie6wabF0aI"
+              >
+                Aktuelles Kampagnendokument
+              </a>
+            </li>
+            <li>
+              <a href="https://stats.opt4.net:2021/campaigns.html">
+                Kampagnen und Spieler Statistiken
+              </a>
+            </li>
+          </ul>
+        </mat-card-content>
+      </mat-card>
+    </section>
+  </div>
+  <div class="row enrollments">
+    <section class="enrollmentHeader">
+      <h3 class="mat-headline">Anmeldung</h3>
+    </section>
 
-  <section class="enrollments">
-    <h3 class="mat-headline">Anmeldung</h3>
-    <opt-battle-enrollments
-      *ngFor="let faction of battle.factions"
-      [battleId]="battle.battleId"
-      [factionId]="faction.factionId"
-    ></opt-battle-enrollments>
-  </section>
+    <section class="enrollment" *ngFor="let faction of battle.factions">
+      <opt-battle-enrollments
+        [battleId]="battle.battleId"
+        [factionId]="faction.factionId"
+      ></opt-battle-enrollments>
+    </section>
+  </div>
 
-  <section class="weblinks">
-    <h3 class="mat-headline">Technik &amp; Co.</h3>
-    <mat-card appearance="outlined" class="mat-elevation-z0">
-      <mat-card-content>
-        <ul>
-          <li>
-            <a
-              href="https://opt4.net/forum/index.php?thread/4851-fairplay-leitfaden/"
-            >
-              Fairplay Leitfaden
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://opt4.net/forum/index.php?thread/8-opt4-server-ips/"
-            >
-              OPT4-Teamspeak
-            </a>
-            ts3.opt4.net
-          </li>
-          <li>
-            <a
-              href="https://opt4.net/forum/index.php?thread/8-opt4-server-ips/"
-            >
-              OPT4-Server-IPs
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://opt4.net/forum/index.php?thread/1214-unsere-aktuellen-server-versionen/"
-            >
-              "Unsere aktuellen Server-Versionen"
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://docs.google.com/document/d/1CxqtbaIv9ZjSiWZbnSsAOiK3QQ9yl2W4xie6wabF0aI"
-            >
-              Aktuelles Kampagnendokument
-            </a>
-          </li>
-          <li>
-            <a href="https://stats.opt4.net:2021/campaigns.html">
-              Kampagnen und Spieler Statistiken
-            </a>
-          </li>
-        </ul>
-      </mat-card-content>
-    </mat-card>
-  </section>
 </ng-container>

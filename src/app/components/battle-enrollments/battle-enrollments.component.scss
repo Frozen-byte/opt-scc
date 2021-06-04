@@ -24,28 +24,39 @@
   flex-wrap: wrap;
 
   .playerCard {
-    margin: 0.33rem;
+    margin: 0.5rem 1.5rem;
+    align-items: center;
+    display: inline-grid;
+    grid-gap: .25rem;
+    max-width: 240px;
+    height: fit-content;
 
-    display: grid;
     grid-template-areas:
-      "avatar avatar title    title    title    title"
-      "avatar avatar subtitle subtitle subtitle subtitle";
+      "avatar title    status"
+      "avatar comment  comment";
 
     .avatar {
-      margin: 8px;
-      border-radius: 50%;
       grid-area: avatar;
+      align-self: start;
+      justify-self: left;
+      padding: 1px;
+      margin-right: 2px;
+      background: linear-gradient( to bottom, #515151 5%, #474747 95%);
       height: 32px;
     }
 
     .title {
-      margin: 0;
       grid-area: title;
     }
 
-    .subtitle {
-      margin: 0;
-      grid-area: subtitle;
+    .status {
+      grid-area: status;
+      align-self: start;
+      justify-self: right;
+    }
+
+    .comment {
+      grid-area: comment;
       color: var(--text-primary-darker-color);
     }
 
