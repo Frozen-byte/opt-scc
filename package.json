@@ -9,7 +9,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "emulators": "firebase emulators:start",
+    "emulators": "firebase emulators:start --import=e2e/mocks/rtdb",
     "bundle": "source-map-explorer dist/opt-scc/**/*.js"
   },
   "private": true,
