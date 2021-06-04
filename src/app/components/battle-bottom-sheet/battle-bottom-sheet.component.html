@@ -3,4 +3,7 @@
   [enrollment]="enrollment"
   (enrollmentChange)="enrollmentChange($event)"
 ></opt-enroll-on-battle>
-<ng-template #login><opt-steam-sign-in></opt-steam-sign-in></ng-template>
+<ng-template #login>
+  <span>Um dich für die Schlacht einzutragen, melde dich bitte an:</span>
+  <opt-steam-sign-in></opt-steam-sign-in>
+</ng-template>

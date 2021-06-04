@@ -1,6 +1,5 @@
-import { Component, Inject, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Enrollment } from '../enroll-on-battle/enroll-on-battle.component';
-import { MAT_BOTTOM_SHEET_DATA } from '@angular/material/bottom-sheet';
 import { EnrollmentsService } from '../../services/enrollments.service';
 import { Battle } from '../../route-outlets/battle/battle.types';
 import { AngularFireAuth } from '@angular/fire/auth';
@@ -14,35 +13,31 @@ import { filter, map, switchMap } from 'rxjs/operators';
   styleUrls: ['./battle-bottom-sheet.component.scss'],
 })
 export class BattleBottomSheetComponent implements OnInit {
-  enrollment?: Enrollment;
-  battleId: Battle['battleId'];
+  @Input() battleId: Battle['battleId'] = '';
+  public enrollment?: Enrollment;
 
   constructor(
     public fireAuth: AngularFireAuth,
-    @Inject(MAT_BOTTOM_SHEET_DATA)
-    public bottomSheetData: {
-      battleId: Battle['battleId'];
-    },
     public enrollmentService: EnrollmentsService
-  ) {
-    this.battleId = bottomSheetData.battleId;
-    this.fireAuth.user
-      .pipe(
-        filter((user) => !!user?.uid),
-        map((user) => user?.uid as string),
-        switchMap((userId) =>
-          this.enrollmentService.getEnrollment(this.battleId, userId)
-        ),
-        untilDestroyed(this)
-      )
-      .subscribe((enrollment) => {
-        if (enrollment) {
-          this.enrollment = enrollment;
-        }
-      });
-  }
+  ) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    if (this.battleId) {
+      this.fireAuth.user
+        .pipe(
+          filter((user) => !!user?.uid),
+          map((user) => user?.uid as string),
+          switchMap((userId) =>
+            this.enrollmentService.getEnrollment(this.battleId, userId)
+          ),
+          map((enrollment) => enrollment as Enrollment),
+          untilDestroyed(this)
+        )
+        .subscribe((enrollment) => {
+          this.enrollment = enrollment;
+        });
+    }
+  }
 
   enrollmentChange(enrollment: Enrollment): void {
     this.enrollmentService.patchEnrollment(this.battleId, enrollment);
