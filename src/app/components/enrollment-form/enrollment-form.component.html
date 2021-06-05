@@ -7,7 +7,7 @@
       <span class="faction-arf">ARF</span>
     </mat-radio-button>
   </mat-radio-group>
-  <mat-button-toggle-group formControlName="status">
+  <mat-button-toggle-group formControlName="status" vertical>
     <mat-button-toggle value="yes" class="statusButton">
       <span class="statusButtonLabel"
         ><mat-icon>check_circle_outline</mat-icon>
@@ -27,8 +27,8 @@
       </span>
     </mat-button-toggle>
   </mat-button-toggle-group>
-    <mat-form-field formControlName="comment">
-      <mat-label>Kommentar</mat-label>
-      <textarea matInput placeholder="komme 10 Minuten später..."></textarea>
-    </mat-form-field>
+  <mat-form-field appearance="outline" formControlName="comment">
+    <mat-label>Kommentar</mat-label>
+    <input matInput placeholder="komme 10 Minuten später..." />
+  </mat-form-field>
 </form>
