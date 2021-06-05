@@ -1,8 +1,8 @@
-<opt-enroll-on-battle
+<opt-enrollment-form
   *ngIf="fireAuth.user | async; else login"
   [enrollment]="enrollment"
   (enrollmentChange)="enrollmentChange($event)"
-></opt-enroll-on-battle>
+></opt-enrollment-form>
 <ng-template #login>
   <span>Um dich für die Schlacht einzutragen, melde dich bitte an:</span>
   <opt-steam-sign-in></opt-steam-sign-in>

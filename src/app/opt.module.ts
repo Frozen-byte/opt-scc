@@ -3,7 +3,7 @@ import { OptComponent } from './opt.component';
 import { CampaignComponent } from './route-outlets/campaign/campaign.component';
 import { BattleComponent } from './route-outlets/battle/battle.component';
 import { DurationPipe } from './pipes/duration.pipe';
-import { EnrollOnBattleComponent } from './components/enroll-on-battle/enroll-on-battle.component';
+import { EnrollmentFormComponent } from './components/enrollment-form/enrollment-form.component';
 import { SteamSignInComponent } from './components/steam-sign-in/steam-sign-in.component';
 import { SteamVerifyComponent } from './components/steam-verify/steam-verify.component';
 import { BattleEnrollmentsComponent } from './components/battle-enrollments/battle-enrollments.component';
@@ -38,6 +38,10 @@ import { MatExpansionModule } from '@angular/material/expansion';
 import { BattleBottomSheetComponent } from './components/battle-bottom-sheet/battle-bottom-sheet.component';
 import { USE_EMULATOR as USE_AUTH_EMULATOR } from '@angular/fire/auth';
 import { USE_EMULATOR as USE_DATABASE_EMULATOR } from '@angular/fire/database';
+import { MatRadioModule } from '@angular/material/radio';
+import { MatButtonToggleModule } from '@angular/material/button-toggle';
+import { MatFormFieldModule } from '@angular/material-experimental/mdc-form-field';
+import { MatInputModule } from '@angular/material-experimental/mdc-input';
 
 @NgModule({
   declarations: [
@@ -45,7 +49,7 @@ import { USE_EMULATOR as USE_DATABASE_EMULATOR } from '@angular/fire/database';
     CampaignComponent,
     BattleComponent,
     DurationPipe,
-    EnrollOnBattleComponent,
+    EnrollmentFormComponent,
     SteamSignInComponent,
     SteamVerifyComponent,
     BattleEnrollmentsComponent,
@@ -83,6 +87,10 @@ import { USE_EMULATOR as USE_DATABASE_EMULATOR } from '@angular/fire/database';
     MatBadgeModule,
     CdkAccordionModule,
     MatExpansionModule,
+    MatRadioModule,
+    MatButtonToggleModule,
+    MatFormFieldModule,
+    MatInputModule,
   ],
   providers: [
     {

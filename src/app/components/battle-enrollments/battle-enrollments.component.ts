@@ -5,7 +5,7 @@ import {
   OnInit,
   TrackByFunction,
 } from '@angular/core';
-import { Enrollment } from '../enroll-on-battle/enroll-on-battle.component';
+import { Enrollment } from '../enrollment-form/enrollment-form.component';
 import { UntilDestroy, untilDestroyed } from '@ngneat/until-destroy';
 import { EnrollmentsService } from '../../services/enrollments.service';
 import { matExpansionAnimations } from '@angular/material/expansion';

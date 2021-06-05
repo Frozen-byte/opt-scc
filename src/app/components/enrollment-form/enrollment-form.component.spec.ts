@@ -1,19 +1,19 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { EnrollOnBattleComponent } from './enroll-on-battle.component';
+import { EnrollmentForm } from './enrollment-form.component';
 
 describe('EnrollOnBattleComponent', () => {
-  let component: EnrollOnBattleComponent;
-  let fixture: ComponentFixture<EnrollOnBattleComponent>;
+  let component: EnrollmentForm;
+  let fixture: ComponentFixture<EnrollmentForm>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [EnrollOnBattleComponent],
+      declarations: [EnrollmentForm],
     }).compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(EnrollOnBattleComponent);
+    fixture = TestBed.createComponent(EnrollmentForm);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

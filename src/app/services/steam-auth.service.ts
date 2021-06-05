@@ -9,7 +9,7 @@ export type Hyperlink = string;
 /**
  * see https://developer.valvesoftware.com/wiki/Steam_Web_API#GetPlayerSummaries_.28v0002.29
  */
-export interface GetPlayerSummaries {
+export interface SteamGetPlayerSummaries {
   avatar: Hyperlink;
   avatarfull: Hyperlink;
   avatarhash: string;

@@ -1,12 +1,12 @@
 <div *ngIf="fireAuth.user | async as user; else showLogin">
   <p>Hallo {{ user.displayName }}!</p>
-  <button (click)="logout()" mat-icon-button>
+  <button (click)="fireAuth.signOut()" mat-icon-button>
     <mat-icon>logout</mat-icon>
     Logout
   </button>
 </div>
 <ng-template #showLogin>
-  <button class="signInWithSteam" mat-flat-button role="link" (click)="login()">
-    <img alt="Anmelden mit Steam" src="/assets/login_with_steam_ger.png" />
-  </button>
+  <a class="signInWithSteam" mat-flat-button [href]="STEAM_AUTHENTICATE_URL" target="_blank" >
+    <img  mat-ripple  alt="Anmelden mit Steam" src="/assets/login_with_steam_ger.png" />
+  </a>
 </ng-template>

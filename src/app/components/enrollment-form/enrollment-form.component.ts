@@ -2,7 +2,6 @@ import {
   Component,
   Input,
   OnChanges,
-  OnInit,
   Output,
   SimpleChanges,
 } from '@angular/core';
@@ -19,11 +18,11 @@ export interface Enrollment {
 }
 
 @Component({
-  selector: 'opt-enroll-on-battle',
-  templateUrl: './enroll-on-battle.component.html',
-  styleUrls: ['./enroll-on-battle.component.css'],
+  selector: 'opt-enrollment-form',
+  templateUrl: './enrollment-form.component.html',
+  styleUrls: ['./enrollment-form.component.scss'],
 })
-export class EnrollOnBattleComponent implements OnInit, OnChanges {
+export class EnrollmentFormComponent implements OnChanges {
   public enrollmentForm = new FormGroup({
     battleId: new FormControl(),
     factionId: new FormControl(),
@@ -35,10 +34,6 @@ export class EnrollOnBattleComponent implements OnInit, OnChanges {
   });
   @Input() enrollment?: Enrollment;
   @Output() enrollmentChange = this.enrollmentForm.valueChanges;
-
-  constructor() {}
-
-  ngOnInit(): void {}
 
   ngOnChanges(changes: SimpleChanges): void {
     this.enrollmentForm.patchValue(changes.enrollment?.currentValue);

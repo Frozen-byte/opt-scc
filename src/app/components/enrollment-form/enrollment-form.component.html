@@ -1,0 +1,34 @@
+<form [formGroup]="enrollmentForm">
+  <mat-radio-group formControlName="factionId">
+    <mat-radio-button value="sword">
+      <span class="faction-sword">SWORD</span>
+    </mat-radio-button>
+    <mat-radio-button value="arf">
+      <span class="faction-arf">ARF</span>
+    </mat-radio-button>
+  </mat-radio-group>
+  <mat-button-toggle-group formControlName="status">
+    <mat-button-toggle value="yes" class="statusButton">
+      <span class="statusButtonLabel"
+        ><mat-icon>check_circle_outline</mat-icon>
+        Ja
+      </span>
+    </mat-button-toggle>
+    <mat-button-toggle value="no">
+      <span class="statusButtonLabel">
+        <mat-icon>highlight_off</mat-icon>
+        Nein
+      </span>
+    </mat-button-toggle>
+    <mat-button-toggle value="maybe" class="statusButton">
+      <span class="statusButtonLabel"
+        ><mat-icon>help_outline</mat-icon>
+        Vielleicht
+      </span>
+    </mat-button-toggle>
+  </mat-button-toggle-group>
+    <mat-form-field formControlName="comment">
+      <mat-label>Kommentar</mat-label>
+      <textarea matInput placeholder="komme 10 Minuten später..."></textarea>
+    </mat-form-field>
+</form>

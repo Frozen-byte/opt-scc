@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Enrollment } from '../components/enroll-on-battle/enroll-on-battle.component';
+import { Enrollment } from '../components/enrollment-form/enrollment-form.component';
 import { AngularFireDatabase, QueryFn } from '@angular/fire/database';
 import { Observable } from 'rxjs';
 import { Battle } from '../route-outlets/battle/battle.types';

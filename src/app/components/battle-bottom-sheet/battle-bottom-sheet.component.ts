@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Enrollment } from '../enroll-on-battle/enroll-on-battle.component';
+import { Enrollment } from '../enrollment-form/enrollment-form.component';
 import { EnrollmentsService } from '../../services/enrollments.service';
 import { Battle } from '../../route-outlets/battle/battle.types';
 import { AngularFireAuth } from '@angular/fire/auth';
