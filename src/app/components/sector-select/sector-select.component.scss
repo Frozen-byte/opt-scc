@@ -41,7 +41,6 @@ svg {
     stroke: rgba($color, 0.08);
   }
 
-
   &:hover:not(.disabledHover):not(.disabledSector) {
     fill: rgba($color, 0.5);
     stroke: rgba($color, 0.5);

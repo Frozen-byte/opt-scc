@@ -103,17 +103,7 @@
     "template-no-negated-async": true,
     "use-lifecycle-interface": true,
     "use-pipe-transform-interface": true,
-    "directive-selector": [
-      true,
-      "attribute",
-      "opt",
-      "camelCase"
-    ],
-    "component-selector": [
-      true,
-      "element",
-      "opt",
-      "kebab-case"
-    ]
+    "directive-selector": [true, "attribute", "opt", "camelCase"],
+    "component-selector": [true, "element", "opt", "kebab-case"]
   }
 }

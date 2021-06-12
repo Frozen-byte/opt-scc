@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {
-  SteamAuthService,
   STEAM_AUTHENTICATE_URL,
+  SteamAuthService,
 } from '../../services/steam-auth.service';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { environment } from '../../../environments/environment';
@@ -19,7 +19,11 @@ export class SteamSignInComponent implements OnInit {
     public fireAuth: AngularFireAuth
   ) {
     if (environment.useEmulators) {
-      fireAuth.signInAnonymously();
+      import('firebase/app').then((firebase) => {
+        this.fireAuth.signInWithPopup(
+          new firebase.default.auth.GoogleAuthProvider()
+        );
+      });
     }
   }
 

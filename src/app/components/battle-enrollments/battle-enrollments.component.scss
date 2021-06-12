@@ -27,7 +27,7 @@
     margin: 0.5rem 1.5rem;
     align-items: center;
     display: inline-grid;
-    grid-gap: .25rem;
+    grid-gap: 0.25rem;
     max-width: 240px;
     height: fit-content;
 
@@ -41,7 +41,7 @@
       justify-self: left;
       padding: 1px;
       margin-right: 2px;
-      background: linear-gradient( to bottom, #515151 5%, #474747 95%);
+      background: linear-gradient(to bottom, #515151 5%, #474747 95%);
       height: 32px;
     }
 

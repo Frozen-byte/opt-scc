@@ -112,7 +112,9 @@
   <div class="row enrollments">
     <section class="enrollmentHeader">
       <h3 class="mat-headline">Anmeldung</h3>
-      <opt-battle-bottom-sheet [battleId]="battle.battleId"></opt-battle-bottom-sheet>
+      <opt-battle-bottom-sheet
+        [battleId]="battle.battleId"
+      ></opt-battle-bottom-sheet>
     </section>
 
     <section class="enrollment" *ngFor="let faction of battle.factions">
@@ -123,4 +125,10 @@
     </section>
   </div>
 
+  <div class="row debriefing">
+    <section *optHasPlayerRole="'eventManager'">
+      <h3 class="mat-headline">Debriefing</h3>
+      <opt-debriefing [battleId]="battle.battleId"></opt-debriefing>
+    </section>
+  </div>
 </ng-container>

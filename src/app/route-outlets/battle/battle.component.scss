@@ -14,7 +14,7 @@
   flex-direction: row;
   align-items: stretch;
 
-  $section-margin: .5rem;
+  $section-margin: 0.5rem;
   > section {
     flex: 1 1 auto;
     margin: $section-margin $section-margin * 4;
@@ -29,7 +29,6 @@
       flex: 1 1 44%; // rough estimate to split into 2 columns
     }
   }
-
 }
 
 opt-sector-select {
@@ -37,4 +36,3 @@ opt-sector-select {
   width: 100px;
   height: 100px;
 }
-

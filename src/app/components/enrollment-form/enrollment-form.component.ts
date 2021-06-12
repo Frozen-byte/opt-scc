@@ -27,7 +27,7 @@ export class EnrollmentFormComponent implements OnChanges {
     battleId: new FormControl(),
     factionId: new FormControl(),
     status: new FormControl(),
-    comment: new FormControl(undefined, { updateOn: 'blur' }),
+    comment: new FormControl('', { updateOn: 'blur' }),
     userId: new FormControl(),
     displayName: new FormControl(),
     photoUrl: new FormControl(),

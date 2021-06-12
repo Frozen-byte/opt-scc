@@ -32,9 +32,13 @@ export class EnrollmentsService {
       .valueChanges();
   }
 
+  /*
+   * battleID is required
+   * userId is required for the partial Enrollment object you pass
+   */
   patchEnrollment(
     battleId: Battle['battleId'],
-    enrollment: Enrollment
+    enrollment: Partial<Enrollment> & Required<{ userId: Enrollment['userId'] }>
   ): Promise<void> {
     return this.db
       .object<Enrollment>(`enrollments/${battleId}/${enrollment.userId}`)

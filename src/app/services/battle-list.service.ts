@@ -15,7 +15,7 @@ function sortBattlesByDate(a: Battle, b: Battle): number {
 export class BattleListService {
   constructor(public db: AngularFireDatabase) {}
 
-  public getBattles(campaignId: Battle['campaignId']): Observable<Battle[]> {
+  getBattles(campaignId: Battle['campaignId']): Observable<Battle[]> {
     return this.db
       .list<Battle>('battles', (ref) =>
         ref.orderByChild('campaignId').equalTo(campaignId)
@@ -26,5 +26,14 @@ export class BattleListService {
 
   getBattle(battleId: Battle['battleId']): Observable<Battle | null> {
     return this.db.object<Battle>(`battles/${battleId}`).valueChanges();
+  }
+
+  /*
+   * battleID is required for the partial Battle object you pass
+   */
+  patchBattle(
+    battle: Partial<Battle> & Required<{ battleId: Battle['battleId'] }>
+  ): Promise<void> {
+    return this.db.object<Battle>(`battles/${battle.battleId}`).update(battle);
   }
 }

@@ -1,19 +1,19 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { BattleBottomSheetComponent } from './battle-bottom-sheet.component';
+import { DebriefingComponent } from './debriefing.component';
 
-describe('BattleBottomSheetComponent', () => {
-  let component: BattleBottomSheetComponent;
-  let fixture: ComponentFixture<BattleBottomSheetComponent>;
+describe('DebriefingComponent', () => {
+  let component: DebriefingComponent;
+  let fixture: ComponentFixture<DebriefingComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [BattleBottomSheetComponent],
+      declarations: [DebriefingComponent],
     }).compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(BattleBottomSheetComponent);
+    fixture = TestBed.createComponent(DebriefingComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

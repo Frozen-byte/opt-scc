@@ -1,0 +1,15 @@
+<form (submit)="submitDebriefingFormGroup($event)">
+  Endpunktestand
+  <mat-form-field appearance="outline" *ngFor="let faction of factions">
+    <mat-label
+      >{{ faction.factionName }} als {{ faction.factionSide }}</mat-label
+    >
+    <input
+      matInput
+      type="number"
+      [(ngModel)]="faction.factionBattleScore"
+      [name]="faction.factionId"
+    />
+  </mat-form-field>
+  <button mat-button>Speichern</button>
+</form>

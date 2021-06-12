@@ -27,8 +27,12 @@
       </span>
     </mat-button-toggle>
   </mat-button-toggle-group>
-  <mat-form-field appearance="outline" formControlName="comment">
+  <mat-form-field appearance="outline">
     <mat-label>Kommentar</mat-label>
-    <input matInput placeholder="komme 10 Minuten später..." />
+    <input
+      matInput
+      placeholder="komme 10 Minuten später..."
+      formControlName="comment"
+    />
   </mat-form-field>
 </form>

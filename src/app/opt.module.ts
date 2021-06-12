@@ -19,8 +19,14 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AngularFireModule } from '@angular/fire';
 import { environment } from '../environments/environment';
-import { AngularFireAuthModule } from '@angular/fire/auth';
-import { AngularFireDatabaseModule } from '@angular/fire/database';
+import {
+  AngularFireAuthModule,
+  USE_EMULATOR as USE_AUTH_EMULATOR,
+} from '@angular/fire/auth';
+import {
+  AngularFireDatabaseModule,
+  USE_EMULATOR as USE_DATABASE_EMULATOR,
+} from '@angular/fire/database';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatMenuModule } from '@angular/material/menu';
@@ -36,12 +42,12 @@ import { MatBadgeModule } from '@angular/material/badge';
 import { CdkAccordionModule } from '@angular/cdk/accordion';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { BattleBottomSheetComponent } from './components/battle-bottom-sheet/battle-bottom-sheet.component';
-import { USE_EMULATOR as USE_AUTH_EMULATOR } from '@angular/fire/auth';
-import { USE_EMULATOR as USE_DATABASE_EMULATOR } from '@angular/fire/database';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { MatFormFieldModule } from '@angular/material-experimental/mdc-form-field';
 import { MatInputModule } from '@angular/material-experimental/mdc-input';
+import { DebriefingComponent } from './components/debriefing/debriefing.component';
+import { HasPlayerRoleDirective } from './has-player-role.directive';
 
 @NgModule({
   declarations: [
@@ -60,6 +66,8 @@ import { MatInputModule } from '@angular/material-experimental/mdc-input';
     BattleLinkComponent,
     SiteToolbarComponent,
     BattleBottomSheetComponent,
+    DebriefingComponent,
+    HasPlayerRoleDirective,
   ],
   imports: [
     // Native Modules
