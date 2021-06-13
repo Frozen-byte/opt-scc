@@ -17,7 +17,7 @@ export type PLAYER_ROLES =
   | 'eventManager'
   | 'armyCommand'
   | 'squadLead'
-  | 'player'
+  | 'soldier'
   | 'guest';
 
 export enum PLAYER_ROLES_WEIGHT {
@@ -25,7 +25,7 @@ export enum PLAYER_ROLES_WEIGHT {
   eventManager = 900,
   armyCommand = 500,
   squadLead = 200,
-  player = 100,
+  soldier = 100,
   guest = 99,
 }
 

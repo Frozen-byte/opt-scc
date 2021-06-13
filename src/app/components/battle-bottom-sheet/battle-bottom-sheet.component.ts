@@ -4,7 +4,7 @@ import { EnrollmentsService } from '../../services/enrollments.service';
 import { Battle } from '../../route-outlets/battle/battle.types';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { UntilDestroy, untilDestroyed } from '@ngneat/until-destroy';
-import { filter, map, switchMap } from 'rxjs/operators';
+import { filter, map, switchMap, withLatestFrom } from 'rxjs/operators';
 
 @UntilDestroy()
 @Component({
@@ -31,10 +31,16 @@ export class BattleBottomSheetComponent implements OnInit {
             this.enrollmentService.getEnrollment(this.battleId, userId)
           ),
           map((enrollment) => enrollment as Enrollment),
+          withLatestFrom(this.fireAuth.user),
           untilDestroyed(this)
         )
-        .subscribe((enrollment) => {
-          this.enrollment = enrollment;
+        .subscribe(([enrollment, user]) => {
+          // enrollment may not defined, yet. fill all pre required data
+          this.enrollment = enrollment ?? {
+            battleId: this.battleId,
+            userId: user?.uid,
+            photoUrl: user?.photoURL,
+          };
         });
     }
   }

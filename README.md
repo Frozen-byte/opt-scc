@@ -11,7 +11,7 @@ Helper Webapp to manage the Campaigns
 ## quick start
 
 Execute `npm start` and `npm run emulators` for a good dev-environement.
-TODO: Steam-Auth emulation
+For Auth stuff use Google auth. On Production the SteamAuth will kick in.
 
 # Production
 

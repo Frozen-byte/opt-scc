@@ -1,8 +1,10 @@
-<opt-enrollment-form
-  *ngIf="fireAuth.user | async; else login"
-  [enrollment]="enrollment"
-  (enrollmentChange)="enrollmentChange($event)"
-></opt-enrollment-form>
+<ng-container *ngIf="fireAuth.user | async; else login">
+  <opt-enrollment-form
+    *optHasPlayerRole="'soldier'"
+    [enrollment]="enrollment"
+    (enrollmentChange)="enrollmentChange($event)"
+  ></opt-enrollment-form>
+</ng-container>
 <ng-template #login>
   <span>Um dich für die Schlacht einzutragen, melde dich bitte an:</span>
   <opt-steam-sign-in></opt-steam-sign-in>
