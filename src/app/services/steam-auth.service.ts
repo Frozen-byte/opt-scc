@@ -1,7 +1,10 @@
 import { Injectable } from '@angular/core';
-import { map } from 'rxjs/operators';
+import { filter, map, switchMap } from 'rxjs/operators';
 import { ajax } from 'rxjs/ajax';
 import { Observable } from 'rxjs';
+import { PLAYER_ROLE } from '../has-player-role.directive';
+import { AngularFireAuth } from '@angular/fire/auth';
+import { AngularFireDatabase } from '@angular/fire/database';
 
 export type Timestamp = number;
 export type Hyperlink = string;
@@ -44,11 +47,35 @@ export interface OpenIdResponse extends Record<string, string> {
 export const STEAM_AUTHENTICATE_URL = 'https://steam.byte.pm/api/steam/auth';
 export const STEAM_VERIFY_URL = 'https://steam.byte.pm/api/steam/verify';
 
+export interface Player {
+  fireAuthUid: string;
+  photoUrl: string;
+  defaultFactionId: string;
+  role: PLAYER_ROLE;
+}
+
 @Injectable({
   providedIn: 'root',
 })
 export class SteamAuthService {
-  constructor() {}
+  constructor(
+    public fireAuth: AngularFireAuth,
+    public db: AngularFireDatabase
+  ) {}
+
+  getPlayer(campaignId: string, playerId: string): Observable<Player | null> {
+    return this.db
+      .object<Player>(`/campaigns/${campaignId}/players/${playerId}`)
+      .valueChanges();
+  }
+
+  getLoggedInPlayer(campaignId: string): Observable<Player | null> {
+    return this.fireAuth.user.pipe(
+      filter((user) => !!user?.uid),
+      map((user) => user?.uid as string),
+      switchMap((userId) => this.getPlayer(campaignId, userId))
+    );
+  }
 
   authenticate(): Promise<void> {
     return fetch(STEAM_AUTHENTICATE_URL)

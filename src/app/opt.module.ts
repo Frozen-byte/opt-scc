@@ -41,7 +41,7 @@ import { MatBottomSheetModule } from '@angular/material/bottom-sheet';
 import { MatBadgeModule } from '@angular/material/badge';
 import { CdkAccordionModule } from '@angular/cdk/accordion';
 import { MatExpansionModule } from '@angular/material/expansion';
-import { BattleBottomSheetComponent } from './components/battle-bottom-sheet/battle-bottom-sheet.component';
+import { EnrollForBattleComponent } from './components/battle-bottom-sheet/enroll-for-battle.component';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { MatFormFieldModule } from '@angular/material-experimental/mdc-form-field';
@@ -65,7 +65,7 @@ import { HasPlayerRoleDirective } from './has-player-role.directive';
     FactionScoreComponent,
     BattleLinkComponent,
     SiteToolbarComponent,
-    BattleBottomSheetComponent,
+    EnrollForBattleComponent,
     DebriefingComponent,
     HasPlayerRoleDirective,
   ],

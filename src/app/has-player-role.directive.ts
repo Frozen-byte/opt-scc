@@ -10,9 +10,10 @@ import {
 } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { UntilDestroy, untilDestroyed } from '@ngneat/until-destroy';
-import { withLatestFrom } from 'rxjs/operators';
+import { pluck, switchMap, withLatestFrom } from 'rxjs/operators';
+import { Player, SteamAuthService } from './services/steam-auth.service';
 
-export type PLAYER_ROLES =
+export type PLAYER_ROLE =
   | 'admin'
   | 'eventManager'
   | 'armyCommand'
@@ -20,7 +21,7 @@ export type PLAYER_ROLES =
   | 'soldier'
   | 'guest';
 
-export enum PLAYER_ROLES_WEIGHT {
+export enum PLAYER_ROLE_WEIGHT {
   admin = 1000,
   eventManager = 900,
   armyCommand = 500,
@@ -29,27 +30,36 @@ export enum PLAYER_ROLES_WEIGHT {
   guest = 99,
 }
 
+interface OptHasPlayerRole {
+  minimumRole: PLAYER_ROLE;
+  campaignId: string;
+}
+
 @UntilDestroy()
 @Directive({
   selector: '[optHasPlayerRole]',
 })
 export class HasPlayerRoleDirective implements OnChanges {
-  @Input() optHasPlayerRole: PLAYER_ROLES = 'guest';
-  private optHasPlayerRole$ = new EventEmitter<PLAYER_ROLES>();
+  @Input() optHasPlayerRole?: OptHasPlayerRole;
+  private optHasPlayerRole$ = new EventEmitter<OptHasPlayerRole>();
 
   constructor(
-    public fireAuth: AngularFireAuth,
+    public steamAuth: SteamAuthService,
     private element: ElementRef,
     private templateRef: TemplateRef<any>,
     private viewContainer: ViewContainerRef
   ) {
-    this.fireAuth.idTokenResult
-      .pipe(withLatestFrom(this.optHasPlayerRole$), untilDestroyed(this))
-      .subscribe(([token, minimumRole]) => {
-        const playerRole = token?.claims?.role as PLAYER_ROLES;
-        if (
-          PLAYER_ROLES_WEIGHT[playerRole] >= PLAYER_ROLES_WEIGHT[minimumRole]
-        ) {
+    this.optHasPlayerRole$
+      .pipe(
+        switchMap(({ campaignId }) =>
+          this.steamAuth.getLoggedInPlayer(campaignId)
+        ),
+        pluck<Player | null, Player['role']>('role'),
+        withLatestFrom(this.optHasPlayerRole$),
+        untilDestroyed(this)
+      )
+      .subscribe(([playerRole, { minimumRole }]) => {
+        if (PLAYER_ROLE_WEIGHT[playerRole] >= PLAYER_ROLE_WEIGHT[minimumRole]) {
           this.viewContainer.createEmbeddedView(this.templateRef);
         } else {
           this.viewContainer.clear();
@@ -59,5 +69,8 @@ export class HasPlayerRoleDirective implements OnChanges {
 
   ngOnChanges(changes: SimpleChanges): void {
     this.optHasPlayerRole$.emit(changes.optHasPlayerRole?.currentValue);
+    this.optHasPlayerRole$.emit(
+      changes.optHasPlayerRoleCampaignId?.currentValue
+    );
   }
 }

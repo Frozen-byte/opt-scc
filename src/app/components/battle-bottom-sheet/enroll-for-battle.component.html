@@ -1,6 +1,6 @@
 <ng-container *ngIf="fireAuth.user | async; else login">
   <opt-enrollment-form
-    *optHasPlayerRole="'soldier'"
+    *optHasPlayerRole="{minimumRole: 'soldier', campaignId: battle.campaignId}"
     [enrollment]="enrollment"
     (enrollmentChange)="enrollmentChange($event)"
   ></opt-enrollment-form>

@@ -8,12 +8,12 @@ import { filter, map, switchMap, withLatestFrom } from 'rxjs/operators';
 
 @UntilDestroy()
 @Component({
-  selector: 'opt-battle-bottom-sheet',
-  templateUrl: './battle-bottom-sheet.component.html',
-  styleUrls: ['./battle-bottom-sheet.component.scss'],
+  selector: 'opt-enroll-for-battle[battle]',
+  templateUrl: './enroll-for-battle.component.html',
+  styleUrls: ['./enroll-for-battle.component.scss'],
 })
-export class BattleBottomSheetComponent implements OnInit {
-  @Input() battleId: Battle['battleId'] = '';
+export class EnrollForBattleComponent implements OnInit {
+  @Input() battle: Battle;
   public enrollment?: Enrollment;
 
   constructor(
@@ -22,22 +22,23 @@ export class BattleBottomSheetComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    if (this.battleId) {
+    if (this.battle) {
       this.fireAuth.user
         .pipe(
           filter((user) => !!user?.uid),
           map((user) => user?.uid as string),
           switchMap((userId) =>
-            this.enrollmentService.getEnrollment(this.battleId, userId)
+            this.enrollmentService.getEnrollment(this.battle?.battleId, userId)
           ),
           map((enrollment) => enrollment as Enrollment),
           withLatestFrom(this.fireAuth.user),
           untilDestroyed(this)
         )
         .subscribe(([enrollment, user]) => {
+          console.debug(enrollment, user);
           // enrollment may not defined, yet. fill all pre required data
           this.enrollment = enrollment ?? {
-            battleId: this.battleId,
+            battleId: this.battle?.battleId,
             userId: user?.uid,
             photoUrl: user?.photoURL,
           };
@@ -46,6 +47,6 @@ export class BattleBottomSheetComponent implements OnInit {
   }
 
   enrollmentChange(enrollment: Enrollment): void {
-    this.enrollmentService.patchEnrollment(this.battleId, enrollment);
+    this.enrollmentService.patchEnrollment(this.battle.battleId, enrollment);
   }
 }

@@ -1,19 +1,19 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { BattleBottomSheetComponent } from './battle-bottom-sheet.component';
+import { EnrollForBattleComponent } from './enroll-for-battle.component';
 
 describe('BattleBottomSheetComponent', () => {
-  let component: BattleBottomSheetComponent;
-  let fixture: ComponentFixture<BattleBottomSheetComponent>;
+  let component: EnrollForBattleComponent;
+  let fixture: ComponentFixture<EnrollForBattleComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [BattleBottomSheetComponent],
+      declarations: [EnrollForBattleComponent],
     }).compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(BattleBottomSheetComponent);
+    fixture = TestBed.createComponent(EnrollForBattleComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
