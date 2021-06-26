@@ -8,10 +8,9 @@ import {
   TemplateRef,
   ViewContainerRef,
 } from '@angular/core';
-import { AngularFireAuth } from '@angular/fire/auth';
 import { UntilDestroy, untilDestroyed } from '@ngneat/until-destroy';
 import { pluck, switchMap, withLatestFrom } from 'rxjs/operators';
-import { Player, SteamAuthService } from './services/steam-auth.service';
+import { Player, SteamAuthService } from '../services/steam-auth.service';
 
 export type PLAYER_ROLE =
   | 'admin'
@@ -69,8 +68,5 @@ export class HasPlayerRoleDirective implements OnChanges {
 
   ngOnChanges(changes: SimpleChanges): void {
     this.optHasPlayerRole$.emit(changes.optHasPlayerRole?.currentValue);
-    this.optHasPlayerRole$.emit(
-      changes.optHasPlayerRoleCampaignId?.currentValue
-    );
   }
 }

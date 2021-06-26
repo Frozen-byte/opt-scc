@@ -2,12 +2,10 @@ import { Injectable } from '@angular/core';
 import { filter, map, switchMap } from 'rxjs/operators';
 import { ajax } from 'rxjs/ajax';
 import { Observable } from 'rxjs';
-import { PLAYER_ROLE } from '../has-player-role.directive';
+import { PLAYER_ROLE } from '../pipes-and-directives/has-player-role.directive';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { AngularFireDatabase } from '@angular/fire/database';
-
-export type Timestamp = number;
-export type Hyperlink = string;
+import { Hyperlink, isDefinedGuard, Timestamp } from '../toolbelt';
 
 /**
  * see https://developer.valvesoftware.com/wiki/Steam_Web_API#GetPlayerSummaries_.28v0002.29
@@ -58,6 +56,16 @@ export interface Player {
   providedIn: 'root',
 })
 export class SteamAuthService {
+  /*
+    the firebase user
+   */
+  public loggedInUser = this.fireAuth.user;
+
+  /*
+    the firebase userId
+   */
+  public loggedInUserId = this.loggedInUser.pipe(map((user) => user?.uid));
+
   constructor(
     public fireAuth: AngularFireAuth,
     public db: AngularFireDatabase
@@ -65,14 +73,16 @@ export class SteamAuthService {
 
   getPlayer(campaignId: string, playerId: string): Observable<Player | null> {
     return this.db
-      .object<Player>(`/campaigns/${campaignId}/players/${playerId}`)
+      .object<Player>(`/players/${campaignId}/${playerId}`)
       .valueChanges();
   }
 
+  /*
+    the player is basically the user with additional campaign information like faction and rank
+   */
   getLoggedInPlayer(campaignId: string): Observable<Player | null> {
-    return this.fireAuth.user.pipe(
-      filter((user) => !!user?.uid),
-      map((user) => user?.uid as string),
+    return this.loggedInUserId.pipe(
+      filter(isDefinedGuard),
       switchMap((userId) => this.getPlayer(campaignId, userId))
     );
   }

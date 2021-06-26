@@ -34,14 +34,26 @@ export class EnrollmentsService {
 
   /*
    * battleID is required
-   * userId is required for the partial Enrollment object you pass
+   * userId is required
    */
   patchEnrollment(
-    battleId: Battle['battleId'],
-    enrollment: Partial<Enrollment> & Required<{ userId: Enrollment['userId'] }>
+    enrollment: Partial<Enrollment> &
+      Required<{
+        battleId: Enrollment['battleId'];
+        userId: Enrollment['userId'];
+      }>
   ): Promise<void> {
+    if (!enrollment.battleId) {
+      throw new Error('battleId is not defined');
+    }
+    if (!enrollment.userId) {
+      throw new Error('userId is not defined');
+    }
+
     return this.db
-      .object<Enrollment>(`enrollments/${battleId}/${enrollment.userId}`)
+      .object<Enrollment>(
+        `enrollments/${enrollment.battleId}/${enrollment.userId}`
+      )
       .update(enrollment);
   }
 }
