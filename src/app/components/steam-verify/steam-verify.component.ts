@@ -5,9 +5,9 @@ import {
 } from '../../services/steam-auth.service';
 import { ActivatedRoute } from '@angular/router';
 import { filter, switchMap, tap } from 'rxjs/operators';
-import { isNotNullOrUndefined } from 'codelyzer/util/isNotNullOrUndefined';
-import { EmptyError } from 'rxjs';
 import { AngularFireAuth } from '@angular/fire/auth';
+import { isDefinedGuard } from '../../toolbelt';
+import { UntilDestroy, untilDestroyed } from '@ngneat/until-destroy';
 
 function isOpenIdResponse(
   toBeDetermined: any
@@ -15,6 +15,7 @@ function isOpenIdResponse(
   return toBeDetermined.hasOwnProperty('openid.sig');
 }
 
+@UntilDestroy()
 @Component({
   selector: 'opt-steam-verify',
   templateUrl: './steam-verify.component.html',
@@ -33,15 +34,11 @@ export class SteamVerifyComponent implements OnInit {
         tap(() => (status = 'verify')),
         filter(isOpenIdResponse),
         switchMap(steamAuth.verify),
-        filter(isNotNullOrUndefined),
+        filter(isDefinedGuard),
         switchMap((player) => {
-          if (player) {
-            // typescript helper, the filter() method above should be sufficient but TS does not parse it
-            return fireAuth.signInWithCustomToken(player.jwt);
-          }
-          // potentially dead code return
-          return EmptyError;
-        })
+          return fireAuth.signInWithCustomToken(player.jwt);
+        }),
+        untilDestroyed(this)
       )
       .subscribe();
   }
