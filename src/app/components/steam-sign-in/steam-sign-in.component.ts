@@ -1,8 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {
-  STEAM_AUTHENTICATE_URL,
-  SteamAuthService,
-} from '../../services/steam-auth.service';
+import { STEAM_AUTHENTICATE_URL } from '../../services/steam-auth.service';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { environment } from '../../../environments/environment';
 
@@ -14,10 +11,7 @@ import { environment } from '../../../environments/environment';
 export class SteamSignInComponent implements OnInit {
   STEAM_AUTHENTICATE_URL = STEAM_AUTHENTICATE_URL;
 
-  constructor(
-    public steamAuth: SteamAuthService,
-    public fireAuth: AngularFireAuth
-  ) {
+  constructor(public fireAuth: AngularFireAuth) {
     if (environment.useEmulators) {
       import('firebase/app').then((firebase) => {
         this.fireAuth.signInWithPopup(

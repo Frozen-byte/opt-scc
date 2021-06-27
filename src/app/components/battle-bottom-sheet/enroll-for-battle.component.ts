@@ -7,6 +7,7 @@ import { filter, switchMap, withLatestFrom } from 'rxjs/operators';
 import { SteamAuthService } from '../../services/steam-auth.service';
 import { throwError } from 'rxjs';
 import { isDefinedGuard } from '../../toolbelt';
+import { PlayerService } from '../../services/player.service';
 
 @UntilDestroy()
 @Component({
@@ -20,10 +21,11 @@ export class EnrollForBattleComponent implements OnInit {
   public enrollment?: Enrollment;
 
   constructor(
-    public steamAuth: SteamAuthService,
+    public authService: SteamAuthService,
+    public playerService: PlayerService,
     public enrollmentService: EnrollmentsService
   ) {
-    this.steamAuth.loggedInUserId
+    this.authService.loggedInUserId
       .pipe(
         filter(isDefinedGuard),
         switchMap((userId) => {
@@ -36,7 +38,7 @@ export class EnrollForBattleComponent implements OnInit {
           return throwError('The Guard for userId or battle failed');
         }),
         withLatestFrom(
-          this.steamAuth.loggedInUser.pipe(filter(isDefinedGuard))
+          this.authService.loggedInUser.pipe(filter(isDefinedGuard))
         ),
         untilDestroyed(this)
       )
@@ -46,9 +48,17 @@ export class EnrollForBattleComponent implements OnInit {
           battleId: this.battle.battleId,
           userId: user.uid,
           displayName: user.displayName || user.uid,
-          photoUrl: user?.photoURL,
+          photoUrl: user.photoURL,
           status: 'pending',
         };
+
+        // create player
+        // TODO: skip if existing
+        this.playerService.patchPlayer(this.battle.campaignId, {
+          fireAuthUid: user.uid,
+          displayName: user.displayName ?? user.uid,
+          photoUrl: user.photoURL ?? undefined,
+        });
       });
   }
 

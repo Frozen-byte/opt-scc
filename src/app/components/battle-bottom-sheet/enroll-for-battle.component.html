@@ -1,4 +1,4 @@
-<ng-container *ngIf="steamAuth.loggedInUserId | async; else login">
+<ng-container *ngIf="authService.loggedInUserId | async; else login">
   <opt-enrollment-form
     [enrollment]="enrollment"
     (enrollmentChange)="enrollmentChange($event)"

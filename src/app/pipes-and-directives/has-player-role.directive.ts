@@ -9,8 +9,10 @@ import {
   ViewContainerRef,
 } from '@angular/core';
 import { UntilDestroy, untilDestroyed } from '@ngneat/until-destroy';
-import { pluck, switchMap, withLatestFrom } from 'rxjs/operators';
-import { Player, SteamAuthService } from '../services/steam-auth.service';
+import { filter, pluck, switchMap, withLatestFrom } from 'rxjs/operators';
+import { Player } from '../services/steam-auth.service';
+import { PlayerService } from '../services/player.service';
+import { isDefinedGuard } from '../toolbelt';
 
 export type PLAYER_ROLE =
   | 'admin'
@@ -18,6 +20,7 @@ export type PLAYER_ROLE =
   | 'armyCommand'
   | 'squadLead'
   | 'soldier'
+  | 'recruit'
   | 'guest';
 
 export enum PLAYER_ROLE_WEIGHT {
@@ -43,7 +46,7 @@ export class HasPlayerRoleDirective implements OnChanges {
   private optHasPlayerRole$ = new EventEmitter<OptHasPlayerRole>();
 
   constructor(
-    public steamAuth: SteamAuthService,
+    public playerService: PlayerService,
     private element: ElementRef,
     private templateRef: TemplateRef<any>,
     private viewContainer: ViewContainerRef
@@ -51,9 +54,10 @@ export class HasPlayerRoleDirective implements OnChanges {
     this.optHasPlayerRole$
       .pipe(
         switchMap(({ campaignId }) =>
-          this.steamAuth.getLoggedInPlayer(campaignId)
+          this.playerService.getLoggedInPlayer(campaignId)
         ),
-        pluck<Player | null, Player['role']>('role'),
+        filter(isDefinedGuard),
+        pluck<Player, Player['role']>('role'),
         withLatestFrom(this.optHasPlayerRole$),
         untilDestroyed(this)
       )

@@ -47,6 +47,7 @@ export const STEAM_VERIFY_URL = 'https://steam.byte.pm/api/steam/verify';
 
 export interface Player {
   fireAuthUid: string;
+  displayName: string;
   photoUrl: string;
   defaultFactionId: string;
   role: PLAYER_ROLE;
@@ -67,25 +68,9 @@ export class SteamAuthService {
   public loggedInUserId = this.loggedInUser.pipe(map((user) => user?.uid));
 
   constructor(
-    public fireAuth: AngularFireAuth,
-    public db: AngularFireDatabase
+    private fireAuth: AngularFireAuth,
+    private db: AngularFireDatabase
   ) {}
-
-  getPlayer(campaignId: string, playerId: string): Observable<Player | null> {
-    return this.db
-      .object<Player>(`/players/${campaignId}/${playerId}`)
-      .valueChanges();
-  }
-
-  /*
-    the player is basically the user with additional campaign information like faction and rank
-   */
-  getLoggedInPlayer(campaignId: string): Observable<Player | null> {
-    return this.loggedInUserId.pipe(
-      filter(isDefinedGuard),
-      switchMap((userId) => this.getPlayer(campaignId, userId))
-    );
-  }
 
   authenticate(): Promise<void> {
     return fetch(STEAM_AUTHENTICATE_URL)

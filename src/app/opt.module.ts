@@ -14,7 +14,7 @@ import { FactionScoreComponent } from './components/faction-score/faction-score.
 import { BattleLinkComponent } from './components/battle-link/battle-link.component';
 import { SiteToolbarComponent } from './components/site-toolbar/site-toolbar.component';
 import { BrowserModule } from '@angular/platform-browser';
-import { OptRoutingModule } from './opt-routing.module';
+import { OptRoutingModule } from './route-outlets/opt-routing.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AngularFireModule } from '@angular/fire';
@@ -48,6 +48,7 @@ import { MatFormFieldModule } from '@angular/material-experimental/mdc-form-fiel
 import { MatInputModule } from '@angular/material-experimental/mdc-input';
 import { DebriefingComponent } from './components/debriefing/debriefing.component';
 import { HasPlayerRoleDirective } from './pipes-and-directives/has-player-role.directive';
+import { DragDropModule } from '@angular/cdk/drag-drop';
 
 @NgModule({
   declarations: [
@@ -99,6 +100,7 @@ import { HasPlayerRoleDirective } from './pipes-and-directives/has-player-role.d
     MatButtonToggleModule,
     MatFormFieldModule,
     MatInputModule,
+    DragDropModule,
   ],
   providers: [
     {
