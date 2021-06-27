@@ -29,7 +29,8 @@ export enum PLAYER_ROLE_WEIGHT {
   armyCommand = 500,
   squadLead = 200,
   soldier = 100,
-  guest = 99,
+  recruit = 99,
+  guest = 1,
 }
 
 interface OptHasPlayerRole {
