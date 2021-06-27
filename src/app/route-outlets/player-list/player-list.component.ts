@@ -33,7 +33,7 @@ export class PlayerListComponent implements OnInit {
   ) {
     this.player$.subscribe((players) => {
       for (const player of players) {
-        if (player.role === 'recruit') {
+        if (!player.hasOwnProperty('role') || player.role === 'recruit') {
           this.recruitPlayers.push(player);
         } else if (player.role === 'guest') {
           this.inactivePlayers.push(player);
