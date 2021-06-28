@@ -1,3 +1,5 @@
+@use "../player-card/playerCard";
+
 .mat-expansion-panel-header {
   flex-direction: column;
   align-items: stretch;
@@ -24,30 +26,10 @@
   flex-wrap: wrap;
 
   .playerCard {
-    margin: 0.5rem 1.5rem;
-    align-items: center;
-    display: inline-grid;
-    grid-gap: 0.25rem;
-    max-width: 240px;
-    height: fit-content;
-
+    @include playerCard.defaultGrid;
     grid-template-areas:
       "avatar title    status"
       "avatar comment  comment";
-
-    .avatar {
-      grid-area: avatar;
-      align-self: start;
-      justify-self: left;
-      padding: 1px;
-      margin-right: 2px;
-      background: linear-gradient(to bottom, #515151 5%, #474747 95%);
-      height: 32px;
-    }
-
-    .title {
-      grid-area: title;
-    }
 
     .status {
       grid-area: status;
@@ -58,12 +40,6 @@
     .comment {
       grid-area: comment;
       color: var(--text-primary-darker-color);
-    }
-
-    .mat-badge-small .mat-badge-content {
-      width: min-content;
-      padding: 0 0.6rem;
-      border-radius: 8px;
     }
   }
 }

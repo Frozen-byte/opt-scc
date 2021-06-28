@@ -6,6 +6,7 @@ import { PLAYER_ROLE } from '../pipes-and-directives/has-player-role.directive';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { AngularFireDatabase } from '@angular/fire/database';
 import { Hyperlink, isDefinedGuard, Timestamp } from '../toolbelt';
+import { Faction } from '../route-outlets/campaign/campaign.component';
 
 /**
  * see https://developer.valvesoftware.com/wiki/Steam_Web_API#GetPlayerSummaries_.28v0002.29
@@ -49,7 +50,7 @@ export interface Player {
   fireAuthUid: string;
   displayName: string;
   photoUrl: string;
-  defaultFactionId: string;
+  defaultFactionId: Faction['factionId'];
   role: PLAYER_ROLE;
 }
 

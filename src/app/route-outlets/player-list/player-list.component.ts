@@ -9,7 +9,9 @@ import { Faction } from '../campaign/campaign.component';
 import { PlayerService } from '../../services/player.service';
 import { ActivatedRoute } from '@angular/router';
 import { distinctUntilChanged, pluck, switchMap } from 'rxjs/operators';
+import { KeyValue } from '@angular/common';
 
+type PlayersByFaction = Record<Faction['factionId'], Player[]>;
 @Component({
   selector: 'opt-player-list',
   templateUrl: './player-list.component.html',
@@ -17,7 +19,7 @@ import { distinctUntilChanged, pluck, switchMap } from 'rxjs/operators';
 })
 export class PlayerListComponent implements OnInit {
   public recruitPlayers: Player[] = [];
-  public factionPlayers: Map<Faction['factionId'], Player> = new Map();
+  public playersByFaction: PlayersByFaction = {};
   public inactivePlayers: Player[] = [];
   public player$ = this.route.params.pipe(
     pluck('campaignId'),
@@ -37,8 +39,10 @@ export class PlayerListComponent implements OnInit {
           this.recruitPlayers.push(player);
         } else if (player.role === 'guest') {
           this.inactivePlayers.push(player);
+        } else if (this.playersByFaction[player.defaultFactionId]) {
+          this.playersByFaction[player.defaultFactionId]?.push(player);
         } else {
-          this.factionPlayers.set(player.defaultFactionId, player);
+          this.playersByFaction[player.defaultFactionId] = [player];
         }
       }
     });

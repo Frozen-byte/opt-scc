@@ -5,20 +5,17 @@
       cdkDropList
       [cdkDropListData]="recruitPlayers"
       (cdkDropListDropped)="drop($event)">
-      <div *ngFor="let item of recruitPlayers" cdkDrag>{{item}}</div>
+      <opt-player-card *ngFor="let recruitPlayer of recruitPlayers" cdkDrag [player]="recruitPlayer"></opt-player-card>
     </div>
   </section>
-  <section *ngFor="let faction of factionPlayers | keyvalue">
-    <h2>ARF</h2>
+  <section *ngFor="let item of playersByFaction | keyvalue">
+    <h2>{{item.key}}</h2>
     <div
       cdkDropList
       [cdkDropListData]="recruitPlayers"
       (cdkDropListDropped)="drop($event)">
-      <div *ngFor="let item of recruitPlayers" cdkDrag>{{item}}</div>
+      <opt-player-card *ngFor="let factionPlayer of item.value" cdkDrag [player]="factionPlayer"></opt-player-card>
     </div>
-  </section>
-  <section>
-    <h2>SWORD</h2>
   </section>
   <section>
     <h2>Inaktive Spieler</h2>
@@ -26,7 +23,7 @@
       cdkDropList
       [cdkDropListData]="inactivePlayers"
       (cdkDropListDropped)="drop($event)">
-      <div *ngFor="let item of inactivePlayers" cdkDrag>{{item}}</div>
+      <opt-player-card *ngFor="let inactivePlayer of inactivePlayers" cdkDrag [player]="inactivePlayer"></opt-player-card>
     </div>
   </section>
 </div>

@@ -1,0 +1,10 @@
+@mixin defaultGrid {
+  display: inline-grid;
+  align-items: center;
+  grid-gap: 0.25rem;
+  grid-template-areas: "avatar title";
+
+  max-width: 240px;
+  height: fit-content;
+  margin: 0.5rem 1.5rem;
+}

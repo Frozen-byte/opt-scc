@@ -1,0 +1,13 @@
+:host {
+  display: block;
+  grid-area: avatar;
+  align-self: start;
+  justify-self: left;
+  margin-right: 2px;
+}
+
+img {
+  height: 32px;
+  padding: 1px;
+  background: linear-gradient(to bottom, #515151 5%, #474747 95%);
+}

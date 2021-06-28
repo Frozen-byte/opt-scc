@@ -49,6 +49,9 @@ import { MatInputModule } from '@angular/material-experimental/mdc-input';
 import { DebriefingComponent } from './components/debriefing/debriefing.component';
 import { HasPlayerRoleDirective } from './pipes-and-directives/has-player-role.directive';
 import { DragDropModule } from '@angular/cdk/drag-drop';
+import { PlayerCardComponent } from './components/player-card/player-card.component';
+import { PlayerCardAvatarComponent } from './components/player-card/player-card-avatar/player-card-avatar.component';
+import { PlayerCardNameComponent } from './components/player-card/player-card-name/player-card-name.component';
 
 @NgModule({
   declarations: [
@@ -69,6 +72,9 @@ import { DragDropModule } from '@angular/cdk/drag-drop';
     EnrollForBattleComponent,
     DebriefingComponent,
     HasPlayerRoleDirective,
+    PlayerCardComponent,
+    PlayerCardAvatarComponent,
+    PlayerCardNameComponent,
   ],
   imports: [
     // Native Modules
