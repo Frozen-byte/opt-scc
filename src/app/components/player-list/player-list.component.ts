@@ -4,6 +4,7 @@ import { CdkDragDrop } from '@angular/cdk/drag-drop';
 import { FactionId } from '../../route-outlets/campaign/campaign.component';
 import { PlayerService } from '../../services/player.service';
 import { Observable } from 'rxjs';
+import { tap } from 'rxjs/operators';
 
 @Component({
   selector: 'opt-player-list[campaignId][factionId]',
@@ -13,6 +14,7 @@ import { Observable } from 'rxjs';
 export class PlayerListComponent implements OnInit {
   @Input() campaignId!: string;
   @Input() factionId!: FactionId;
+  public length = 0;
 
   public players$?: Observable<Player[]>;
 
@@ -24,7 +26,11 @@ export class PlayerListComponent implements OnInit {
       .getPlayerList(this.campaignId, (ref) =>
         ref.orderByChild('defaultFactionId').equalTo(this.factionId)
       )
-      .valueChanges();
+      .valueChanges()
+      .pipe(
+        // side effect for leaking the total count to parent element
+        tap((players) => (this.length = players.length))
+      );
   }
 
   drop(event: CdkDragDrop<Player[]>): void {
