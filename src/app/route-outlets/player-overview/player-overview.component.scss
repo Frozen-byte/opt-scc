@@ -1,0 +1,13 @@
+.mat-sidebar-content {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 4em;
+
+  section {
+    flex: 1 1 100%;
+
+    &.faction {
+      flex-basis: 0;
+    }
+  }
+}

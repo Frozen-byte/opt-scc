@@ -1,5 +1,9 @@
 import { Injectable } from '@angular/core';
-import { AngularFireDatabase } from '@angular/fire/database';
+import {
+  AngularFireDatabase,
+  AngularFireList,
+  QueryFn,
+} from '@angular/fire/database';
 import { Player, SteamAuthService } from './steam-auth.service';
 import { Observable } from 'rxjs';
 import { filter, switchMap } from 'rxjs/operators';
@@ -14,8 +18,11 @@ export class PlayerService {
     private db: AngularFireDatabase
   ) {}
 
-  getPlayerList(campaignId: string): Observable<Player[]> {
-    return this.db.list<Player>(`players/${campaignId}`).valueChanges();
+  getPlayerList(
+    campaignId: string,
+    queryFn?: QueryFn
+  ): AngularFireList<Player> {
+    return this.db.list<Player>(`players/${campaignId}`, queryFn);
   }
 
   getPlayer(campaignId: string, playerId: string): Observable<Player | null> {
@@ -39,7 +46,6 @@ export class PlayerService {
     player: Partial<Player> &
       Required<{
         fireAuthUid: Player['fireAuthUid'];
-        displayName: Player['displayName'];
       }>
   ): Promise<void> {
     return this.db

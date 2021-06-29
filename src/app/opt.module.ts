@@ -8,7 +8,7 @@ import { SteamSignInComponent } from './components/steam-sign-in/steam-sign-in.c
 import { SteamVerifyComponent } from './components/steam-verify/steam-verify.component';
 import { BattleEnrollmentsComponent } from './components/battle-enrollments/battle-enrollments.component';
 import { SectorSelectComponent } from './components/sector-select/sector-select.component';
-import { PlayerListComponent } from './route-outlets/player-list/player-list.component';
+import { PlayerListComponent } from './components/player-list/player-list.component';
 import { BattleSectorSelectDialogComponent } from './components/battle-sector-select-dialog/battle-sector-select-dialog.component';
 import { FactionScoreComponent } from './components/faction-score/faction-score.component';
 import { BattleLinkComponent } from './components/battle-link/battle-link.component';
@@ -52,6 +52,7 @@ import { DragDropModule } from '@angular/cdk/drag-drop';
 import { PlayerCardComponent } from './components/player-card/player-card.component';
 import { PlayerCardAvatarComponent } from './components/player-card/player-card-avatar/player-card-avatar.component';
 import { PlayerCardNameComponent } from './components/player-card/player-card-name/player-card-name.component';
+import { PlayerOverviewComponent } from './route-outlets/player-overview/player-overview.component';
 
 @NgModule({
   declarations: [
@@ -75,6 +76,7 @@ import { PlayerCardNameComponent } from './components/player-card/player-card-na
     PlayerCardComponent,
     PlayerCardAvatarComponent,
     PlayerCardNameComponent,
+    PlayerOverviewComponent,
   ],
   imports: [
     // Native Modules

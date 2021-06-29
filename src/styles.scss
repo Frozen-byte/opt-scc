@@ -15,6 +15,14 @@ body {
   &-sword {
     color: opt.$sword-color;
   }
+
+  &-bootcamp {
+    color: inherit;
+  }
+
+  &-retired {
+    color: inherit;
+  }
 }
 
 .side {

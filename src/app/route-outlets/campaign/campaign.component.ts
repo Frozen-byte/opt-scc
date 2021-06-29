@@ -6,9 +6,11 @@ import { Observable } from 'rxjs';
 
 export type DATE_ISO8601 = string;
 
+export type FactionId = 'bootcamp' | 'retired' | 'arf' | 'sword' | 'unknown';
+
 export interface Faction {
   factionName: string;
-  factionId: string;
+  factionId: FactionId;
   factionSide: string;
 }
 

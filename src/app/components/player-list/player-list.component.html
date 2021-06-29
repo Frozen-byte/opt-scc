@@ -1,0 +1,8 @@
+<div (cdkDropListDropped)="drop($event)" cdkDropList>
+  <opt-player-card
+    *ngFor="let player of players$ | async"
+    [cdkDragData]="player"
+    [player]="player"
+    cdkDrag
+  ></opt-player-card>
+</div>

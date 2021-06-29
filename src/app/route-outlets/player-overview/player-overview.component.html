@@ -1,0 +1,22 @@
+<div
+  *ngIf="campaignId$ | async as campaignId"
+  cdkDropListGroup
+  class="mat-sidebar-content"
+>
+  <section class="bootcamp">
+    <h2>Rekruten</h2>
+    <opt-player-list campaignId="adl" factionId="bootcamp"></opt-player-list>
+  </section>
+  <section class="faction">
+    <h2>ARF</h2>
+    <opt-player-list campaignId="adl" factionId="arf"></opt-player-list>
+  </section>
+  <section class="faction">
+    <h2>SWORD</h2>
+    <opt-player-list campaignId="adl" factionId="sword"></opt-player-list>
+  </section>
+  <section class="retired">
+    <h2>Inaktiv</h2>
+    <opt-player-list campaignId="adl" factionId="retired"></opt-player-list>
+  </section>
+</div>
