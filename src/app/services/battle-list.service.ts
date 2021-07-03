@@ -1,8 +1,9 @@
 import { Injectable } from '@angular/core';
 import { map } from 'rxjs/operators';
 import { Battle } from '../route-outlets/battle/battle.types';
-import { AngularFireDatabase } from '@angular/fire/database';
+import { AngularFireDatabase, AngularFireList } from '@angular/fire/database';
 import { Observable } from 'rxjs';
+import { DATE_ISO8601 } from '../route-outlets/campaign/campaign.component';
 
 function sortBattlesByDate(a: Battle, b: Battle): number {
   // ISO Date sorts Lexicographically https://stackoverflow.com/a/12192544
@@ -35,5 +36,11 @@ export class BattleListService {
     battle: Partial<Battle> & Required<{ battleId: Battle['battleId'] }>
   ): Promise<void> {
     return this.db.object<Battle>(`battles/${battle.battleId}`).update(battle);
+  }
+
+  getNextBattle(date: DATE_ISO8601): AngularFireList<Battle> {
+    return this.db.list<Battle>(`battles`, (ref) =>
+      ref.orderByChild('battleDate').startAfter(date).limitToFirst(1)
+    );
   }
 }

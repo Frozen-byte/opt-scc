@@ -1,8 +1,8 @@
 <form (submit)="submitDebriefingFormGroup()">
   Endpunktestand
-  <mat-form-field appearance="outline" *ngFor="let faction of factions">
+  <mat-form-field *ngFor="let faction of battle?.factions" appearance="outline">
     <mat-label
-      >{{ faction.factionName }} als {{ faction.factionSide }}</mat-label
+    >{{ faction.factionName }} als {{ faction.factionSide }}</mat-label
     >
     <input
       matInput

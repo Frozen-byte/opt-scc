@@ -1,8 +1,9 @@
 import { DATE_ISO8601, Faction } from '../campaign/campaign.component';
+import { Sector } from '../../components/sector-select/sector-select.component';
 
 export interface BattleFaction extends Faction {
   factionBattleScore: number;
-  factionAttackingSector: number;
+  factionAttackingSector: Sector['sectorId'];
 }
 
 /**

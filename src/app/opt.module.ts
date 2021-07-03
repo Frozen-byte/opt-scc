@@ -79,17 +79,14 @@ import { PlayerOverviewComponent } from './route-outlets/player-overview/player-
     PlayerOverviewComponent,
   ],
   imports: [
-    // Native Modules
     BrowserModule,
     OptRoutingModule,
     FormsModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
-    // 3rd Party Modules
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAuthModule,
     AngularFireDatabaseModule,
-    // Material Modules
     MatTooltipModule,
     MatToolbarModule,
     MatMenuModule,

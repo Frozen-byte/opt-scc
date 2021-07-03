@@ -11,15 +11,21 @@ import { environment } from '../../../environments/environment';
 export class SteamSignInComponent implements OnInit {
   STEAM_AUTHENTICATE_URL = STEAM_AUTHENTICATE_URL;
 
-  constructor(public fireAuth: AngularFireAuth) {
+  constructor(public fireAuth: AngularFireAuth) {}
+
+  ngOnInit(): void {}
+
+  emulatedAuth(event: any): false | void {
     if (environment.useEmulators) {
+      event.preventDefault();
+
       import('firebase/app').then((firebase) => {
         this.fireAuth.signInWithPopup(
           new firebase.default.auth.GoogleAuthProvider()
         );
       });
+
+      return false;
     }
   }
-
-  ngOnInit(): void {}
 }

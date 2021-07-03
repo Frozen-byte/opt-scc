@@ -9,17 +9,16 @@
       #sector
       (click)="onClick($event, sector)"
       [attr.d]="sector.path"
-      [attr.id]="sector.id"
-      [matTooltip]="sector.name"
+      [attr.id]="sector.sectorId"
+      [matTooltip]="sector.sectorName"
       [matTooltipDisabled]="disabled"
-      [ngClass]="{
-        sector: true,
-        red: sector.color === 'red',
-        green: sector.color === 'green',
-        selected: sector.selected || sector.id === selectedSector,
-        disabledSector: sector.disabled,
-        disabledHover: disabled
-      }"
+      [ngClass]="[
+        sector.occupant,
+        'sector',
+        sector.selected || sector.sectorId === selectedSector ? 'selected' : '',
+        sector.disabled ? 'disabledSector' : '',
+        disabled ? 'disabledHover' : ''
+      ]"
     ></path>
   </ng-container>
 </svg>

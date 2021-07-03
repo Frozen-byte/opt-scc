@@ -1,11 +1,10 @@
 import { Injectable } from '@angular/core';
-import { filter, map, switchMap } from 'rxjs/operators';
+import { map } from 'rxjs/operators';
 import { ajax } from 'rxjs/ajax';
 import { Observable } from 'rxjs';
 import { PLAYER_ROLE } from '../pipes-and-directives/has-player-role.directive';
 import { AngularFireAuth } from '@angular/fire/auth';
-import { AngularFireDatabase } from '@angular/fire/database';
-import { Hyperlink, isDefinedGuard, Timestamp } from '../toolbelt';
+import { Hyperlink, Timestamp } from '../toolbelt';
 import { Faction } from '../route-outlets/campaign/campaign.component';
 
 /**
@@ -68,10 +67,7 @@ export class SteamAuthService {
    */
   public loggedInUserId = this.loggedInUser.pipe(map((user) => user?.uid));
 
-  constructor(
-    private fireAuth: AngularFireAuth,
-    private db: AngularFireDatabase
-  ) {}
+  constructor(private fireAuth: AngularFireAuth) {}
 
   authenticate(): Promise<void> {
     return fetch(STEAM_AUTHENTICATE_URL)

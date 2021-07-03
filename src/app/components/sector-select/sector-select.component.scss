@@ -47,10 +47,14 @@ svg {
   }
 }
 
-.red {
+.csat {
   @include shadings(opt.$csat-color);
 }
 
-.green {
+.aaf {
   @include shadings(opt.$aaf-color);
+}
+
+.nato {
+  @include shadings(opt.$nato-color);
 }

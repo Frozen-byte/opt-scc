@@ -10,18 +10,18 @@
       "campaignName": "Aufstand des Lumpenproletariats",
       "factions": [
         {
-          "factionAttackingSector": 11,
+          "factionAttackingSector": "sector-11",
           "factionBattleScore": 7,
           "factionId": "sword",
           "factionName": "SWORD",
-          "factionSide": "CSAT"
+          "factionSide": "csat"
         },
         {
-          "factionAttackingSector": 14,
+          "factionAttackingSector": "sector-14",
           "factionBattleScore": 43,
           "factionId": "arf",
           "factionName": "ARF",
-          "factionSide": "AAF"
+          "factionSide": "aaf"
         }
       ],
       "weather": "Spielzeit beginn: 12 Uhr, Bewölkt bis Heiter"
@@ -36,18 +36,18 @@
       "campaignName": "Aufstand des Lumpenproletariats",
       "factions": [
         {
-          "factionAttackingSector": 16,
+          "factionAttackingSector": "sector-16",
           "factionBattleScore": 29,
           "factionId": "sword",
           "factionName": "SWORD",
-          "factionSide": "AAF"
+          "factionSide": "aaf"
         },
         {
-          "factionAttackingSector": 12,
+          "factionAttackingSector": "sector-12",
           "factionBattleScore": 44,
           "factionId": "arf",
           "factionName": "ARF",
-          "factionSide": "CSAT"
+          "factionSide": "csat"
         }
       ],
       "weather": "Spielzeit beginn: 12 Uhr, Bewölkt bis Heiter"
@@ -62,18 +62,18 @@
       "campaignName": "Aufstand des Lumpenproletariats",
       "factions": [
         {
-          "factionAttackingSector": 12,
+          "factionAttackingSector": "sector-12",
           "factionBattleScore": 6,
           "factionId": "sword",
           "factionName": "SWORD",
-          "factionSide": "CSAT"
+          "factionSide": "csat"
         },
         {
-          "factionAttackingSector": 8,
+          "factionAttackingSector": "sector-8",
           "factionBattleScore": 49,
           "factionId": "arf",
           "factionName": "ARF",
-          "factionSide": "AAF"
+          "factionSide": "aaf"
         }
       ],
       "weather": "Spielzeit beginn: 12 Uhr, Bewölkt bis Heiter"
@@ -88,18 +88,18 @@
       "campaignName": "Aufstand des Lumpenproletariats",
       "factions": [
         {
-          "factionAttackingSector": 13,
+          "factionAttackingSector": "sector-13",
           "factionBattleScore": 68,
           "factionId": "sword",
           "factionName": "SWORD",
-          "factionSide": "AAF"
+          "factionSide": "aaf"
         },
         {
-          "factionAttackingSector": 11,
+          "factionAttackingSector": "sector-11",
           "factionBattleScore": 6,
           "factionId": "arf",
           "factionName": "ARF",
-          "factionSide": "CSAT"
+          "factionSide": "csat"
         }
       ],
       "weather": "Spielzeit beginn: 12 Uhr, Bewölkt bis Heiter"
@@ -114,18 +114,18 @@
       "campaignName": "Aufstand des Lumpenproletariats",
       "factions": [
         {
-          "factionAttackingSector": 11,
+          "factionAttackingSector": "sector-11",
           "factionBattleScore": 28,
           "factionId": "sword",
           "factionName": "SWORD",
-          "factionSide": "CSAT"
+          "factionSide": "csat"
         },
         {
-          "factionAttackingSector": 9,
+          "factionAttackingSector": "sector-9",
           "factionBattleScore": 54,
           "factionId": "arf",
           "factionName": "ARF",
-          "factionSide": "AAF"
+          "factionSide": "aaf"
         }
       ],
       "weather": "Spielzeit beginn: 12 Uhr, Bewölkt bis Heiter"
@@ -140,18 +140,18 @@
       "campaignName": "Aufstand des Lumpenproletariats",
       "factions": [
         {
-          "factionAttackingSector": 15,
+          "factionAttackingSector": "sector-15",
           "factionBattleScore": 31,
           "factionId": "sword",
           "factionName": "SWORD",
-          "factionSide": "AAF"
+          "factionSide": "aaf"
         },
         {
-          "factionAttackingSector": 17,
+          "factionAttackingSector": "sector-17",
           "factionBattleScore": 30,
           "factionId": "arf",
           "factionName": "ARF",
-          "factionSide": "CSAT"
+          "factionSide": "csat"
         }
       ],
       "weather": "Spielzeit beginn: 12 Uhr, Bewölkt bis Heiter"
@@ -166,18 +166,18 @@
       "campaignName": "Aufstand des Lumpenproletariats",
       "factions": [
         {
-          "factionAttackingSector": 17,
+          "factionAttackingSector": "sector-17",
           "factionBattleScore": 52,
           "factionId": "sword",
           "factionName": "SWORD",
-          "factionSide": "CSAT"
+          "factionSide": "csat"
         },
         {
-          "factionAttackingSector": 13,
+          "factionAttackingSector": "sector-13",
           "factionBattleScore": 3,
           "factionId": "arf",
           "factionName": "ARF",
-          "factionSide": "AAF"
+          "factionSide": "aaf"
         }
       ],
       "weather": "Spielzeit beginn: 12 Uhr, Bewölkt bis Heiter"
@@ -192,18 +192,18 @@
       "campaignName": "Aufstand des Lumpenproletariats",
       "factions": [
         {
-          "factionAttackingSector": 9,
+          "factionAttackingSector": "sector-9",
           "factionBattleScore": 45,
           "factionId": "sword",
           "factionName": "SWORD",
-          "factionSide": "AAF"
+          "factionSide": "aaf"
         },
         {
-          "factionAttackingSector": 18,
+          "factionAttackingSector": "sector-18",
           "factionBattleScore": 14,
           "factionId": "arf",
           "factionName": "ARF",
-          "factionSide": "CSAT"
+          "factionSide": "csat"
         }
       ],
       "weather": "Spielzeit beginn: 12 Uhr, Bewölkt bis Heiter"
@@ -218,18 +218,18 @@
       "campaignName": "Aufstand des Lumpenproletariats",
       "factions": [
         {
-          "factionAttackingSector": 22,
+          "factionAttackingSector": "sector-22",
           "factionBattleScore": 15,
           "factionId": "sword",
           "factionName": "SWORD",
-          "factionSide": "CSAT"
+          "factionSide": "csat"
         },
         {
-          "factionAttackingSector": 13,
+          "factionAttackingSector": "sector-13",
           "factionBattleScore": 29,
           "factionId": "arf",
           "factionName": "ARF",
-          "factionSide": "AAF"
+          "factionSide": "aaf"
         }
       ],
       "weather": "Spielzeit beginn: 12 Uhr, Bewölkt bis Heiter"
@@ -244,16 +244,18 @@
       "campaignName": "Aufstand des Lumpenproletariats",
       "factions": [
         {
-          "factionAttackingSector": 9,
+          "factionAttackingSector": "sector-9",
+          "factionBattleScore": 60,
           "factionId": "sword",
           "factionName": "SWORD",
-          "factionSide": "AAF"
+          "factionSide": "aaf"
         },
         {
-          "factionAttackingSector": 12,
+          "factionAttackingSector": "sector-12",
+          "factionBattleScore": 13,
           "factionId": "arf",
           "factionName": "ARF",
-          "factionSide": "CSAT"
+          "factionSide": "csat"
         }
       ],
       "weather": "Spielzeit beginn: 12 Uhr, Bewölkt bis Heiter"
@@ -268,18 +270,18 @@
       "campaignName": "Aufstand des Lumpenproletariats",
       "factions": [
         {
-          "factionAttackingSector": 9,
+          "factionAttackingSector": "sector-9",
           "factionBattleScore": 25,
           "factionId": "sword",
           "factionName": "SWORD",
-          "factionSide": "CSAT"
+          "factionSide": "csat"
         },
         {
-          "factionAttackingSector": 16,
+          "factionAttackingSector": "sector-16",
           "factionBattleScore": 15,
           "factionId": "arf",
           "factionName": "ARF",
-          "factionSide": "AAF"
+          "factionSide": "aaf"
         }
       ],
       "weather": "Spielzeit beginn: 12 Uhr, Bewölkt bis Heiter"
@@ -296,12 +298,12 @@
         {
           "factionId": "sword",
           "factionName": "SWORD",
-          "factionSide": "AAF"
+          "factionSide": "aaf"
         },
         {
           "factionId": "arf",
           "factionName": "ARF",
-          "factionSide": "CSAT"
+          "factionSide": "csat"
         }
       ],
       "weather": "Spielzeit beginn: 12 Uhr, Bewölkt bis Heiter"
@@ -316,18 +318,18 @@
       "campaignName": "Aufstand des Lumpenproletariats",
       "factions": [
         {
-          "factionAttackingSector": 14,
+          "factionAttackingSector": "sector-14",
           "factionBattleScore": 40,
           "factionId": "sword",
           "factionName": "SWORD",
-          "factionSide": "CSAT"
+          "factionSide": "csat"
         },
         {
-          "factionAttackingSector": 17,
+          "factionAttackingSector": "sector-17",
           "factionBattleScore": 18,
           "factionId": "arf",
           "factionName": "ARF",
-          "factionSide": "AAF"
+          "factionSide": "aaf"
         }
       ],
       "weather": "Spielzeit beginn: 12 Uhr, Bewölkt bis Heiter"
@@ -344,26 +346,21 @@
         {
           "factionId": "sword",
           "factionName": "SWORD",
-          "factionSide": "AAF"
+          "factionSide": "aaf"
         },
         {
           "factionId": "arf",
           "factionName": "ARF",
-          "factionSide": "CSAT"
+          "factionSide": "csat"
         }
       ],
       "weather": "Spielzeit beginn: 12 Uhr, Bewölkt bis Heiter"
     }
   },
   "campaigns": {
-    "Aufstand des Lumpenproletariats": {
-      "campaignName": "Aufstand des Lumpenproletariats",
-      "players": {
-        "qvEP3e50hY0fgXyMfs8VOpDR59ke": {
-          "defaultFactionId": "arf",
-          "role": "soldier"
-        }
-      }
+    "adl": {
+      "campaignId": "adl",
+      "campaignName": "Aufstand des Lumpenproletariats"
     }
   },
   "enrollments": {
@@ -883,6 +880,14 @@
         "photoUrl": "https://picsum.photos/64",
         "status": "no",
         "userId": "XmetJQ6RIKZWaY6ABCnY75k4MdcH"
+      },
+      "qvEP3e50hY0fgXyMfs8VOpDR59ke": {
+        "battleId": "adl-schlacht-2",
+        "comment": "",
+        "displayName": "Raccoon Grass",
+        "photoUrl": "https://i.picsum.photos/id/217/64/64.jpg?hmac=tk_My6l8590gWSa3KVWodsiTaEMnQ-pCIeBA_-RI-w4",
+        "status": "pending",
+        "userId": "qvEP3e50hY0fgXyMfs8VOpDR59ke"
       }
     },
     "adl-schlacht-3": {
@@ -942,3184 +947,482 @@
         "status": "no",
         "userId": "qvEP3e50hY0fgXyMfs8VOpDR59ke"
       }
+    },
+    "adl-schlacht-6-1": {
+      "qvEP3e50hY0fgXyMfs8VOpDR59ke": {
+        "battleId": "adl-schlacht-6-1",
+        "comment": "",
+        "displayName": "Raccoon Grass",
+        "photoUrl": "https://i.picsum.photos/id/217/64/64.jpg?hmac=tk_My6l8590gWSa3KVWodsiTaEMnQ-pCIeBA_-RI-w4",
+        "status": "pending",
+        "userId": "qvEP3e50hY0fgXyMfs8VOpDR59ke"
+      }
     }
   },
   "maps": {
-    "adl-schlacht-1": [
-      {
-        "color": "green",
-        "disabled": false,
-        "id": "sector-23",
-        "name": "Sektor #23",
-        "path": "M3519.5 3720H4118V2794.5L3310 2571L2688.5 2985L2859.5 3231.25L3483 3269.5L3519.5 3720Z",
-        "selected": false
-      },
-      {
-        "color": "green",
-        "disabled": false,
-        "id": "sector-24",
-        "name": "Sektor #24",
-        "path": "M3535 4093L3519.5 3720L3483 3269.5L2859.5 3231.25L3030.5 3477.5L2619 4093H3535Z",
-        "selected": false
-      },
-      {
-        "color": "green",
-        "disabled": false,
-        "id": "sector-22",
-        "name": "Sektor #22",
-        "path": "M2148 3429L2178 3681L2225 4093H2619L3030.5 3477.5L2859.5 3231.25L2688.5 2985L2481.5 2671L2148 3429Z",
-        "selected": false
-      },
-      {
-        "color": "green",
-        "disabled": false,
-        "id": "sector-17",
-        "name": "Sektor #17",
-        "path": "M2692.5 2230L1907.5 2202L1848.5 2747.5L1973.07 3147L2148 3429L2481.5 2671L2914 2230H2692.5Z",
-        "selected": false
-      },
-      {
-        "color": "green",
-        "disabled": false,
-        "id": "sector-18",
-        "name": "Sektor #18",
-        "path": "M4118 2794.5V2191L3275 2230H3094.5H2914L2481.5 2671L2688.5 2985L3310 2571L4118 2794.5Z",
-        "selected": false
-      },
-      {
-        "color": "red",
-        "disabled": false,
-        "id": "sector-14",
-        "name": "Sektor #14",
-        "path": "M3275 2230L4118 2191V1507.5H2987.5L3094.5 2230H3275Z",
-        "selected": true
-      },
-      {
-        "color": "green",
-        "disabled": false,
-        "id": "sector-11",
-        "name": "Sektor #11",
-        "path": "M501.5 2142H1165H1348L1197 1658L592 1758.5L8.66295 1658L11.1938 2142H257H501.5Z",
-        "selected": true
-      },
-      {
-        "color": "green",
-        "disabled": false,
-        "id": "sector-12",
-        "name": "Sektor #12",
-        "path": "M1670 2142L1907.5 2202L1842.5 1828V1651L1858 1122L1197 1658L1348 2142H1670Z",
-        "selected": false
-      },
-      {
-        "color": "green",
-        "disabled": false,
-        "id": "sector-7",
-        "name": "Sektor #7",
-        "path": "M1197 1658L1858 1122V764.5L1678 601.5L1253.58 1002.5L1225 1029.5L1197 1517.5V1658Z",
-        "selected": false
-      },
-      {
-        "color": "green",
-        "disabled": false,
-        "id": "sector-6",
-        "name": "Sektor #6",
-        "path": "M8.66295 1658L592 1758.5L1197 1658V1517.5L1225 1029.5L450 1457L5.93344 1136L8.66295 1658Z",
-        "selected": false
-      },
-      {
-        "color": "green",
-        "disabled": false,
-        "id": "sector-1",
-        "name": "Sektor #1",
-        "path": "M720.5 575H3L5.93344 1136L450 1457L1225 1029.5L1253.58 1002.5L720.5 575Z",
-        "selected": false
-      },
-      {
-        "color": "green",
-        "disabled": false,
-        "id": "sector-2",
-        "name": "Sektor #2",
-        "path": "M720.5 7.5V575L1253.58 1002.5L1678 601.5L1510.5 7.5H720.5Z",
-        "selected": false
-      },
-      {
-        "color": "green",
-        "disabled": false,
-        "id": "sector-3",
-        "name": "Sektor #3",
-        "path": "M2263.5 7.5H1510.5L1678 601.5L1858 764.5V1122L2040 975.5L2245.5 873L2263.5 7.5Z",
-        "selected": false
-      },
-      {
-        "color": "red",
-        "disabled": false,
-        "id": "sector-8",
-        "name": "Sektor #8",
-        "path": "M2040 975.5L1858 1122L1842.5 1651V1828L2593 1507.5L2245.5 873L2040 975.5Z",
-        "selected": false
-      },
-      {
-        "color": "green",
+    "adl-schlacht-1": {
+      "base-aaf-1": {
         "disabled": true,
-        "id": "base-aaf-1",
-        "name": "AAF Basis",
+        "occupant": "aaf",
         "path": "M3 7.5V575H720.5V7.5H333.5H3Z",
+        "sectorId": "base-aaf-1",
+        "sectorName": "aaf Basis",
         "selected": false
       },
-      {
-        "color": "green",
+      "base-aaf-2": {
         "disabled": true,
-        "id": "base-aaf-2",
-        "name": "AAF FOB",
+        "occupant": "aaf",
         "path": "M3535 4093H4118V3720H3519.5L3535 4093Z",
+        "sectorId": "base-aaf-2",
+        "sectorName": "aaf FOB",
         "selected": false
       },
-      {
-        "color": "red",
+      "base-csat-1": {
         "disabled": true,
-        "id": "base-csat-1",
-        "name": "CSAT Basis",
+        "occupant": "csat",
         "path": "M4118 575V7.5L3427 2.5L3433 575H4118Z",
+        "sectorId": "base-csat-1",
+        "sectorName": "csat Basis",
         "selected": false
       },
-      {
-        "color": "red",
-        "disabled": false,
-        "id": "sector-10",
-        "name": "Sektor #10",
-        "path": "M4118 575H3433L3244.5 942L2870.28 1023L2987.5 1507.5H4118V575Z",
-        "selected": false
-      },
-      {
-        "color": "red",
-        "disabled": false,
-        "id": "sector-5",
-        "name": "Sektor #5",
-        "path": "M2748.5 7.5L2792.5 701.5L2870.28 1023L3244.5 942L3433 575L3427 2.5L2748.5 7.5Z",
-        "selected": false
-      },
-      {
-        "color": "red",
-        "disabled": false,
-        "id": "sector-4",
-        "name": "Sektor #4",
-        "path": "M2390 7.5H2263.5L2245.5 873L2485 682.5L2792.5 701.5L2748.5 7.5H2390Z",
-        "selected": false
-      },
-      {
-        "color": "red",
-        "disabled": false,
-        "id": "sector-9",
-        "name": "Sektor #9",
-        "path": "M2245.5 873L2593 1507.5H2987.5L2870.28 1023L2792.5 701.5L2485 682.5L2245.5 873Z",
-        "selected": false
-      },
-      {
-        "color": "red",
-        "disabled": false,
-        "id": "sector-13",
-        "name": "Sektor #13",
-        "path": "M1907.5 2202L2692.5 2230H2914H3094.5L2987.5 1507.5H2593L1842.5 1828L1907.5 2202Z",
-        "selected": false
-      },
-      {
-        "color": "red",
-        "disabled": false,
-        "id": "sector-15",
-        "name": "Sektor #15",
-        "path": "M1165 2142H501.5H257H11.1938V2747.5L472.5 2529L1165 2671L1348 2142H1165Z",
-        "selected": false
-      },
-      {
-        "color": "red",
-        "disabled": false,
-        "id": "sector-16",
-        "name": "Sektor #16",
-        "path": "M1907.5 2202L1670 2142H1348L1165 2671L1408.5 2915.5L1973.07 3147L1848.5 2747.5L1907.5 2202Z",
-        "selected": false
-      },
-      {
-        "color": "red",
-        "disabled": false,
-        "id": "sector-19",
-        "name": "Sektor #19",
-        "path": "M3 3569H401L856.5 3493L1165 2671L472.5 2529L11.1938 2747.5L3 3569Z",
-        "selected": false
-      },
-      {
-        "color": "red",
-        "disabled": false,
-        "id": "sector-21",
-        "name": "Sektor #21",
-        "path": "M2178 3681L2148 3429L1973.07 3147L1408.5 2915.5L1165 2671L856.5 3493L1579 4093H2225L2178 3681Z",
-        "selected": false
-      },
-      {
-        "color": "red",
-        "disabled": false,
-        "id": "sector-20",
-        "name": "Sektor #20",
-        "path": "M401 3569V4093H1579L856.5 3493L401 3569Z",
-        "selected": false
-      },
-      {
-        "color": "red",
+      "base-csat-2": {
         "disabled": true,
-        "id": "base-csat-2",
-        "name": "CSAT FOB",
+        "occupant": "csat",
         "path": "M3 4093H401V3569H3V4093Z",
+        "sectorId": "base-csat-2",
+        "sectorName": "csat FOB",
+        "selected": false
+      },
+      "sector-1": {
+        "disabled": false,
+        "occupant": "aaf",
+        "path": "M720.5 575H3L5.93344 1136L450 1457L1225 1029.5L1253.58 1002.5L720.5 575Z",
+        "sectorId": "sector-1",
+        "sectorName": "Sektor #1",
+        "selected": false
+      },
+      "sector-10": {
+        "disabled": false,
+        "occupant": "csat",
+        "path": "M4118 575H3433L3244.5 942L2870.28 1023L2987.5 1507.5H4118V575Z",
+        "sectorId": "sector-10",
+        "sectorName": "Sektor #10",
+        "selected": false
+      },
+      "sector-11": {
+        "disabled": false,
+        "occupant": "aaf",
+        "path": "M501.5 2142H1165H1348L1197 1658L592 1758.5L8.66295 1658L11.1938 2142H257H501.5Z",
+        "sectorId": "sector-11",
+        "sectorName": "Sektor #11",
+        "selected": true
+      },
+      "sector-12": {
+        "disabled": false,
+        "occupant": "aaf",
+        "path": "M1670 2142L1907.5 2202L1842.5 1828V1651L1858 1122L1197 1658L1348 2142H1670Z",
+        "sectorId": "sector-12",
+        "sectorName": "Sektor #12",
+        "selected": false
+      },
+      "sector-13": {
+        "disabled": false,
+        "occupant": "csat",
+        "path": "M1907.5 2202L2692.5 2230H2914H3094.5L2987.5 1507.5H2593L1842.5 1828L1907.5 2202Z",
+        "sectorId": "sector-13",
+        "sectorName": "Sektor #13",
+        "selected": false
+      },
+      "sector-14": {
+        "disabled": false,
+        "occupant": "csat",
+        "path": "M3275 2230L4118 2191V1507.5H2987.5L3094.5 2230H3275Z",
+        "sectorId": "sector-14",
+        "sectorName": "Sektor #14",
+        "selected": true
+      },
+      "sector-15": {
+        "disabled": false,
+        "occupant": "csat",
+        "path": "M1165 2142H501.5H257H11.1938V2747.5L472.5 2529L1165 2671L1348 2142H1165Z",
+        "sectorId": "sector-15",
+        "sectorName": "Sektor #15",
+        "selected": false
+      },
+      "sector-16": {
+        "disabled": false,
+        "occupant": "csat",
+        "path": "M1907.5 2202L1670 2142H1348L1165 2671L1408.5 2915.5L1973.07 3147L1848.5 2747.5L1907.5 2202Z",
+        "sectorId": "sector-16",
+        "sectorName": "Sektor #16",
+        "selected": false
+      },
+      "sector-17": {
+        "disabled": false,
+        "occupant": "aaf",
+        "path": "M2692.5 2230L1907.5 2202L1848.5 2747.5L1973.07 3147L2148 3429L2481.5 2671L2914 2230H2692.5Z",
+        "sectorId": "sector-17",
+        "sectorName": "Sektor #17",
+        "selected": false
+      },
+      "sector-18": {
+        "disabled": false,
+        "occupant": "aaf",
+        "path": "M4118 2794.5V2191L3275 2230H3094.5H2914L2481.5 2671L2688.5 2985L3310 2571L4118 2794.5Z",
+        "sectorId": "sector-18",
+        "sectorName": "Sektor #18",
+        "selected": false
+      },
+      "sector-19": {
+        "disabled": false,
+        "occupant": "csat",
+        "path": "M3 3569H401L856.5 3493L1165 2671L472.5 2529L11.1938 2747.5L3 3569Z",
+        "sectorId": "sector-19",
+        "sectorName": "Sektor #19",
+        "selected": false
+      },
+      "sector-2": {
+        "disabled": false,
+        "occupant": "aaf",
+        "path": "M720.5 7.5V575L1253.58 1002.5L1678 601.5L1510.5 7.5H720.5Z",
+        "sectorId": "sector-2",
+        "sectorName": "Sektor #2",
+        "selected": false
+      },
+      "sector-20": {
+        "disabled": false,
+        "occupant": "csat",
+        "path": "M401 3569V4093H1579L856.5 3493L401 3569Z",
+        "sectorId": "sector-20",
+        "sectorName": "Sektor #20",
+        "selected": false
+      },
+      "sector-21": {
+        "disabled": false,
+        "occupant": "csat",
+        "path": "M2178 3681L2148 3429L1973.07 3147L1408.5 2915.5L1165 2671L856.5 3493L1579 4093H2225L2178 3681Z",
+        "sectorId": "sector-21",
+        "sectorName": "Sektor #21",
+        "selected": false
+      },
+      "sector-22": {
+        "disabled": false,
+        "occupant": "aaf",
+        "path": "M2148 3429L2178 3681L2225 4093H2619L3030.5 3477.5L2859.5 3231.25L2688.5 2985L2481.5 2671L2148 3429Z",
+        "sectorId": "sector-22",
+        "sectorName": "Sektor #22",
+        "selected": false
+      },
+      "sector-23": {
+        "disabled": false,
+        "occupant": "aaf",
+        "path": "M3519.5 3720H4118V2794.5L3310 2571L2688.5 2985L2859.5 3231.25L3483 3269.5L3519.5 3720Z",
+        "sectorId": "sector-23",
+        "sectorName": "Sektor #23",
+        "selected": false
+      },
+      "sector-24": {
+        "disabled": false,
+        "occupant": "aaf",
+        "path": "M3535 4093L3519.5 3720L3483 3269.5L2859.5 3231.25L3030.5 3477.5L2619 4093H3535Z",
+        "sectorId": "sector-24",
+        "sectorName": "Sektor #24",
+        "selected": false
+      },
+      "sector-3": {
+        "disabled": false,
+        "occupant": "aaf",
+        "path": "M2263.5 7.5H1510.5L1678 601.5L1858 764.5V1122L2040 975.5L2245.5 873L2263.5 7.5Z",
+        "sectorId": "sector-3",
+        "sectorName": "Sektor #3",
+        "selected": false
+      },
+      "sector-4": {
+        "disabled": false,
+        "occupant": "csat",
+        "path": "M2390 7.5H2263.5L2245.5 873L2485 682.5L2792.5 701.5L2748.5 7.5H2390Z",
+        "sectorId": "sector-4",
+        "sectorName": "Sektor #4",
+        "selected": false
+      },
+      "sector-5": {
+        "disabled": false,
+        "occupant": "csat",
+        "path": "M2748.5 7.5L2792.5 701.5L2870.28 1023L3244.5 942L3433 575L3427 2.5L2748.5 7.5Z",
+        "sectorId": "sector-5",
+        "sectorName": "Sektor #5",
+        "selected": false
+      },
+      "sector-6": {
+        "disabled": false,
+        "occupant": "aaf",
+        "path": "M8.66295 1658L592 1758.5L1197 1658V1517.5L1225 1029.5L450 1457L5.93344 1136L8.66295 1658Z",
+        "sectorId": "sector-6",
+        "sectorName": "Sektor #6",
+        "selected": false
+      },
+      "sector-7": {
+        "disabled": false,
+        "occupant": "aaf",
+        "path": "M1197 1658L1858 1122V764.5L1678 601.5L1253.58 1002.5L1225 1029.5L1197 1517.5V1658Z",
+        "sectorId": "sector-7",
+        "sectorName": "Sektor #7",
+        "selected": false
+      },
+      "sector-8": {
+        "disabled": false,
+        "occupant": "csat",
+        "path": "M2040 975.5L1858 1122L1842.5 1651V1828L2593 1507.5L2245.5 873L2040 975.5Z",
+        "sectorId": "sector-8",
+        "sectorName": "Sektor #8",
+        "selected": false
+      },
+      "sector-9": {
+        "disabled": false,
+        "occupant": "csat",
+        "path": "M2245.5 873L2593 1507.5H2987.5L2870.28 1023L2792.5 701.5L2485 682.5L2245.5 873Z",
+        "sectorId": "sector-9",
+        "sectorName": "Sektor #9",
         "selected": false
       }
-    ],
-    "adl-schlacht-1-seitenwechsel": [
-      {
-        "color": "green",
-        "disabled": false,
-        "id": "sector-23",
-        "name": "Sektor #23",
-        "path": "M3519.5 3720H4118V2794.5L3310 2571L2688.5 2985L2859.5 3231.25L3483 3269.5L3519.5 3720Z",
-        "selected": false
-      },
-      {
-        "color": "green",
-        "disabled": false,
-        "id": "sector-24",
-        "name": "Sektor #24",
-        "path": "M3535 4093L3519.5 3720L3483 3269.5L2859.5 3231.25L3030.5 3477.5L2619 4093H3535Z",
-        "selected": false
-      },
-      {
-        "color": "green",
-        "disabled": false,
-        "id": "sector-22",
-        "name": "Sektor #22",
-        "path": "M2148 3429L2178 3681L2225 4093H2619L3030.5 3477.5L2859.5 3231.25L2688.5 2985L2481.5 2671L2148 3429Z",
-        "selected": false
-      },
-      {
-        "color": "green",
-        "disabled": false,
-        "id": "sector-17",
-        "name": "Sektor #17",
-        "path": "M2692.5 2230L1907.5 2202L1848.5 2747.5L1973.07 3147L2148 3429L2481.5 2671L2914 2230H2692.5Z",
-        "selected": false
-      },
-      {
-        "color": "green",
-        "disabled": false,
-        "id": "sector-18",
-        "name": "Sektor #18",
-        "path": "M4118 2794.5V2191L3275 2230H3094.5H2914L2481.5 2671L2688.5 2985L3310 2571L4118 2794.5Z",
-        "selected": false
-      },
-      {
-        "color": "red",
-        "disabled": false,
-        "id": "sector-14",
-        "name": "Sektor #14",
-        "path": "M3275 2230L4118 2191V1507.5H2987.5L3094.5 2230H3275Z",
-        "selected": false
-      },
-      {
-        "color": "green",
-        "disabled": false,
-        "id": "sector-11",
-        "name": "Sektor #11",
-        "path": "M501.5 2142H1165H1348L1197 1658L592 1758.5L8.66295 1658L11.1938 2142H257H501.5Z",
-        "selected": false
-      },
-      {
-        "color": "green",
-        "disabled": false,
-        "id": "sector-12",
-        "name": "Sektor #12",
-        "path": "M1670 2142L1907.5 2202L1842.5 1828V1651L1858 1122L1197 1658L1348 2142H1670Z",
-        "selected": true
-      },
-      {
-        "color": "green",
-        "disabled": false,
-        "id": "sector-7",
-        "name": "Sektor #7",
-        "path": "M1197 1658L1858 1122V764.5L1678 601.5L1253.58 1002.5L1225 1029.5L1197 1517.5V1658Z",
-        "selected": false
-      },
-      {
-        "color": "green",
-        "disabled": false,
-        "id": "sector-6",
-        "name": "Sektor #6",
-        "path": "M8.66295 1658L592 1758.5L1197 1658V1517.5L1225 1029.5L450 1457L5.93344 1136L8.66295 1658Z",
-        "selected": false
-      },
-      {
-        "color": "green",
-        "disabled": false,
-        "id": "sector-1",
-        "name": "Sektor #1",
-        "path": "M720.5 575H3L5.93344 1136L450 1457L1225 1029.5L1253.58 1002.5L720.5 575Z",
-        "selected": false
-      },
-      {
-        "color": "green",
-        "disabled": false,
-        "id": "sector-2",
-        "name": "Sektor #2",
-        "path": "M720.5 7.5V575L1253.58 1002.5L1678 601.5L1510.5 7.5H720.5Z",
-        "selected": false
-      },
-      {
-        "color": "green",
-        "disabled": false,
-        "id": "sector-3",
-        "name": "Sektor #3",
-        "path": "M2263.5 7.5H1510.5L1678 601.5L1858 764.5V1122L2040 975.5L2245.5 873L2263.5 7.5Z",
-        "selected": false
-      },
-      {
-        "color": "red",
-        "disabled": false,
-        "id": "sector-8",
-        "name": "Sektor #8",
-        "path": "M2040 975.5L1858 1122L1842.5 1651V1828L2593 1507.5L2245.5 873L2040 975.5Z",
-        "selected": false
-      },
-      {
-        "color": "green",
+    },
+    "adl-schlacht-2": {
+      "base-aaf-1": {
         "disabled": true,
-        "id": "base-aaf-1",
-        "name": "AAF Basis",
+        "occupant": "aaf",
         "path": "M3 7.5V575H720.5V7.5H333.5H3Z",
+        "sectorId": "base-aaf-1",
+        "sectorName": "aaf Basis",
         "selected": false
       },
-      {
-        "color": "green",
+      "base-aaf-2": {
         "disabled": true,
-        "id": "base-aaf-2",
-        "name": "AAF FOB",
+        "occupant": "aaf",
         "path": "M3535 4093H4118V3720H3519.5L3535 4093Z",
+        "sectorId": "base-aaf-2",
+        "sectorName": "aaf FOB",
         "selected": false
       },
-      {
-        "color": "red",
+      "base-csat-1": {
         "disabled": true,
-        "id": "base-csat-1",
-        "name": "CSAT Basis",
+        "occupant": "csat",
         "path": "M4118 575V7.5L3427 2.5L3433 575H4118Z",
+        "sectorId": "base-csat-1",
+        "sectorName": "csat Basis",
         "selected": false
       },
-      {
-        "color": "red",
+      "base-csat-2": {
+        "disabled": true,
+        "occupant": "csat",
+        "path": "M3 4093H401V3569H3V4093Z",
+        "sectorId": "base-csat-2",
+        "sectorName": "csat FOB",
+        "selected": false
+      },
+      "sector-1": {
         "disabled": false,
-        "id": "sector-10",
-        "name": "Sektor #10",
+        "occupant": "aaf",
+        "path": "M720.5 575H3L5.93344 1136L450 1457L1225 1029.5L1253.58 1002.5L720.5 575Z",
+        "sectorId": "sector-1",
+        "sectorName": "Sektor #1",
+        "selected": false
+      },
+      "sector-10": {
+        "disabled": false,
+        "occupant": "csat",
         "path": "M4118 575H3433L3244.5 942L2870.28 1023L2987.5 1507.5H4118V575Z",
+        "sectorId": "sector-10",
+        "sectorName": "Sektor #10",
         "selected": false
       },
-      {
-        "color": "red",
+      "sector-11": {
         "disabled": false,
-        "id": "sector-5",
-        "name": "Sektor #5",
-        "path": "M2748.5 7.5L2792.5 701.5L2870.28 1023L3244.5 942L3433 575L3427 2.5L2748.5 7.5Z",
-        "selected": false
-      },
-      {
-        "color": "red",
-        "disabled": false,
-        "id": "sector-4",
-        "name": "Sektor #4",
-        "path": "M2390 7.5H2263.5L2245.5 873L2485 682.5L2792.5 701.5L2748.5 7.5H2390Z",
-        "selected": false
-      },
-      {
-        "color": "red",
-        "disabled": false,
-        "id": "sector-9",
-        "name": "Sektor #9",
-        "path": "M2245.5 873L2593 1507.5H2987.5L2870.28 1023L2792.5 701.5L2485 682.5L2245.5 873Z",
-        "selected": false
-      },
-      {
-        "color": "red",
-        "disabled": false,
-        "id": "sector-13",
-        "name": "Sektor #13",
-        "path": "M1907.5 2202L2692.5 2230H2914H3094.5L2987.5 1507.5H2593L1842.5 1828L1907.5 2202Z",
-        "selected": false
-      },
-      {
-        "color": "red",
-        "disabled": false,
-        "id": "sector-15",
-        "name": "Sektor #15",
-        "path": "M1165 2142H501.5H257H11.1938V2747.5L472.5 2529L1165 2671L1348 2142H1165Z",
-        "selected": false
-      },
-      {
-        "color": "red",
-        "disabled": false,
-        "id": "sector-16",
-        "name": "Sektor #16",
-        "path": "M1907.5 2202L1670 2142H1348L1165 2671L1408.5 2915.5L1973.07 3147L1848.5 2747.5L1907.5 2202Z",
+        "occupant": "aaf",
+        "path": "M501.5 2142H1165H1348L1197 1658L592 1758.5L8.66295 1658L11.1938 2142H257H501.5Z",
+        "sectorId": "sector-11",
+        "sectorName": "Sektor #11",
         "selected": true
       },
-      {
-        "color": "red",
+      "sector-12": {
         "disabled": false,
-        "id": "sector-19",
-        "name": "Sektor #19",
+        "occupant": "aaf",
+        "path": "M1670 2142L1907.5 2202L1842.5 1828V1651L1858 1122L1197 1658L1348 2142H1670Z",
+        "sectorId": "sector-12",
+        "sectorName": "Sektor #12",
+        "selected": false
+      },
+      "sector-13": {
+        "disabled": false,
+        "occupant": "csat",
+        "path": "M1907.5 2202L2692.5 2230H2914H3094.5L2987.5 1507.5H2593L1842.5 1828L1907.5 2202Z",
+        "sectorId": "sector-13",
+        "sectorName": "Sektor #13",
+        "selected": false
+      },
+      "sector-14": {
+        "disabled": false,
+        "occupant": "aaf",
+        "path": "M3275 2230L4118 2191V1507.5H2987.5L3094.5 2230H3275Z",
+        "sectorId": "sector-14",
+        "sectorName": "Sektor #14",
+        "selected": true
+      },
+      "sector-15": {
+        "disabled": false,
+        "occupant": "csat",
+        "path": "M1165 2142H501.5H257H11.1938V2747.5L472.5 2529L1165 2671L1348 2142H1165Z",
+        "sectorId": "sector-15",
+        "sectorName": "Sektor #15",
+        "selected": false
+      },
+      "sector-16": {
+        "disabled": false,
+        "occupant": "csat",
+        "path": "M1907.5 2202L1670 2142H1348L1165 2671L1408.5 2915.5L1973.07 3147L1848.5 2747.5L1907.5 2202Z",
+        "sectorId": "sector-16",
+        "sectorName": "Sektor #16",
+        "selected": false
+      },
+      "sector-17": {
+        "disabled": false,
+        "occupant": "aaf",
+        "path": "M2692.5 2230L1907.5 2202L1848.5 2747.5L1973.07 3147L2148 3429L2481.5 2671L2914 2230H2692.5Z",
+        "sectorId": "sector-17",
+        "sectorName": "Sektor #17",
+        "selected": false
+      },
+      "sector-18": {
+        "disabled": false,
+        "occupant": "aaf",
+        "path": "M4118 2794.5V2191L3275 2230H3094.5H2914L2481.5 2671L2688.5 2985L3310 2571L4118 2794.5Z",
+        "sectorId": "sector-18",
+        "sectorName": "Sektor #18",
+        "selected": false
+      },
+      "sector-19": {
+        "disabled": false,
+        "occupant": "csat",
         "path": "M3 3569H401L856.5 3493L1165 2671L472.5 2529L11.1938 2747.5L3 3569Z",
+        "sectorId": "sector-19",
+        "sectorName": "Sektor #19",
         "selected": false
       },
-      {
-        "color": "red",
+      "sector-2": {
         "disabled": false,
-        "id": "sector-21",
-        "name": "Sektor #21",
-        "path": "M2178 3681L2148 3429L1973.07 3147L1408.5 2915.5L1165 2671L856.5 3493L1579 4093H2225L2178 3681Z",
+        "occupant": "aaf",
+        "path": "M720.5 7.5V575L1253.58 1002.5L1678 601.5L1510.5 7.5H720.5Z",
+        "sectorId": "sector-2",
+        "sectorName": "Sektor #2",
         "selected": false
       },
-      {
-        "color": "red",
+      "sector-20": {
         "disabled": false,
-        "id": "sector-20",
-        "name": "Sektor #20",
+        "occupant": "csat",
         "path": "M401 3569V4093H1579L856.5 3493L401 3569Z",
+        "sectorId": "sector-20",
+        "sectorName": "Sektor #20",
         "selected": false
       },
-      {
-        "color": "red",
-        "disabled": true,
-        "id": "base-csat-2",
-        "name": "CSAT FOB",
-        "path": "M3 4093H401V3569H3V4093Z",
+      "sector-21": {
+        "disabled": false,
+        "occupant": "csat",
+        "path": "M2178 3681L2148 3429L1973.07 3147L1408.5 2915.5L1165 2671L856.5 3493L1579 4093H2225L2178 3681Z",
+        "sectorId": "sector-21",
+        "sectorName": "Sektor #21",
+        "selected": false
+      },
+      "sector-22": {
+        "disabled": false,
+        "occupant": "aaf",
+        "path": "M2148 3429L2178 3681L2225 4093H2619L3030.5 3477.5L2859.5 3231.25L2688.5 2985L2481.5 2671L2148 3429Z",
+        "sectorId": "sector-22",
+        "sectorName": "Sektor #22",
+        "selected": false
+      },
+      "sector-23": {
+        "disabled": false,
+        "occupant": "aaf",
+        "path": "M3519.5 3720H4118V2794.5L3310 2571L2688.5 2985L2859.5 3231.25L3483 3269.5L3519.5 3720Z",
+        "sectorId": "sector-23",
+        "sectorName": "Sektor #23",
+        "selected": false
+      },
+      "sector-24": {
+        "disabled": false,
+        "occupant": "aaf",
+        "path": "M3535 4093L3519.5 3720L3483 3269.5L2859.5 3231.25L3030.5 3477.5L2619 4093H3535Z",
+        "sectorId": "sector-24",
+        "sectorName": "Sektor #24",
+        "selected": false
+      },
+      "sector-3": {
+        "disabled": false,
+        "occupant": "aaf",
+        "path": "M2263.5 7.5H1510.5L1678 601.5L1858 764.5V1122L2040 975.5L2245.5 873L2263.5 7.5Z",
+        "sectorId": "sector-3",
+        "sectorName": "Sektor #3",
+        "selected": false
+      },
+      "sector-4": {
+        "disabled": false,
+        "occupant": "csat",
+        "path": "M2390 7.5H2263.5L2245.5 873L2485 682.5L2792.5 701.5L2748.5 7.5H2390Z",
+        "sectorId": "sector-4",
+        "sectorName": "Sektor #4",
+        "selected": false
+      },
+      "sector-5": {
+        "disabled": false,
+        "occupant": "csat",
+        "path": "M2748.5 7.5L2792.5 701.5L2870.28 1023L3244.5 942L3433 575L3427 2.5L2748.5 7.5Z",
+        "sectorId": "sector-5",
+        "sectorName": "Sektor #5",
+        "selected": false
+      },
+      "sector-6": {
+        "disabled": false,
+        "occupant": "aaf",
+        "path": "M8.66295 1658L592 1758.5L1197 1658V1517.5L1225 1029.5L450 1457L5.93344 1136L8.66295 1658Z",
+        "sectorId": "sector-6",
+        "sectorName": "Sektor #6",
+        "selected": false
+      },
+      "sector-7": {
+        "disabled": false,
+        "occupant": "aaf",
+        "path": "M1197 1658L1858 1122V764.5L1678 601.5L1253.58 1002.5L1225 1029.5L1197 1517.5V1658Z",
+        "sectorId": "sector-7",
+        "sectorName": "Sektor #7",
+        "selected": false
+      },
+      "sector-8": {
+        "disabled": false,
+        "occupant": "csat",
+        "path": "M2040 975.5L1858 1122L1842.5 1651V1828L2593 1507.5L2245.5 873L2040 975.5Z",
+        "sectorId": "sector-8",
+        "sectorName": "Sektor #8",
+        "selected": false
+      },
+      "sector-9": {
+        "disabled": false,
+        "occupant": "csat",
+        "path": "M2245.5 873L2593 1507.5H2987.5L2870.28 1023L2792.5 701.5L2485 682.5L2245.5 873Z",
+        "sectorId": "sector-9",
+        "sectorName": "Sektor #9",
         "selected": false
       }
-    ],
-    "adl-schlacht-2": [
-      {
-        "color": "green",
-        "disabled": false,
-        "id": "sector-23",
-        "name": "Sektor #23",
-        "path": "M3519.5 3720H4118V2794.5L3310 2571L2688.5 2985L2859.5 3231.25L3483 3269.5L3519.5 3720Z",
-        "selected": false
-      },
-      {
-        "color": "green",
-        "disabled": false,
-        "id": "sector-24",
-        "name": "Sektor #24",
-        "path": "M3535 4093L3519.5 3720L3483 3269.5L2859.5 3231.25L3030.5 3477.5L2619 4093H3535Z",
-        "selected": false
-      },
-      {
-        "color": "green",
-        "disabled": false,
-        "id": "sector-22",
-        "name": "Sektor #22",
-        "path": "M2148 3429L2178 3681L2225 4093H2619L3030.5 3477.5L2859.5 3231.25L2688.5 2985L2481.5 2671L2148 3429Z",
-        "selected": false
-      },
-      {
-        "color": "green",
-        "disabled": false,
-        "id": "sector-17",
-        "name": "Sektor #17",
-        "path": "M2692.5 2230L1907.5 2202L1848.5 2747.5L1973.07 3147L2148 3429L2481.5 2671L2914 2230H2692.5Z",
-        "selected": false
-      },
-      {
-        "color": "green",
-        "disabled": false,
-        "id": "sector-18",
-        "name": "Sektor #18",
-        "path": "M4118 2794.5V2191L3275 2230H3094.5H2914L2481.5 2671L2688.5 2985L3310 2571L4118 2794.5Z",
-        "selected": false
-      },
-      {
-        "color": "green",
-        "disabled": false,
-        "id": "sector-14",
-        "name": "Sektor #14",
-        "path": "M3275 2230L4118 2191V1507.5H2987.5L3094.5 2230H3275Z",
-        "selected": false
-      },
-      {
-        "color": "green",
-        "disabled": false,
-        "id": "sector-11",
-        "name": "Sektor #11",
-        "path": "M501.5 2142H1165H1348L1197 1658L592 1758.5L8.66295 1658L11.1938 2142H257H501.5Z",
-        "selected": false
-      },
-      {
-        "color": "green",
-        "disabled": false,
-        "id": "sector-12",
-        "name": "Sektor #12",
-        "path": "M1670 2142L1907.5 2202L1842.5 1828V1651L1858 1122L1197 1658L1348 2142H1670Z",
-        "selected": true
-      },
-      {
-        "color": "green",
-        "disabled": false,
-        "id": "sector-7",
-        "name": "Sektor #7",
-        "path": "M1197 1658L1858 1122V764.5L1678 601.5L1253.58 1002.5L1225 1029.5L1197 1517.5V1658Z",
-        "selected": false
-      },
-      {
-        "color": "green",
-        "disabled": false,
-        "id": "sector-6",
-        "name": "Sektor #6",
-        "path": "M8.66295 1658L592 1758.5L1197 1658V1517.5L1225 1029.5L450 1457L5.93344 1136L8.66295 1658Z",
-        "selected": false
-      },
-      {
-        "color": "green",
-        "disabled": false,
-        "id": "sector-1",
-        "name": "Sektor #1",
-        "path": "M720.5 575H3L5.93344 1136L450 1457L1225 1029.5L1253.58 1002.5L720.5 575Z",
-        "selected": false
-      },
-      {
-        "color": "green",
-        "disabled": false,
-        "id": "sector-2",
-        "name": "Sektor #2",
-        "path": "M720.5 7.5V575L1253.58 1002.5L1678 601.5L1510.5 7.5H720.5Z",
-        "selected": false
-      },
-      {
-        "color": "green",
-        "disabled": false,
-        "id": "sector-3",
-        "name": "Sektor #3",
-        "path": "M2263.5 7.5H1510.5L1678 601.5L1858 764.5V1122L2040 975.5L2245.5 873L2263.5 7.5Z",
-        "selected": false
-      },
-      {
-        "color": "red",
-        "disabled": false,
-        "id": "sector-8",
-        "name": "Sektor #8",
-        "path": "M2040 975.5L1858 1122L1842.5 1651V1828L2593 1507.5L2245.5 873L2040 975.5Z",
-        "selected": true
-      },
-      {
-        "color": "green",
-        "disabled": true,
-        "id": "base-aaf-1",
-        "name": "AAF Basis",
-        "path": "M3 7.5V575H720.5V7.5H333.5H3Z",
-        "selected": false
-      },
-      {
-        "color": "green",
-        "disabled": true,
-        "id": "base-aaf-2",
-        "name": "AAF FOB",
-        "path": "M3535 4093H4118V3720H3519.5L3535 4093Z",
-        "selected": false
-      },
-      {
-        "color": "red",
-        "disabled": true,
-        "id": "base-csat-1",
-        "name": "CSAT Basis",
-        "path": "M4118 575V7.5L3427 2.5L3433 575H4118Z",
-        "selected": false
-      },
-      {
-        "color": "red",
-        "disabled": false,
-        "id": "sector-10",
-        "name": "Sektor #10",
-        "path": "M4118 575H3433L3244.5 942L2870.28 1023L2987.5 1507.5H4118V575Z",
-        "selected": false
-      },
-      {
-        "color": "red",
-        "disabled": false,
-        "id": "sector-5",
-        "name": "Sektor #5",
-        "path": "M2748.5 7.5L2792.5 701.5L2870.28 1023L3244.5 942L3433 575L3427 2.5L2748.5 7.5Z",
-        "selected": false
-      },
-      {
-        "color": "red",
-        "disabled": false,
-        "id": "sector-4",
-        "name": "Sektor #4",
-        "path": "M2390 7.5H2263.5L2245.5 873L2485 682.5L2792.5 701.5L2748.5 7.5H2390Z",
-        "selected": false
-      },
-      {
-        "color": "red",
-        "disabled": false,
-        "id": "sector-9",
-        "name": "Sektor #9",
-        "path": "M2245.5 873L2593 1507.5H2987.5L2870.28 1023L2792.5 701.5L2485 682.5L2245.5 873Z",
-        "selected": false
-      },
-      {
-        "color": "red",
-        "disabled": false,
-        "id": "sector-13",
-        "name": "Sektor #13",
-        "path": "M1907.5 2202L2692.5 2230H2914H3094.5L2987.5 1507.5H2593L1842.5 1828L1907.5 2202Z",
-        "selected": false
-      },
-      {
-        "color": "red",
-        "disabled": false,
-        "id": "sector-15",
-        "name": "Sektor #15",
-        "path": "M1165 2142H501.5H257H11.1938V2747.5L472.5 2529L1165 2671L1348 2142H1165Z",
-        "selected": false
-      },
-      {
-        "color": "red",
-        "disabled": false,
-        "id": "sector-16",
-        "name": "Sektor #16",
-        "path": "M1907.5 2202L1670 2142H1348L1165 2671L1408.5 2915.5L1973.07 3147L1848.5 2747.5L1907.5 2202Z",
-        "selected": false
-      },
-      {
-        "color": "red",
-        "disabled": false,
-        "id": "sector-19",
-        "name": "Sektor #19",
-        "path": "M3 3569H401L856.5 3493L1165 2671L472.5 2529L11.1938 2747.5L3 3569Z",
-        "selected": false
-      },
-      {
-        "color": "red",
-        "disabled": false,
-        "id": "sector-21",
-        "name": "Sektor #21",
-        "path": "M2178 3681L2148 3429L1973.07 3147L1408.5 2915.5L1165 2671L856.5 3493L1579 4093H2225L2178 3681Z",
-        "selected": false
-      },
-      {
-        "color": "red",
-        "disabled": false,
-        "id": "sector-20",
-        "name": "Sektor #20",
-        "path": "M401 3569V4093H1579L856.5 3493L401 3569Z",
-        "selected": false
-      },
-      {
-        "color": "red",
-        "disabled": true,
-        "id": "base-csat-2",
-        "name": "CSAT FOB",
-        "path": "M3 4093H401V3569H3V4093Z",
-        "selected": false
-      }
-    ],
-    "adl-schlacht-2-1": [
-      {
-        "color": "green",
-        "disabled": false,
-        "id": "sector-23",
-        "name": "Sektor #23",
-        "path": "M3519.5 3720H4118V2794.5L3310 2571L2688.5 2985L2859.5 3231.25L3483 3269.5L3519.5 3720Z",
-        "selected": false
-      },
-      {
-        "color": "green",
-        "disabled": false,
-        "id": "sector-24",
-        "name": "Sektor #24",
-        "path": "M3535 4093L3519.5 3720L3483 3269.5L2859.5 3231.25L3030.5 3477.5L2619 4093H3535Z",
-        "selected": false
-      },
-      {
-        "color": "green",
-        "disabled": false,
-        "id": "sector-22",
-        "name": "Sektor #22",
-        "path": "M2148 3429L2178 3681L2225 4093H2619L3030.5 3477.5L2859.5 3231.25L2688.5 2985L2481.5 2671L2148 3429Z",
-        "selected": false
-      },
-      {
-        "color": "green",
-        "disabled": false,
-        "id": "sector-17",
-        "name": "Sektor #17",
-        "path": "M2692.5 2230L1907.5 2202L1848.5 2747.5L1973.07 3147L2148 3429L2481.5 2671L2914 2230H2692.5Z",
-        "selected": false
-      },
-      {
-        "color": "green",
-        "disabled": false,
-        "id": "sector-18",
-        "name": "Sektor #18",
-        "path": "M4118 2794.5V2191L3275 2230H3094.5H2914L2481.5 2671L2688.5 2985L3310 2571L4118 2794.5Z",
-        "selected": false
-      },
-      {
-        "color": "red",
-        "disabled": false,
-        "id": "sector-14",
-        "name": "Sektor #14",
-        "path": "M3275 2230L4118 2191V1507.5H2987.5L3094.5 2230H3275Z",
-        "selected": false
-      },
-      {
-        "color": "green",
-        "disabled": false,
-        "id": "sector-11",
-        "name": "Sektor #11",
-        "path": "M501.5 2142H1165H1348L1197 1658L592 1758.5L8.66295 1658L11.1938 2142H257H501.5Z",
-        "selected": "true"
-      },
-      {
-        "color": "red",
-        "disabled": false,
-        "id": "sector-12",
-        "name": "Sektor #12",
-        "path": "M1670 2142L1907.5 2202L1842.5 1828V1651L1858 1122L1197 1658L1348 2142H1670Z",
-        "selected": false
-      },
-      {
-        "color": "green",
-        "disabled": false,
-        "id": "sector-7",
-        "name": "Sektor #7",
-        "path": "M1197 1658L1858 1122V764.5L1678 601.5L1253.58 1002.5L1225 1029.5L1197 1517.5V1658Z",
-        "selected": false
-      },
-      {
-        "color": "green",
-        "disabled": false,
-        "id": "sector-6",
-        "name": "Sektor #6",
-        "path": "M8.66295 1658L592 1758.5L1197 1658V1517.5L1225 1029.5L450 1457L5.93344 1136L8.66295 1658Z",
-        "selected": false
-      },
-      {
-        "color": "green",
-        "disabled": false,
-        "id": "sector-1",
-        "name": "Sektor #1",
-        "path": "M720.5 575H3L5.93344 1136L450 1457L1225 1029.5L1253.58 1002.5L720.5 575Z",
-        "selected": false
-      },
-      {
-        "color": "green",
-        "disabled": false,
-        "id": "sector-2",
-        "name": "Sektor #2",
-        "path": "M720.5 7.5V575L1253.58 1002.5L1678 601.5L1510.5 7.5H720.5Z",
-        "selected": false
-      },
-      {
-        "color": "green",
-        "disabled": false,
-        "id": "sector-3",
-        "name": "Sektor #3",
-        "path": "M2263.5 7.5H1510.5L1678 601.5L1858 764.5V1122L2040 975.5L2245.5 873L2263.5 7.5Z",
-        "selected": false
-      },
-      {
-        "color": "red",
-        "disabled": false,
-        "id": "sector-8",
-        "name": "Sektor #8",
-        "path": "M2040 975.5L1858 1122L1842.5 1651V1828L2593 1507.5L2245.5 873L2040 975.5Z",
-        "selected": false
-      },
-      {
-        "color": "green",
-        "disabled": true,
-        "id": "base-aaf-1",
-        "name": "AAF Basis",
-        "path": "M3 7.5V575H720.5V7.5H333.5H3Z",
-        "selected": false
-      },
-      {
-        "color": "green",
-        "disabled": true,
-        "id": "base-aaf-2",
-        "name": "AAF FOB",
-        "path": "M3535 4093H4118V3720H3519.5L3535 4093Z",
-        "selected": false
-      },
-      {
-        "color": "red",
-        "disabled": true,
-        "id": "base-csat-1",
-        "name": "CSAT Basis",
-        "path": "M4118 575V7.5L3427 2.5L3433 575H4118Z",
-        "selected": false
-      },
-      {
-        "color": "red",
-        "disabled": false,
-        "id": "sector-10",
-        "name": "Sektor #10",
-        "path": "M4118 575H3433L3244.5 942L2870.28 1023L2987.5 1507.5H4118V575Z",
-        "selected": false
-      },
-      {
-        "color": "red",
-        "disabled": false,
-        "id": "sector-5",
-        "name": "Sektor #5",
-        "path": "M2748.5 7.5L2792.5 701.5L2870.28 1023L3244.5 942L3433 575L3427 2.5L2748.5 7.5Z",
-        "selected": false
-      },
-      {
-        "color": "red",
-        "disabled": false,
-        "id": "sector-4",
-        "name": "Sektor #4",
-        "path": "M2390 7.5H2263.5L2245.5 873L2485 682.5L2792.5 701.5L2748.5 7.5H2390Z",
-        "selected": false
-      },
-      {
-        "color": "red",
-        "disabled": false,
-        "id": "sector-9",
-        "name": "Sektor #9",
-        "path": "M2245.5 873L2593 1507.5H2987.5L2870.28 1023L2792.5 701.5L2485 682.5L2245.5 873Z",
-        "selected": false
-      },
-      {
-        "color": "red",
-        "disabled": false,
-        "id": "sector-13",
-        "name": "Sektor #13",
-        "path": "M1907.5 2202L2692.5 2230H2914H3094.5L2987.5 1507.5H2593L1842.5 1828L1907.5 2202Z",
-        "selected": true
-      },
-      {
-        "color": "red",
-        "disabled": false,
-        "id": "sector-15",
-        "name": "Sektor #15",
-        "path": "M1165 2142H501.5H257H11.1938V2747.5L472.5 2529L1165 2671L1348 2142H1165Z",
-        "selected": false
-      },
-      {
-        "color": "red",
-        "disabled": false,
-        "id": "sector-16",
-        "name": "Sektor #16",
-        "path": "M1907.5 2202L1670 2142H1348L1165 2671L1408.5 2915.5L1973.07 3147L1848.5 2747.5L1907.5 2202Z",
-        "selected": false
-      },
-      {
-        "color": "red",
-        "disabled": false,
-        "id": "sector-19",
-        "name": "Sektor #19",
-        "path": "M3 3569H401L856.5 3493L1165 2671L472.5 2529L11.1938 2747.5L3 3569Z",
-        "selected": false
-      },
-      {
-        "color": "red",
-        "disabled": false,
-        "id": "sector-21",
-        "name": "Sektor #21",
-        "path": "M2178 3681L2148 3429L1973.07 3147L1408.5 2915.5L1165 2671L856.5 3493L1579 4093H2225L2178 3681Z",
-        "selected": false
-      },
-      {
-        "color": "red",
-        "disabled": false,
-        "id": "sector-20",
-        "name": "Sektor #20",
-        "path": "M401 3569V4093H1579L856.5 3493L401 3569Z",
-        "selected": false
-      },
-      {
-        "color": "red",
-        "disabled": true,
-        "id": "base-csat-2",
-        "name": "CSAT FOB",
-        "path": "M3 4093H401V3569H3V4093Z",
-        "selected": false
-      }
-    ],
-    "adl-schlacht-3": [
-      {
-        "color": "green",
-        "disabled": false,
-        "id": "sector-23",
-        "name": "Sektor #23",
-        "path": "M3519.5 3720H4118V2794.5L3310 2571L2688.5 2985L2859.5 3231.25L3483 3269.5L3519.5 3720Z",
-        "selected": false
-      },
-      {
-        "color": "green",
-        "disabled": false,
-        "id": "sector-24",
-        "name": "Sektor #24",
-        "path": "M3535 4093L3519.5 3720L3483 3269.5L2859.5 3231.25L3030.5 3477.5L2619 4093H3535Z",
-        "selected": false
-      },
-      {
-        "color": "green",
-        "disabled": false,
-        "id": "sector-22",
-        "name": "Sektor #22",
-        "path": "M2148 3429L2178 3681L2225 4093H2619L3030.5 3477.5L2859.5 3231.25L2688.5 2985L2481.5 2671L2148 3429Z",
-        "selected": false
-      },
-      {
-        "color": "green",
-        "disabled": false,
-        "id": "sector-17",
-        "name": "Sektor #17",
-        "path": "M2692.5 2230L1907.5 2202L1848.5 2747.5L1973.07 3147L2148 3429L2481.5 2671L2914 2230H2692.5Z",
-        "selected": false
-      },
-      {
-        "color": "green",
-        "disabled": false,
-        "id": "sector-18",
-        "name": "Sektor #18",
-        "path": "M4118 2794.5V2191L3275 2230H3094.5H2914L2481.5 2671L2688.5 2985L3310 2571L4118 2794.5Z",
-        "selected": false
-      },
-      {
-        "color": "green",
-        "disabled": false,
-        "id": "sector-14",
-        "name": "Sektor #14",
-        "path": "M3275 2230L4118 2191V1507.5H2987.5L3094.5 2230H3275Z",
-        "selected": false
-      },
-      {
-        "color": "green",
-        "disabled": false,
-        "id": "sector-11",
-        "name": "Sektor #11",
-        "path": "M501.5 2142H1165H1348L1197 1658L592 1758.5L8.66295 1658L11.1938 2142H257H501.5Z",
-        "selected": true
-      },
-      {
-        "color": "green",
-        "disabled": false,
-        "id": "sector-12",
-        "name": "Sektor #12",
-        "path": "M1670 2142L1907.5 2202L1842.5 1828V1651L1858 1122L1197 1658L1348 2142H1670Z",
-        "selected": false
-      },
-      {
-        "color": "green",
-        "disabled": false,
-        "id": "sector-7",
-        "name": "Sektor #7",
-        "path": "M1197 1658L1858 1122V764.5L1678 601.5L1253.58 1002.5L1225 1029.5L1197 1517.5V1658Z",
-        "selected": false
-      },
-      {
-        "color": "green",
-        "disabled": false,
-        "id": "sector-6",
-        "name": "Sektor #6",
-        "path": "M8.66295 1658L592 1758.5L1197 1658V1517.5L1225 1029.5L450 1457L5.93344 1136L8.66295 1658Z",
-        "selected": false
-      },
-      {
-        "color": "green",
-        "disabled": false,
-        "id": "sector-1",
-        "name": "Sektor #1",
-        "path": "M720.5 575H3L5.93344 1136L450 1457L1225 1029.5L1253.58 1002.5L720.5 575Z",
-        "selected": false
-      },
-      {
-        "color": "green",
-        "disabled": false,
-        "id": "sector-2",
-        "name": "Sektor #2",
-        "path": "M720.5 7.5V575L1253.58 1002.5L1678 601.5L1510.5 7.5H720.5Z",
-        "selected": false
-      },
-      {
-        "color": "green",
-        "disabled": false,
-        "id": "sector-3",
-        "name": "Sektor #3",
-        "path": "M2263.5 7.5H1510.5L1678 601.5L1858 764.5V1122L2040 975.5L2245.5 873L2263.5 7.5Z",
-        "selected": false
-      },
-      {
-        "color": "green",
-        "disabled": false,
-        "id": "sector-8",
-        "name": "Sektor #8",
-        "path": "M2040 975.5L1858 1122L1842.5 1651V1828L2593 1507.5L2245.5 873L2040 975.5Z",
-        "selected": false
-      },
-      {
-        "color": "green",
-        "disabled": true,
-        "id": "base-aaf-1",
-        "name": "AAF Basis",
-        "path": "M3 7.5V575H720.5V7.5H333.5H3Z",
-        "selected": false
-      },
-      {
-        "color": "green",
-        "disabled": true,
-        "id": "base-aaf-2",
-        "name": "AAF FOB",
-        "path": "M3535 4093H4118V3720H3519.5L3535 4093Z",
-        "selected": false
-      },
-      {
-        "color": "red",
-        "disabled": true,
-        "id": "base-csat-1",
-        "name": "CSAT Basis",
-        "path": "M4118 575V7.5L3427 2.5L3433 575H4118Z",
-        "selected": false
-      },
-      {
-        "color": "red",
-        "disabled": false,
-        "id": "sector-10",
-        "name": "Sektor #10",
-        "path": "M4118 575H3433L3244.5 942L2870.28 1023L2987.5 1507.5H4118V575Z",
-        "selected": false
-      },
-      {
-        "color": "red",
-        "disabled": false,
-        "id": "sector-5",
-        "name": "Sektor #5",
-        "path": "M2748.5 7.5L2792.5 701.5L2870.28 1023L3244.5 942L3433 575L3427 2.5L2748.5 7.5Z",
-        "selected": false
-      },
-      {
-        "color": "red",
-        "disabled": false,
-        "id": "sector-4",
-        "name": "Sektor #4",
-        "path": "M2390 7.5H2263.5L2245.5 873L2485 682.5L2792.5 701.5L2748.5 7.5H2390Z",
-        "selected": false
-      },
-      {
-        "color": "red",
-        "disabled": false,
-        "id": "sector-9",
-        "name": "Sektor #9",
-        "path": "M2245.5 873L2593 1507.5H2987.5L2870.28 1023L2792.5 701.5L2485 682.5L2245.5 873Z",
-        "selected": true
-      },
-      {
-        "color": "red",
-        "disabled": false,
-        "id": "sector-13",
-        "name": "Sektor #13",
-        "path": "M1907.5 2202L2692.5 2230H2914H3094.5L2987.5 1507.5H2593L1842.5 1828L1907.5 2202Z",
-        "selected": false
-      },
-      {
-        "color": "red",
-        "disabled": false,
-        "id": "sector-15",
-        "name": "Sektor #15",
-        "path": "M1165 2142H501.5H257H11.1938V2747.5L472.5 2529L1165 2671L1348 2142H1165Z",
-        "selected": false
-      },
-      {
-        "color": "red",
-        "disabled": false,
-        "id": "sector-16",
-        "name": "Sektor #16",
-        "path": "M1907.5 2202L1670 2142H1348L1165 2671L1408.5 2915.5L1973.07 3147L1848.5 2747.5L1907.5 2202Z",
-        "selected": false
-      },
-      {
-        "color": "red",
-        "disabled": false,
-        "id": "sector-19",
-        "name": "Sektor #19",
-        "path": "M3 3569H401L856.5 3493L1165 2671L472.5 2529L11.1938 2747.5L3 3569Z",
-        "selected": false
-      },
-      {
-        "color": "red",
-        "disabled": false,
-        "id": "sector-21",
-        "name": "Sektor #21",
-        "path": "M2178 3681L2148 3429L1973.07 3147L1408.5 2915.5L1165 2671L856.5 3493L1579 4093H2225L2178 3681Z",
-        "selected": false
-      },
-      {
-        "color": "red",
-        "disabled": false,
-        "id": "sector-20",
-        "name": "Sektor #20",
-        "path": "M401 3569V4093H1579L856.5 3493L401 3569Z",
-        "selected": false
-      },
-      {
-        "color": "red",
-        "disabled": true,
-        "id": "base-csat-2",
-        "name": "CSAT FOB",
-        "path": "M3 4093H401V3569H3V4093Z",
-        "selected": false
-      }
-    ],
-    "adl-schlacht-3-1": [
-      {
-        "color": "green",
-        "disabled": false,
-        "id": "sector-23",
-        "name": "Sektor #23",
-        "path": "M3519.5 3720H4118V2794.5L3310 2571L2688.5 2985L2859.5 3231.25L3483 3269.5L3519.5 3720Z",
-        "selected": false
-      },
-      {
-        "color": "green",
-        "disabled": false,
-        "id": "sector-24",
-        "name": "Sektor #24",
-        "path": "M3535 4093L3519.5 3720L3483 3269.5L2859.5 3231.25L3030.5 3477.5L2619 4093H3535Z",
-        "selected": false
-      },
-      {
-        "color": "green",
-        "disabled": false,
-        "id": "sector-22",
-        "name": "Sektor #22",
-        "path": "M2148 3429L2178 3681L2225 4093H2619L3030.5 3477.5L2859.5 3231.25L2688.5 2985L2481.5 2671L2148 3429Z",
-        "selected": false
-      },
-      {
-        "color": "green",
-        "disabled": false,
-        "id": "sector-17",
-        "name": "Sektor #17",
-        "path": "M2692.5 2230L1907.5 2202L1848.5 2747.5L1973.07 3147L2148 3429L2481.5 2671L2914 2230H2692.5Z",
-        "selected": true
-      },
-      {
-        "color": "green",
-        "disabled": false,
-        "id": "sector-18",
-        "name": "Sektor #18",
-        "path": "M4118 2794.5V2191L3275 2230H3094.5H2914L2481.5 2671L2688.5 2985L3310 2571L4118 2794.5Z",
-        "selected": false
-      },
-      {
-        "color": "red",
-        "disabled": false,
-        "id": "sector-14",
-        "name": "Sektor #14",
-        "path": "M3275 2230L4118 2191V1507.5H2987.5L3094.5 2230H3275Z",
-        "selected": false
-      },
-      {
-        "color": "green",
-        "disabled": false,
-        "id": "sector-11",
-        "name": "Sektor #11",
-        "path": "M501.5 2142H1165H1348L1197 1658L592 1758.5L8.66295 1658L11.1938 2142H257H501.5Z",
-        "selected": false
-      },
-      {
-        "color": "red",
-        "disabled": false,
-        "id": "sector-12",
-        "name": "Sektor #12",
-        "path": "M1670 2142L1907.5 2202L1842.5 1828V1651L1858 1122L1197 1658L1348 2142H1670Z",
-        "selected": false
-      },
-      {
-        "color": "green",
-        "disabled": false,
-        "id": "sector-7",
-        "name": "Sektor #7",
-        "path": "M1197 1658L1858 1122V764.5L1678 601.5L1253.58 1002.5L1225 1029.5L1197 1517.5V1658Z",
-        "selected": false
-      },
-      {
-        "color": "green",
-        "disabled": false,
-        "id": "sector-6",
-        "name": "Sektor #6",
-        "path": "M8.66295 1658L592 1758.5L1197 1658V1517.5L1225 1029.5L450 1457L5.93344 1136L8.66295 1658Z",
-        "selected": false
-      },
-      {
-        "color": "green",
-        "disabled": false,
-        "id": "sector-1",
-        "name": "Sektor #1",
-        "path": "M720.5 575H3L5.93344 1136L450 1457L1225 1029.5L1253.58 1002.5L720.5 575Z",
-        "selected": false
-      },
-      {
-        "color": "green",
-        "disabled": false,
-        "id": "sector-2",
-        "name": "Sektor #2",
-        "path": "M720.5 7.5V575L1253.58 1002.5L1678 601.5L1510.5 7.5H720.5Z",
-        "selected": false
-      },
-      {
-        "color": "green",
-        "disabled": false,
-        "id": "sector-3",
-        "name": "Sektor #3",
-        "path": "M2263.5 7.5H1510.5L1678 601.5L1858 764.5V1122L2040 975.5L2245.5 873L2263.5 7.5Z",
-        "selected": false
-      },
-      {
-        "color": "red",
-        "disabled": false,
-        "id": "sector-8",
-        "name": "Sektor #8",
-        "path": "M2040 975.5L1858 1122L1842.5 1651V1828L2593 1507.5L2245.5 873L2040 975.5Z",
-        "selected": false
-      },
-      {
-        "color": "green",
-        "disabled": true,
-        "id": "base-aaf-1",
-        "name": "AAF Basis",
-        "path": "M3 7.5V575H720.5V7.5H333.5H3Z",
-        "selected": false
-      },
-      {
-        "color": "green",
-        "disabled": true,
-        "id": "base-aaf-2",
-        "name": "AAF FOB",
-        "path": "M3535 4093H4118V3720H3519.5L3535 4093Z",
-        "selected": false
-      },
-      {
-        "color": "red",
-        "disabled": true,
-        "id": "base-csat-1",
-        "name": "CSAT Basis",
-        "path": "M4118 575V7.5L3427 2.5L3433 575H4118Z",
-        "selected": false
-      },
-      {
-        "color": "red",
-        "disabled": false,
-        "id": "sector-10",
-        "name": "Sektor #10",
-        "path": "M4118 575H3433L3244.5 942L2870.28 1023L2987.5 1507.5H4118V575Z",
-        "selected": false
-      },
-      {
-        "color": "red",
-        "disabled": false,
-        "id": "sector-5",
-        "name": "Sektor #5",
-        "path": "M2748.5 7.5L2792.5 701.5L2870.28 1023L3244.5 942L3433 575L3427 2.5L2748.5 7.5Z",
-        "selected": false
-      },
-      {
-        "color": "red",
-        "disabled": false,
-        "id": "sector-4",
-        "name": "Sektor #4",
-        "path": "M2390 7.5H2263.5L2245.5 873L2485 682.5L2792.5 701.5L2748.5 7.5H2390Z",
-        "selected": false
-      },
-      {
-        "color": "red",
-        "disabled": false,
-        "id": "sector-9",
-        "name": "Sektor #9",
-        "path": "M2245.5 873L2593 1507.5H2987.5L2870.28 1023L2792.5 701.5L2485 682.5L2245.5 873Z",
-        "selected": false
-      },
-      {
-        "color": "green",
-        "disabled": false,
-        "id": "sector-13",
-        "name": "Sektor #13",
-        "path": "M1907.5 2202L2692.5 2230H2914H3094.5L2987.5 1507.5H2593L1842.5 1828L1907.5 2202Z",
-        "selected": false
-      },
-      {
-        "color": "red",
-        "disabled": false,
-        "id": "sector-15",
-        "name": "Sektor #15",
-        "path": "M1165 2142H501.5H257H11.1938V2747.5L472.5 2529L1165 2671L1348 2142H1165Z",
-        "selected": true
-      },
-      {
-        "color": "red",
-        "disabled": false,
-        "id": "sector-16",
-        "name": "Sektor #16",
-        "path": "M1907.5 2202L1670 2142H1348L1165 2671L1408.5 2915.5L1973.07 3147L1848.5 2747.5L1907.5 2202Z",
-        "selected": false
-      },
-      {
-        "color": "red",
-        "disabled": false,
-        "id": "sector-19",
-        "name": "Sektor #19",
-        "path": "M3 3569H401L856.5 3493L1165 2671L472.5 2529L11.1938 2747.5L3 3569Z",
-        "selected": false
-      },
-      {
-        "color": "red",
-        "disabled": false,
-        "id": "sector-21",
-        "name": "Sektor #21",
-        "path": "M2178 3681L2148 3429L1973.07 3147L1408.5 2915.5L1165 2671L856.5 3493L1579 4093H2225L2178 3681Z",
-        "selected": false
-      },
-      {
-        "color": "red",
-        "disabled": false,
-        "id": "sector-20",
-        "name": "Sektor #20",
-        "path": "M401 3569V4093H1579L856.5 3493L401 3569Z",
-        "selected": false
-      },
-      {
-        "color": "red",
-        "disabled": true,
-        "id": "base-csat-2",
-        "name": "CSAT FOB",
-        "path": "M3 4093H401V3569H3V4093Z",
-        "selected": false
-      }
-    ],
-    "adl-schlacht-4": [
-      {
-        "color": "green",
-        "disabled": false,
-        "id": "sector-23",
-        "name": "Sektor #23",
-        "path": "M3519.5 3720H4118V2794.5L3310 2571L2688.5 2985L2859.5 3231.25L3483 3269.5L3519.5 3720Z",
-        "selected": false
-      },
-      {
-        "color": "green",
-        "disabled": false,
-        "id": "sector-24",
-        "name": "Sektor #24",
-        "path": "M3535 4093L3519.5 3720L3483 3269.5L2859.5 3231.25L3030.5 3477.5L2619 4093H3535Z",
-        "selected": false
-      },
-      {
-        "color": "green",
-        "disabled": false,
-        "id": "sector-22",
-        "name": "Sektor #22",
-        "path": "M2148 3429L2178 3681L2225 4093H2619L3030.5 3477.5L2859.5 3231.25L2688.5 2985L2481.5 2671L2148 3429Z",
-        "selected": false
-      },
-      {
-        "color": "green",
-        "disabled": false,
-        "id": "sector-17",
-        "name": "Sektor #17",
-        "path": "M2692.5 2230L1907.5 2202L1848.5 2747.5L1973.07 3147L2148 3429L2481.5 2671L2914 2230H2692.5Z",
-        "selected": true
-      },
-      {
-        "color": "green",
-        "disabled": false,
-        "id": "sector-18",
-        "name": "Sektor #18",
-        "path": "M4118 2794.5V2191L3275 2230H3094.5H2914L2481.5 2671L2688.5 2985L3310 2571L4118 2794.5Z",
-        "selected": false
-      },
-      {
-        "color": "green",
-        "disabled": false,
-        "id": "sector-14",
-        "name": "Sektor #14",
-        "path": "M3275 2230L4118 2191V1507.5H2987.5L3094.5 2230H3275Z",
-        "selected": false
-      },
-      {
-        "color": "green",
-        "disabled": true,
-        "id": "sector-11",
-        "name": "Sektor #11",
-        "path": "M501.5 2142H1165H1348L1197 1658L592 1758.5L8.66295 1658L11.1938 2142H257H501.5Z",
-        "selected": false
-      },
-      {
-        "color": "green",
-        "disabled": false,
-        "id": "sector-12",
-        "name": "Sektor #12",
-        "path": "M1670 2142L1907.5 2202L1842.5 1828V1651L1858 1122L1197 1658L1348 2142H1670Z",
-        "selected": false
-      },
-      {
-        "color": "green",
-        "disabled": false,
-        "id": "sector-7",
-        "name": "Sektor #7",
-        "path": "M1197 1658L1858 1122V764.5L1678 601.5L1253.58 1002.5L1225 1029.5L1197 1517.5V1658Z",
-        "selected": false
-      },
-      {
-        "color": "green",
-        "disabled": false,
-        "id": "sector-6",
-        "name": "Sektor #6",
-        "path": "M8.66295 1658L592 1758.5L1197 1658V1517.5L1225 1029.5L450 1457L5.93344 1136L8.66295 1658Z",
-        "selected": false
-      },
-      {
-        "color": "green",
-        "disabled": false,
-        "id": "sector-1",
-        "name": "Sektor #1",
-        "path": "M720.5 575H3L5.93344 1136L450 1457L1225 1029.5L1253.58 1002.5L720.5 575Z",
-        "selected": false
-      },
-      {
-        "color": "green",
-        "disabled": false,
-        "id": "sector-2",
-        "name": "Sektor #2",
-        "path": "M720.5 7.5V575L1253.58 1002.5L1678 601.5L1510.5 7.5H720.5Z",
-        "selected": false
-      },
-      {
-        "color": "green",
-        "disabled": false,
-        "id": "sector-3",
-        "name": "Sektor #3",
-        "path": "M2263.5 7.5H1510.5L1678 601.5L1858 764.5V1122L2040 975.5L2245.5 873L2263.5 7.5Z",
-        "selected": false
-      },
-      {
-        "color": "green",
-        "disabled": false,
-        "id": "sector-8",
-        "name": "Sektor #8",
-        "path": "M2040 975.5L1858 1122L1842.5 1651V1828L2593 1507.5L2245.5 873L2040 975.5Z",
-        "selected": false
-      },
-      {
-        "color": "green",
-        "disabled": true,
-        "id": "base-aaf-1",
-        "name": "AAF Basis",
-        "path": "M3 7.5V575H720.5V7.5H333.5H3Z",
-        "selected": false
-      },
-      {
-        "color": "green",
-        "disabled": true,
-        "id": "base-aaf-2",
-        "name": "AAF FOB",
-        "path": "M3535 4093H4118V3720H3519.5L3535 4093Z",
-        "selected": false
-      },
-      {
-        "color": "red",
-        "disabled": true,
-        "id": "base-csat-1",
-        "name": "CSAT Basis",
-        "path": "M4118 575V7.5L3427 2.5L3433 575H4118Z",
-        "selected": false
-      },
-      {
-        "color": "red",
-        "disabled": false,
-        "id": "sector-10",
-        "name": "Sektor #10",
-        "path": "M4118 575H3433L3244.5 942L2870.28 1023L2987.5 1507.5H4118V575Z",
-        "selected": false
-      },
-      {
-        "color": "red",
-        "disabled": false,
-        "id": "sector-5",
-        "name": "Sektor #5",
-        "path": "M2748.5 7.5L2792.5 701.5L2870.28 1023L3244.5 942L3433 575L3427 2.5L2748.5 7.5Z",
-        "selected": false
-      },
-      {
-        "color": "red",
-        "disabled": false,
-        "id": "sector-4",
-        "name": "Sektor #4",
-        "path": "M2390 7.5H2263.5L2245.5 873L2485 682.5L2792.5 701.5L2748.5 7.5H2390Z",
-        "selected": false
-      },
-      {
-        "color": "green",
-        "disabled": false,
-        "id": "sector-9",
-        "name": "Sektor #9",
-        "path": "M2245.5 873L2593 1507.5H2987.5L2870.28 1023L2792.5 701.5L2485 682.5L2245.5 873Z",
-        "selected": false
-      },
-      {
-        "color": "red",
-        "disabled": false,
-        "id": "sector-13",
-        "name": "Sektor #13",
-        "path": "M1907.5 2202L2692.5 2230H2914H3094.5L2987.5 1507.5H2593L1842.5 1828L1907.5 2202Z",
-        "selected": true
-      },
-      {
-        "color": "red",
-        "disabled": false,
-        "id": "sector-15",
-        "name": "Sektor #15",
-        "path": "M1165 2142H501.5H257H11.1938V2747.5L472.5 2529L1165 2671L1348 2142H1165Z",
-        "selected": false
-      },
-      {
-        "color": "red",
-        "disabled": false,
-        "id": "sector-16",
-        "name": "Sektor #16",
-        "path": "M1907.5 2202L1670 2142H1348L1165 2671L1408.5 2915.5L1973.07 3147L1848.5 2747.5L1907.5 2202Z",
-        "selected": false
-      },
-      {
-        "color": "red",
-        "disabled": false,
-        "id": "sector-19",
-        "name": "Sektor #19",
-        "path": "M3 3569H401L856.5 3493L1165 2671L472.5 2529L11.1938 2747.5L3 3569Z",
-        "selected": false
-      },
-      {
-        "color": "red",
-        "disabled": false,
-        "id": "sector-21",
-        "name": "Sektor #21",
-        "path": "M2178 3681L2148 3429L1973.07 3147L1408.5 2915.5L1165 2671L856.5 3493L1579 4093H2225L2178 3681Z",
-        "selected": false
-      },
-      {
-        "color": "red",
-        "disabled": false,
-        "id": "sector-20",
-        "name": "Sektor #20",
-        "path": "M401 3569V4093H1579L856.5 3493L401 3569Z",
-        "selected": false
-      },
-      {
-        "color": "red",
-        "disabled": true,
-        "id": "base-csat-2",
-        "name": "CSAT FOB",
-        "path": "M3 4093H401V3569H3V4093Z",
-        "selected": false
-      }
-    ],
-    "adl-schlacht-4-1": [
-      {
-        "color": "green",
-        "disabled": false,
-        "id": "sector-23",
-        "name": "Sektor #23",
-        "path": "M3519.5 3720H4118V2794.5L3310 2571L2688.5 2985L2859.5 3231.25L3483 3269.5L3519.5 3720Z",
-        "selected": false
-      },
-      {
-        "color": "green",
-        "disabled": false,
-        "id": "sector-24",
-        "name": "Sektor #24",
-        "path": "M3535 4093L3519.5 3720L3483 3269.5L2859.5 3231.25L3030.5 3477.5L2619 4093H3535Z",
-        "selected": false
-      },
-      {
-        "color": "green",
-        "disabled": false,
-        "id": "sector-22",
-        "name": "Sektor #22",
-        "path": "M2148 3429L2178 3681L2225 4093H2619L3030.5 3477.5L2859.5 3231.25L2688.5 2985L2481.5 2671L2148 3429Z",
-        "selected": false
-      },
-      {
-        "color": "green",
-        "disabled": false,
-        "id": "sector-17",
-        "name": "Sektor #17",
-        "path": "M2692.5 2230L1907.5 2202L1848.5 2747.5L1973.07 3147L2148 3429L2481.5 2671L2914 2230H2692.5Z",
-        "selected": false
-      },
-      {
-        "color": "green",
-        "disabled": false,
-        "id": "sector-18",
-        "name": "Sektor #18",
-        "path": "M4118 2794.5V2191L3275 2230H3094.5H2914L2481.5 2671L2688.5 2985L3310 2571L4118 2794.5Z",
-        "selected": true
-      },
-      {
-        "color": "red",
-        "disabled": false,
-        "id": "sector-14",
-        "name": "Sektor #14",
-        "path": "M3275 2230L4118 2191V1507.5H2987.5L3094.5 2230H3275Z",
-        "selected": false
-      },
-      {
-        "color": "green",
-        "disabled": false,
-        "id": "sector-11",
-        "name": "Sektor #11",
-        "path": "M501.5 2142H1165H1348L1197 1658L592 1758.5L8.66295 1658L11.1938 2142H257H501.5Z",
-        "selected": false
-      },
-      {
-        "color": "red",
-        "disabled": false,
-        "id": "sector-12",
-        "name": "Sektor #12",
-        "path": "M1670 2142L1907.5 2202L1842.5 1828V1651L1858 1122L1197 1658L1348 2142H1670Z",
-        "selected": false
-      },
-      {
-        "color": "green",
-        "disabled": false,
-        "id": "sector-7",
-        "name": "Sektor #7",
-        "path": "M1197 1658L1858 1122V764.5L1678 601.5L1253.58 1002.5L1225 1029.5L1197 1517.5V1658Z",
-        "selected": false
-      },
-      {
-        "color": "green",
-        "disabled": false,
-        "id": "sector-6",
-        "name": "Sektor #6",
-        "path": "M8.66295 1658L592 1758.5L1197 1658V1517.5L1225 1029.5L450 1457L5.93344 1136L8.66295 1658Z",
-        "selected": false
-      },
-      {
-        "color": "green",
-        "disabled": false,
-        "id": "sector-1",
-        "name": "Sektor #1",
-        "path": "M720.5 575H3L5.93344 1136L450 1457L1225 1029.5L1253.58 1002.5L720.5 575Z",
-        "selected": false
-      },
-      {
-        "color": "green",
-        "disabled": false,
-        "id": "sector-2",
-        "name": "Sektor #2",
-        "path": "M720.5 7.5V575L1253.58 1002.5L1678 601.5L1510.5 7.5H720.5Z",
-        "selected": false
-      },
-      {
-        "color": "green",
-        "disabled": false,
-        "id": "sector-3",
-        "name": "Sektor #3",
-        "path": "M2263.5 7.5H1510.5L1678 601.5L1858 764.5V1122L2040 975.5L2245.5 873L2263.5 7.5Z",
-        "selected": false
-      },
-      {
-        "color": "red",
-        "disabled": false,
-        "id": "sector-8",
-        "name": "Sektor #8",
-        "path": "M2040 975.5L1858 1122L1842.5 1651V1828L2593 1507.5L2245.5 873L2040 975.5Z",
-        "selected": false
-      },
-      {
-        "color": "green",
-        "disabled": true,
-        "id": "base-aaf-1",
-        "name": "AAF Basis",
-        "path": "M3 7.5V575H720.5V7.5H333.5H3Z",
-        "selected": false
-      },
-      {
-        "color": "green",
-        "disabled": true,
-        "id": "base-aaf-2",
-        "name": "AAF FOB",
-        "path": "M3535 4093H4118V3720H3519.5L3535 4093Z",
-        "selected": false
-      },
-      {
-        "color": "red",
-        "disabled": true,
-        "id": "base-csat-1",
-        "name": "CSAT Basis",
-        "path": "M4118 575V7.5L3427 2.5L3433 575H4118Z",
-        "selected": false
-      },
-      {
-        "color": "red",
-        "disabled": false,
-        "id": "sector-10",
-        "name": "Sektor #10",
-        "path": "M4118 575H3433L3244.5 942L2870.28 1023L2987.5 1507.5H4118V575Z",
-        "selected": false
-      },
-      {
-        "color": "red",
-        "disabled": false,
-        "id": "sector-5",
-        "name": "Sektor #5",
-        "path": "M2748.5 7.5L2792.5 701.5L2870.28 1023L3244.5 942L3433 575L3427 2.5L2748.5 7.5Z",
-        "selected": false
-      },
-      {
-        "color": "red",
-        "disabled": false,
-        "id": "sector-4",
-        "name": "Sektor #4",
-        "path": "M2390 7.5H2263.5L2245.5 873L2485 682.5L2792.5 701.5L2748.5 7.5H2390Z",
-        "selected": false
-      },
-      {
-        "color": "red",
-        "disabled": false,
-        "id": "sector-9",
-        "name": "Sektor #9",
-        "path": "M2245.5 873L2593 1507.5H2987.5L2870.28 1023L2792.5 701.5L2485 682.5L2245.5 873Z",
-        "selected": true
-      },
-      {
-        "color": "green",
-        "disabled": false,
-        "id": "sector-13",
-        "name": "Sektor #13",
-        "path": "M1907.5 2202L2692.5 2230H2914H3094.5L2987.5 1507.5H2593L1842.5 1828L1907.5 2202Z",
-        "selected": false
-      },
-      {
-        "color": "green",
-        "disabled": false,
-        "id": "sector-15",
-        "name": "Sektor #15",
-        "path": "M1165 2142H501.5H257H11.1938V2747.5L472.5 2529L1165 2671L1348 2142H1165Z",
-        "selected": false
-      },
-      {
-        "color": "red",
-        "disabled": false,
-        "id": "sector-16",
-        "name": "Sektor #16",
-        "path": "M1907.5 2202L1670 2142H1348L1165 2671L1408.5 2915.5L1973.07 3147L1848.5 2747.5L1907.5 2202Z",
-        "selected": false
-      },
-      {
-        "color": "red",
-        "disabled": false,
-        "id": "sector-19",
-        "name": "Sektor #19",
-        "path": "M3 3569H401L856.5 3493L1165 2671L472.5 2529L11.1938 2747.5L3 3569Z",
-        "selected": false
-      },
-      {
-        "color": "red",
-        "disabled": false,
-        "id": "sector-21",
-        "name": "Sektor #21",
-        "path": "M2178 3681L2148 3429L1973.07 3147L1408.5 2915.5L1165 2671L856.5 3493L1579 4093H2225L2178 3681Z",
-        "selected": false
-      },
-      {
-        "color": "red",
-        "disabled": false,
-        "id": "sector-20",
-        "name": "Sektor #20",
-        "path": "M401 3569V4093H1579L856.5 3493L401 3569Z",
-        "selected": false
-      },
-      {
-        "color": "red",
-        "disabled": true,
-        "id": "base-csat-2",
-        "name": "CSAT FOB",
-        "path": "M3 4093H401V3569H3V4093Z",
-        "selected": false
-      }
-    ],
-    "adl-schlacht-5": [
-      {
-        "color": "green",
-        "disabled": false,
-        "id": "sector-23",
-        "name": "Sektor #23",
-        "path": "M3519.5 3720H4118V2794.5L3310 2571L2688.5 2985L2859.5 3231.25L3483 3269.5L3519.5 3720Z",
-        "selected": false
-      },
-      {
-        "color": "green",
-        "disabled": false,
-        "id": "sector-24",
-        "name": "Sektor #24",
-        "path": "M3535 4093L3519.5 3720L3483 3269.5L2859.5 3231.25L3030.5 3477.5L2619 4093H3535Z",
-        "selected": false
-      },
-      {
-        "color": "green",
-        "disabled": false,
-        "id": "sector-22",
-        "name": "Sektor #22",
-        "path": "M2148 3429L2178 3681L2225 4093H2619L3030.5 3477.5L2859.5 3231.25L2688.5 2985L2481.5 2671L2148 3429Z",
-        "selected": true
-      },
-      {
-        "color": "red",
-        "disabled": false,
-        "id": "sector-17",
-        "name": "Sektor #17",
-        "path": "M2692.5 2230L1907.5 2202L1848.5 2747.5L1973.07 3147L2148 3429L2481.5 2671L2914 2230H2692.5Z",
-        "selected": false
-      },
-      {
-        "color": "green",
-        "disabled": false,
-        "id": "sector-18",
-        "name": "Sektor #18",
-        "path": "M4118 2794.5V2191L3275 2230H3094.5H2914L2481.5 2671L2688.5 2985L3310 2571L4118 2794.5Z",
-        "selected": false
-      },
-      {
-        "color": "green",
-        "disabled": false,
-        "id": "sector-14",
-        "name": "Sektor #14",
-        "path": "M3275 2230L4118 2191V1507.5H2987.5L3094.5 2230H3275Z",
-        "selected": false
-      },
-      {
-        "color": "green",
-        "disabled": true,
-        "id": "sector-11",
-        "name": "Sektor #11",
-        "path": "M501.5 2142H1165H1348L1197 1658L592 1758.5L8.66295 1658L11.1938 2142H257H501.5Z",
-        "selected": false
-      },
-      {
-        "color": "green",
-        "disabled": false,
-        "id": "sector-12",
-        "name": "Sektor #12",
-        "path": "M1670 2142L1907.5 2202L1842.5 1828V1651L1858 1122L1197 1658L1348 2142H1670Z",
-        "selected": false
-      },
-      {
-        "color": "green",
-        "disabled": false,
-        "id": "sector-7",
-        "name": "Sektor #7",
-        "path": "M1197 1658L1858 1122V764.5L1678 601.5L1253.58 1002.5L1225 1029.5L1197 1517.5V1658Z",
-        "selected": false
-      },
-      {
-        "color": "green",
-        "disabled": false,
-        "id": "sector-6",
-        "name": "Sektor #6",
-        "path": "M8.66295 1658L592 1758.5L1197 1658V1517.5L1225 1029.5L450 1457L5.93344 1136L8.66295 1658Z",
-        "selected": false
-      },
-      {
-        "color": "green",
-        "disabled": false,
-        "id": "sector-1",
-        "name": "Sektor #1",
-        "path": "M720.5 575H3L5.93344 1136L450 1457L1225 1029.5L1253.58 1002.5L720.5 575Z",
-        "selected": false
-      },
-      {
-        "color": "green",
-        "disabled": false,
-        "id": "sector-2",
-        "name": "Sektor #2",
-        "path": "M720.5 7.5V575L1253.58 1002.5L1678 601.5L1510.5 7.5H720.5Z",
-        "selected": false
-      },
-      {
-        "color": "green",
-        "disabled": false,
-        "id": "sector-3",
-        "name": "Sektor #3",
-        "path": "M2263.5 7.5H1510.5L1678 601.5L1858 764.5V1122L2040 975.5L2245.5 873L2263.5 7.5Z",
-        "selected": false
-      },
-      {
-        "color": "green",
-        "disabled": false,
-        "id": "sector-8",
-        "name": "Sektor #8",
-        "path": "M2040 975.5L1858 1122L1842.5 1651V1828L2593 1507.5L2245.5 873L2040 975.5Z",
-        "selected": false
-      },
-      {
-        "color": "green",
-        "disabled": true,
-        "id": "base-aaf-1",
-        "name": "AAF Basis",
-        "path": "M3 7.5V575H720.5V7.5H333.5H3Z",
-        "selected": false
-      },
-      {
-        "color": "green",
-        "disabled": true,
-        "id": "base-aaf-2",
-        "name": "AAF FOB",
-        "path": "M3535 4093H4118V3720H3519.5L3535 4093Z",
-        "selected": false
-      },
-      {
-        "color": "red",
-        "disabled": true,
-        "id": "base-csat-1",
-        "name": "CSAT Basis",
-        "path": "M4118 575V7.5L3427 2.5L3433 575H4118Z",
-        "selected": false
-      },
-      {
-        "color": "red",
-        "disabled": false,
-        "id": "sector-10",
-        "name": "Sektor #10",
-        "path": "M4118 575H3433L3244.5 942L2870.28 1023L2987.5 1507.5H4118V575Z",
-        "selected": false
-      },
-      {
-        "color": "red",
-        "disabled": false,
-        "id": "sector-5",
-        "name": "Sektor #5",
-        "path": "M2748.5 7.5L2792.5 701.5L2870.28 1023L3244.5 942L3433 575L3427 2.5L2748.5 7.5Z",
-        "selected": false
-      },
-      {
-        "color": "red",
-        "disabled": false,
-        "id": "sector-4",
-        "name": "Sektor #4",
-        "path": "M2390 7.5H2263.5L2245.5 873L2485 682.5L2792.5 701.5L2748.5 7.5H2390Z",
-        "selected": false
-      },
-      {
-        "color": "green",
-        "disabled": false,
-        "id": "sector-9",
-        "name": "Sektor #9",
-        "path": "M2245.5 873L2593 1507.5H2987.5L2870.28 1023L2792.5 701.5L2485 682.5L2245.5 873Z",
-        "selected": false
-      },
-      {
-        "color": "red",
-        "disabled": false,
-        "id": "sector-13",
-        "name": "Sektor #13",
-        "path": "M1907.5 2202L2692.5 2230H2914H3094.5L2987.5 1507.5H2593L1842.5 1828L1907.5 2202Z",
-        "selected": true
-      },
-      {
-        "color": "red",
-        "disabled": false,
-        "id": "sector-15",
-        "name": "Sektor #15",
-        "path": "M1165 2142H501.5H257H11.1938V2747.5L472.5 2529L1165 2671L1348 2142H1165Z",
-        "selected": false
-      },
-      {
-        "color": "red",
-        "disabled": false,
-        "id": "sector-16",
-        "name": "Sektor #16",
-        "path": "M1907.5 2202L1670 2142H1348L1165 2671L1408.5 2915.5L1973.07 3147L1848.5 2747.5L1907.5 2202Z",
-        "selected": false
-      },
-      {
-        "color": "red",
-        "disabled": false,
-        "id": "sector-19",
-        "name": "Sektor #19",
-        "path": "M3 3569H401L856.5 3493L1165 2671L472.5 2529L11.1938 2747.5L3 3569Z",
-        "selected": false
-      },
-      {
-        "color": "red",
-        "disabled": false,
-        "id": "sector-21",
-        "name": "Sektor #21",
-        "path": "M2178 3681L2148 3429L1973.07 3147L1408.5 2915.5L1165 2671L856.5 3493L1579 4093H2225L2178 3681Z",
-        "selected": false
-      },
-      {
-        "color": "red",
-        "disabled": false,
-        "id": "sector-20",
-        "name": "Sektor #20",
-        "path": "M401 3569V4093H1579L856.5 3493L401 3569Z",
-        "selected": false
-      },
-      {
-        "color": "red",
-        "disabled": true,
-        "id": "base-csat-2",
-        "name": "CSAT FOB",
-        "path": "M3 4093H401V3569H3V4093Z",
-        "selected": false
-      }
-    ],
-    "adl-schlacht-5-1": [
-      {
-        "color": "green",
-        "disabled": false,
-        "id": "sector-23",
-        "name": "Sektor #23",
-        "path": "M3519.5 3720H4118V2794.5L3310 2571L2688.5 2985L2859.5 3231.25L3483 3269.5L3519.5 3720Z",
-        "selected": false
-      },
-      {
-        "color": "green",
-        "disabled": false,
-        "id": "sector-24",
-        "name": "Sektor #24",
-        "path": "M3535 4093L3519.5 3720L3483 3269.5L2859.5 3231.25L3030.5 3477.5L2619 4093H3535Z",
-        "selected": false
-      },
-      {
-        "color": "green",
-        "disabled": false,
-        "id": "sector-22",
-        "name": "Sektor #22",
-        "path": "M2148 3429L2178 3681L2225 4093H2619L3030.5 3477.5L2859.5 3231.25L2688.5 2985L2481.5 2671L2148 3429Z",
-        "selected": false
-      },
-      {
-        "color": "green",
-        "disabled": false,
-        "id": "sector-17",
-        "name": "Sektor #17",
-        "path": "M2692.5 2230L1907.5 2202L1848.5 2747.5L1973.07 3147L2148 3429L2481.5 2671L2914 2230H2692.5Z",
-        "selected": false
-      },
-      {
-        "color": "green",
-        "disabled": false,
-        "id": "sector-18",
-        "name": "Sektor #18",
-        "path": "M4118 2794.5V2191L3275 2230H3094.5H2914L2481.5 2671L2688.5 2985L3310 2571L4118 2794.5Z",
-        "selected": false
-      },
-      {
-        "color": "red",
-        "disabled": false,
-        "id": "sector-14",
-        "name": "Sektor #14",
-        "path": "M3275 2230L4118 2191V1507.5H2987.5L3094.5 2230H3275Z",
-        "selected": false
-      },
-      {
-        "color": "green",
-        "disabled": false,
-        "id": "sector-11",
-        "name": "Sektor #11",
-        "path": "M501.5 2142H1165H1348L1197 1658L592 1758.5L8.66295 1658L11.1938 2142H257H501.5Z",
-        "selected": false
-      },
-      {
-        "color": "red",
-        "disabled": false,
-        "id": "sector-12",
-        "name": "Sektor #12",
-        "path": "M1670 2142L1907.5 2202L1842.5 1828V1651L1858 1122L1197 1658L1348 2142H1670Z",
-        "selected": true
-      },
-      {
-        "color": "green",
-        "disabled": false,
-        "id": "sector-7",
-        "name": "Sektor #7",
-        "path": "M1197 1658L1858 1122V764.5L1678 601.5L1253.58 1002.5L1225 1029.5L1197 1517.5V1658Z",
-        "selected": false
-      },
-      {
-        "color": "green",
-        "disabled": false,
-        "id": "sector-6",
-        "name": "Sektor #6",
-        "path": "M8.66295 1658L592 1758.5L1197 1658V1517.5L1225 1029.5L450 1457L5.93344 1136L8.66295 1658Z",
-        "selected": false
-      },
-      {
-        "color": "green",
-        "disabled": false,
-        "id": "sector-1",
-        "name": "Sektor #1",
-        "path": "M720.5 575H3L5.93344 1136L450 1457L1225 1029.5L1253.58 1002.5L720.5 575Z",
-        "selected": false
-      },
-      {
-        "color": "green",
-        "disabled": false,
-        "id": "sector-2",
-        "name": "Sektor #2",
-        "path": "M720.5 7.5V575L1253.58 1002.5L1678 601.5L1510.5 7.5H720.5Z",
-        "selected": false
-      },
-      {
-        "color": "green",
-        "disabled": false,
-        "id": "sector-3",
-        "name": "Sektor #3",
-        "path": "M2263.5 7.5H1510.5L1678 601.5L1858 764.5V1122L2040 975.5L2245.5 873L2263.5 7.5Z",
-        "selected": false
-      },
-      {
-        "color": "red",
-        "disabled": false,
-        "id": "sector-8",
-        "name": "Sektor #8",
-        "path": "M2040 975.5L1858 1122L1842.5 1651V1828L2593 1507.5L2245.5 873L2040 975.5Z",
-        "selected": false
-      },
-      {
-        "color": "green",
-        "disabled": true,
-        "id": "base-aaf-1",
-        "name": "AAF Basis",
-        "path": "M3 7.5V575H720.5V7.5H333.5H3Z",
-        "selected": false
-      },
-      {
-        "color": "green",
-        "disabled": true,
-        "id": "base-aaf-2",
-        "name": "AAF FOB",
-        "path": "M3535 4093H4118V3720H3519.5L3535 4093Z",
-        "selected": false
-      },
-      {
-        "color": "red",
-        "disabled": true,
-        "id": "base-csat-1",
-        "name": "CSAT Basis",
-        "path": "M4118 575V7.5L3427 2.5L3433 575H4118Z",
-        "selected": false
-      },
-      {
-        "color": "red",
-        "disabled": false,
-        "id": "sector-10",
-        "name": "Sektor #10",
-        "path": "M4118 575H3433L3244.5 942L2870.28 1023L2987.5 1507.5H4118V575Z",
-        "selected": false
-      },
-      {
-        "color": "red",
-        "disabled": false,
-        "id": "sector-5",
-        "name": "Sektor #5",
-        "path": "M2748.5 7.5L2792.5 701.5L2870.28 1023L3244.5 942L3433 575L3427 2.5L2748.5 7.5Z",
-        "selected": false
-      },
-      {
-        "color": "red",
-        "disabled": false,
-        "id": "sector-4",
-        "name": "Sektor #4",
-        "path": "M2390 7.5H2263.5L2245.5 873L2485 682.5L2792.5 701.5L2748.5 7.5H2390Z",
-        "selected": false
-      },
-      {
-        "color": "green",
-        "disabled": false,
-        "id": "sector-9",
-        "name": "Sektor #9",
-        "path": "M2245.5 873L2593 1507.5H2987.5L2870.28 1023L2792.5 701.5L2485 682.5L2245.5 873Z",
-        "selected": true
-      },
-      {
-        "color": "green",
-        "disabled": false,
-        "id": "sector-13",
-        "name": "Sektor #13",
-        "path": "M1907.5 2202L2692.5 2230H2914H3094.5L2987.5 1507.5H2593L1842.5 1828L1907.5 2202Z",
-        "selected": false
-      },
-      {
-        "color": "red",
-        "disabled": false,
-        "id": "sector-15",
-        "name": "Sektor #15",
-        "path": "M1165 2142H501.5H257H11.1938V2747.5L472.5 2529L1165 2671L1348 2142H1165Z",
-        "selected": false
-      },
-      {
-        "color": "red",
-        "disabled": false,
-        "id": "sector-16",
-        "name": "Sektor #16",
-        "path": "M1907.5 2202L1670 2142H1348L1165 2671L1408.5 2915.5L1973.07 3147L1848.5 2747.5L1907.5 2202Z",
-        "selected": false
-      },
-      {
-        "color": "red",
-        "disabled": false,
-        "id": "sector-19",
-        "name": "Sektor #19",
-        "path": "M3 3569H401L856.5 3493L1165 2671L472.5 2529L11.1938 2747.5L3 3569Z",
-        "selected": false
-      },
-      {
-        "color": "red",
-        "disabled": false,
-        "id": "sector-21",
-        "name": "Sektor #21",
-        "path": "M2178 3681L2148 3429L1973.07 3147L1408.5 2915.5L1165 2671L856.5 3493L1579 4093H2225L2178 3681Z",
-        "selected": false
-      },
-      {
-        "color": "red",
-        "disabled": false,
-        "id": "sector-20",
-        "name": "Sektor #20",
-        "path": "M401 3569V4093H1579L856.5 3493L401 3569Z",
-        "selected": false
-      },
-      {
-        "color": "red",
-        "disabled": true,
-        "id": "base-csat-2",
-        "name": "CSAT FOB",
-        "path": "M3 4093H401V3569H3V4093Z",
-        "selected": false
-      }
-    ],
-    "adl-schlacht-6": [
-      {
-        "color": "green",
-        "disabled": false,
-        "id": "sector-23",
-        "name": "Sektor #23",
-        "path": "M3519.5 3720H4118V2794.5L3310 2571L2688.5 2985L2859.5 3231.25L3483 3269.5L3519.5 3720Z",
-        "selected": false
-      },
-      {
-        "color": "green",
-        "disabled": false,
-        "id": "sector-24",
-        "name": "Sektor #24",
-        "path": "M3535 4093L3519.5 3720L3483 3269.5L2859.5 3231.25L3030.5 3477.5L2619 4093H3535Z",
-        "selected": false
-      },
-      {
-        "color": "green",
-        "disabled": false,
-        "id": "sector-22",
-        "name": "Sektor #22",
-        "path": "M2148 3429L2178 3681L2225 4093H2619L3030.5 3477.5L2859.5 3231.25L2688.5 2985L2481.5 2671L2148 3429Z",
-        "selected": false
-      },
-      {
-        "color": "red",
-        "disabled": false,
-        "id": "sector-17",
-        "name": "Sektor #17",
-        "path": "M2692.5 2230L1907.5 2202L1848.5 2747.5L1973.07 3147L2148 3429L2481.5 2671L2914 2230H2692.5Z",
-        "selected": false
-      },
-      {
-        "color": "green",
-        "disabled": false,
-        "id": "sector-18",
-        "name": "Sektor #18",
-        "path": "M4118 2794.5V2191L3275 2230H3094.5H2914L2481.5 2671L2688.5 2985L3310 2571L4118 2794.5Z",
-        "selected": false
-      },
-      {
-        "color": "green",
-        "disabled": false,
-        "id": "sector-14",
-        "name": "Sektor #14",
-        "path": "M3275 2230L4118 2191V1507.5H2987.5L3094.5 2230H3275Z",
-        "selected": false
-      },
-      {
-        "color": "green",
-        "disabled": true,
-        "id": "sector-11",
-        "name": "Sektor #11",
-        "path": "M501.5 2142H1165H1348L1197 1658L592 1758.5L8.66295 1658L11.1938 2142H257H501.5Z",
-        "selected": false
-      },
-      {
-        "color": "green",
-        "disabled": false,
-        "id": "sector-12",
-        "name": "Sektor #12",
-        "path": "M1670 2142L1907.5 2202L1842.5 1828V1651L1858 1122L1197 1658L1348 2142H1670Z",
-        "selected": false
-      },
-      {
-        "color": "green",
-        "disabled": false,
-        "id": "sector-7",
-        "name": "Sektor #7",
-        "path": "M1197 1658L1858 1122V764.5L1678 601.5L1253.58 1002.5L1225 1029.5L1197 1517.5V1658Z",
-        "selected": false
-      },
-      {
-        "color": "green",
-        "disabled": false,
-        "id": "sector-6",
-        "name": "Sektor #6",
-        "path": "M8.66295 1658L592 1758.5L1197 1658V1517.5L1225 1029.5L450 1457L5.93344 1136L8.66295 1658Z",
-        "selected": false
-      },
-      {
-        "color": "green",
-        "disabled": false,
-        "id": "sector-1",
-        "name": "Sektor #1",
-        "path": "M720.5 575H3L5.93344 1136L450 1457L1225 1029.5L1253.58 1002.5L720.5 575Z",
-        "selected": false
-      },
-      {
-        "color": "green",
-        "disabled": false,
-        "id": "sector-2",
-        "name": "Sektor #2",
-        "path": "M720.5 7.5V575L1253.58 1002.5L1678 601.5L1510.5 7.5H720.5Z",
-        "selected": false
-      },
-      {
-        "color": "green",
-        "disabled": false,
-        "id": "sector-3",
-        "name": "Sektor #3",
-        "path": "M2263.5 7.5H1510.5L1678 601.5L1858 764.5V1122L2040 975.5L2245.5 873L2263.5 7.5Z",
-        "selected": false
-      },
-      {
-        "color": "green",
-        "disabled": false,
-        "id": "sector-8",
-        "name": "Sektor #8",
-        "path": "M2040 975.5L1858 1122L1842.5 1651V1828L2593 1507.5L2245.5 873L2040 975.5Z",
-        "selected": false
-      },
-      {
-        "color": "green",
-        "disabled": true,
-        "id": "base-aaf-1",
-        "name": "AAF Basis",
-        "path": "M3 7.5V575H720.5V7.5H333.5H3Z",
-        "selected": false
-      },
-      {
-        "color": "green",
-        "disabled": true,
-        "id": "base-aaf-2",
-        "name": "AAF FOB",
-        "path": "M3535 4093H4118V3720H3519.5L3535 4093Z",
-        "selected": false
-      },
-      {
-        "color": "red",
-        "disabled": true,
-        "id": "base-csat-1",
-        "name": "CSAT Basis",
-        "path": "M4118 575V7.5L3427 2.5L3433 575H4118Z",
-        "selected": false
-      },
-      {
-        "color": "red",
-        "disabled": false,
-        "id": "sector-10",
-        "name": "Sektor #10",
-        "path": "M4118 575H3433L3244.5 942L2870.28 1023L2987.5 1507.5H4118V575Z",
-        "selected": false
-      },
-      {
-        "color": "red",
-        "disabled": false,
-        "id": "sector-5",
-        "name": "Sektor #5",
-        "path": "M2748.5 7.5L2792.5 701.5L2870.28 1023L3244.5 942L3433 575L3427 2.5L2748.5 7.5Z",
-        "selected": false
-      },
-      {
-        "color": "red",
-        "disabled": false,
-        "id": "sector-4",
-        "name": "Sektor #4",
-        "path": "M2390 7.5H2263.5L2245.5 873L2485 682.5L2792.5 701.5L2748.5 7.5H2390Z",
-        "selected": false
-      },
-      {
-        "color": "green",
-        "disabled": false,
-        "id": "sector-9",
-        "name": "Sektor #9",
-        "path": "M2245.5 873L2593 1507.5H2987.5L2870.28 1023L2792.5 701.5L2485 682.5L2245.5 873Z",
-        "selected": true
-      },
-      {
-        "color": "green",
-        "disabled": true,
-        "id": "sector-13",
-        "name": "Sektor #13",
-        "path": "M1907.5 2202L2692.5 2230H2914H3094.5L2987.5 1507.5H2593L1842.5 1828L1907.5 2202Z",
-        "selected": false
-      },
-      {
-        "color": "red",
-        "disabled": false,
-        "id": "sector-15",
-        "name": "Sektor #15",
-        "path": "M1165 2142H501.5H257H11.1938V2747.5L472.5 2529L1165 2671L1348 2142H1165Z",
-        "selected": false
-      },
-      {
-        "color": "red",
-        "disabled": false,
-        "id": "sector-16",
-        "name": "Sektor #16",
-        "path": "M1907.5 2202L1670 2142H1348L1165 2671L1408.5 2915.5L1973.07 3147L1848.5 2747.5L1907.5 2202Z",
-        "selected": true
-      },
-      {
-        "color": "red",
-        "disabled": false,
-        "id": "sector-19",
-        "name": "Sektor #19",
-        "path": "M3 3569H401L856.5 3493L1165 2671L472.5 2529L11.1938 2747.5L3 3569Z",
-        "selected": false
-      },
-      {
-        "color": "red",
-        "disabled": false,
-        "id": "sector-21",
-        "name": "Sektor #21",
-        "path": "M2178 3681L2148 3429L1973.07 3147L1408.5 2915.5L1165 2671L856.5 3493L1579 4093H2225L2178 3681Z",
-        "selected": false
-      },
-      {
-        "color": "red",
-        "disabled": false,
-        "id": "sector-20",
-        "name": "Sektor #20",
-        "path": "M401 3569V4093H1579L856.5 3493L401 3569Z",
-        "selected": false
-      },
-      {
-        "color": "red",
-        "disabled": true,
-        "id": "base-csat-2",
-        "name": "CSAT FOB",
-        "path": "M3 4093H401V3569H3V4093Z",
-        "selected": false
-      }
-    ],
-    "adl-schlacht-6-1": [
-      {
-        "color": "green",
-        "disabled": false,
-        "id": "sector-23",
-        "name": "Sektor #23",
-        "path": "M3519.5 3720H4118V2794.5L3310 2571L2688.5 2985L2859.5 3231.25L3483 3269.5L3519.5 3720Z",
-        "selected": false
-      },
-      {
-        "color": "green",
-        "disabled": false,
-        "id": "sector-24",
-        "name": "Sektor #24",
-        "path": "M3535 4093L3519.5 3720L3483 3269.5L2859.5 3231.25L3030.5 3477.5L2619 4093H3535Z",
-        "selected": false
-      },
-      {
-        "color": "green",
-        "disabled": false,
-        "id": "sector-22",
-        "name": "Sektor #22",
-        "path": "M2148 3429L2178 3681L2225 4093H2619L3030.5 3477.5L2859.5 3231.25L2688.5 2985L2481.5 2671L2148 3429Z",
-        "selected": false
-      },
-      {
-        "color": "green",
-        "disabled": false,
-        "id": "sector-17",
-        "name": "Sektor #17",
-        "path": "M2692.5 2230L1907.5 2202L1848.5 2747.5L1973.07 3147L2148 3429L2481.5 2671L2914 2230H2692.5Z",
-        "selected": false
-      },
-      {
-        "color": "green",
-        "disabled": false,
-        "id": "sector-18",
-        "name": "Sektor #18",
-        "path": "M4118 2794.5V2191L3275 2230H3094.5H2914L2481.5 2671L2688.5 2985L3310 2571L4118 2794.5Z",
-        "selected": false
-      },
-      {
-        "color": "red",
-        "disabled": false,
-        "id": "sector-14",
-        "name": "Sektor #14",
-        "path": "M3275 2230L4118 2191V1507.5H2987.5L3094.5 2230H3275Z",
-        "selected": false
-      },
-      {
-        "color": "green",
-        "disabled": false,
-        "id": "sector-11",
-        "name": "Sektor #11",
-        "path": "M501.5 2142H1165H1348L1197 1658L592 1758.5L8.66295 1658L11.1938 2142H257H501.5Z",
-        "selected": false
-      },
-      {
-        "color": "green",
-        "disabled": false,
-        "id": "sector-12",
-        "name": "Sektor #12",
-        "path": "M1670 2142L1907.5 2202L1842.5 1828V1651L1858 1122L1197 1658L1348 2142H1670Z",
-        "selected": false
-      },
-      {
-        "color": "green",
-        "disabled": false,
-        "id": "sector-7",
-        "name": "Sektor #7",
-        "path": "M1197 1658L1858 1122V764.5L1678 601.5L1253.58 1002.5L1225 1029.5L1197 1517.5V1658Z",
-        "selected": false
-      },
-      {
-        "color": "green",
-        "disabled": false,
-        "id": "sector-6",
-        "name": "Sektor #6",
-        "path": "M8.66295 1658L592 1758.5L1197 1658V1517.5L1225 1029.5L450 1457L5.93344 1136L8.66295 1658Z",
-        "selected": false
-      },
-      {
-        "color": "green",
-        "disabled": false,
-        "id": "sector-1",
-        "name": "Sektor #1",
-        "path": "M720.5 575H3L5.93344 1136L450 1457L1225 1029.5L1253.58 1002.5L720.5 575Z",
-        "selected": false
-      },
-      {
-        "color": "green",
-        "disabled": false,
-        "id": "sector-2",
-        "name": "Sektor #2",
-        "path": "M720.5 7.5V575L1253.58 1002.5L1678 601.5L1510.5 7.5H720.5Z",
-        "selected": false
-      },
-      {
-        "color": "green",
-        "disabled": false,
-        "id": "sector-3",
-        "name": "Sektor #3",
-        "path": "M2263.5 7.5H1510.5L1678 601.5L1858 764.5V1122L2040 975.5L2245.5 873L2263.5 7.5Z",
-        "selected": false
-      },
-      {
-        "color": "red",
-        "disabled": false,
-        "id": "sector-8",
-        "name": "Sektor #8",
-        "path": "M2040 975.5L1858 1122L1842.5 1651V1828L2593 1507.5L2245.5 873L2040 975.5Z",
-        "selected": false
-      },
-      {
-        "color": "green",
-        "disabled": true,
-        "id": "base-aaf-1",
-        "name": "AAF Basis",
-        "path": "M3 7.5V575H720.5V7.5H333.5H3Z",
-        "selected": false
-      },
-      {
-        "color": "green",
-        "disabled": true,
-        "id": "base-aaf-2",
-        "name": "AAF FOB",
-        "path": "M3535 4093H4118V3720H3519.5L3535 4093Z",
-        "selected": false
-      },
-      {
-        "color": "red",
-        "disabled": true,
-        "id": "base-csat-1",
-        "name": "CSAT Basis",
-        "path": "M4118 575V7.5L3427 2.5L3433 575H4118Z",
-        "selected": false
-      },
-      {
-        "color": "red",
-        "disabled": false,
-        "id": "sector-10",
-        "name": "Sektor #10",
-        "path": "M4118 575H3433L3244.5 942L2870.28 1023L2987.5 1507.5H4118V575Z",
-        "selected": false
-      },
-      {
-        "color": "red",
-        "disabled": false,
-        "id": "sector-5",
-        "name": "Sektor #5",
-        "path": "M2748.5 7.5L2792.5 701.5L2870.28 1023L3244.5 942L3433 575L3427 2.5L2748.5 7.5Z",
-        "selected": false
-      },
-      {
-        "color": "red",
-        "disabled": false,
-        "id": "sector-4",
-        "name": "Sektor #4",
-        "path": "M2390 7.5H2263.5L2245.5 873L2485 682.5L2792.5 701.5L2748.5 7.5H2390Z",
-        "selected": false
-      },
-      {
-        "color": "red",
-        "disabled": false,
-        "id": "sector-9",
-        "name": "Sektor #9",
-        "path": "M2245.5 873L2593 1507.5H2987.5L2870.28 1023L2792.5 701.5L2485 682.5L2245.5 873Z",
-        "selected": false
-      },
-      {
-        "color": "red",
-        "disabled": false,
-        "id": "sector-13",
-        "name": "Sektor #13",
-        "path": "M1907.5 2202L2692.5 2230H2914H3094.5L2987.5 1507.5H2593L1842.5 1828L1907.5 2202Z",
-        "selected": false
-      },
-      {
-        "color": "red",
-        "disabled": false,
-        "id": "sector-15",
-        "name": "Sektor #15",
-        "path": "M1165 2142H501.5H257H11.1938V2747.5L472.5 2529L1165 2671L1348 2142H1165Z",
-        "selected": false
-      },
-      {
-        "color": "red",
-        "disabled": false,
-        "id": "sector-16",
-        "name": "Sektor #16",
-        "path": "M1907.5 2202L1670 2142H1348L1165 2671L1408.5 2915.5L1973.07 3147L1848.5 2747.5L1907.5 2202Z",
-        "selected": false
-      },
-      {
-        "color": "red",
-        "disabled": false,
-        "id": "sector-19",
-        "name": "Sektor #19",
-        "path": "M3 3569H401L856.5 3493L1165 2671L472.5 2529L11.1938 2747.5L3 3569Z",
-        "selected": false
-      },
-      {
-        "color": "red",
-        "disabled": false,
-        "id": "sector-21",
-        "name": "Sektor #21",
-        "path": "M2178 3681L2148 3429L1973.07 3147L1408.5 2915.5L1165 2671L856.5 3493L1579 4093H2225L2178 3681Z",
-        "selected": false
-      },
-      {
-        "color": "red",
-        "disabled": false,
-        "id": "sector-20",
-        "name": "Sektor #20",
-        "path": "M401 3569V4093H1579L856.5 3493L401 3569Z",
-        "selected": false
-      },
-      {
-        "color": "red",
-        "disabled": true,
-        "id": "base-csat-2",
-        "name": "CSAT FOB",
-        "path": "M3 4093H401V3569H3V4093Z",
-        "selected": false
-      }
-    ],
-    "adl-schlacht-7": [
-      {
-        "color": "green",
-        "disabled": false,
-        "id": "sector-23",
-        "name": "Sektor #23",
-        "path": "M3519.5 3720H4118V2794.5L3310 2571L2688.5 2985L2859.5 3231.25L3483 3269.5L3519.5 3720Z",
-        "selected": false
-      },
-      {
-        "color": "green",
-        "disabled": false,
-        "id": "sector-24",
-        "name": "Sektor #24",
-        "path": "M3535 4093L3519.5 3720L3483 3269.5L2859.5 3231.25L3030.5 3477.5L2619 4093H3535Z",
-        "selected": false
-      },
-      {
-        "color": "green",
-        "disabled": false,
-        "id": "sector-22",
-        "name": "Sektor #22",
-        "path": "M2148 3429L2178 3681L2225 4093H2619L3030.5 3477.5L2859.5 3231.25L2688.5 2985L2481.5 2671L2148 3429Z",
-        "selected": false
-      },
-      {
-        "color": "red",
-        "disabled": false,
-        "id": "sector-17",
-        "name": "Sektor #17",
-        "path": "M2692.5 2230L1907.5 2202L1848.5 2747.5L1973.07 3147L2148 3429L2481.5 2671L2914 2230H2692.5Z",
-        "selected": true
-      },
-      {
-        "color": "green",
-        "disabled": false,
-        "id": "sector-18",
-        "name": "Sektor #18",
-        "path": "M4118 2794.5V2191L3275 2230H3094.5H2914L2481.5 2671L2688.5 2985L3310 2571L4118 2794.5Z",
-        "selected": false
-      },
-      {
-        "color": "green",
-        "disabled": false,
-        "id": "sector-14",
-        "name": "Sektor #14",
-        "path": "M3275 2230L4118 2191V1507.5H2987.5L3094.5 2230H3275Z",
-        "selected": true
-      },
-      {
-        "color": "green",
-        "disabled": true,
-        "id": "sector-11",
-        "name": "Sektor #11",
-        "path": "M501.5 2142H1165H1348L1197 1658L592 1758.5L8.66295 1658L11.1938 2142H257H501.5Z",
-        "selected": false
-      },
-      {
-        "color": "green",
-        "disabled": false,
-        "id": "sector-12",
-        "name": "Sektor #12",
-        "path": "M1670 2142L1907.5 2202L1842.5 1828V1651L1858 1122L1197 1658L1348 2142H1670Z",
-        "selected": false
-      },
-      {
-        "color": "green",
-        "disabled": false,
-        "id": "sector-7",
-        "name": "Sektor #7",
-        "path": "M1197 1658L1858 1122V764.5L1678 601.5L1253.58 1002.5L1225 1029.5L1197 1517.5V1658Z",
-        "selected": false
-      },
-      {
-        "color": "green",
-        "disabled": false,
-        "id": "sector-6",
-        "name": "Sektor #6",
-        "path": "M8.66295 1658L592 1758.5L1197 1658V1517.5L1225 1029.5L450 1457L5.93344 1136L8.66295 1658Z",
-        "selected": false
-      },
-      {
-        "color": "green",
-        "disabled": false,
-        "id": "sector-1",
-        "name": "Sektor #1",
-        "path": "M720.5 575H3L5.93344 1136L450 1457L1225 1029.5L1253.58 1002.5L720.5 575Z",
-        "selected": false
-      },
-      {
-        "color": "green",
-        "disabled": false,
-        "id": "sector-2",
-        "name": "Sektor #2",
-        "path": "M720.5 7.5V575L1253.58 1002.5L1678 601.5L1510.5 7.5H720.5Z",
-        "selected": false
-      },
-      {
-        "color": "green",
-        "disabled": false,
-        "id": "sector-3",
-        "name": "Sektor #3",
-        "path": "M2263.5 7.5H1510.5L1678 601.5L1858 764.5V1122L2040 975.5L2245.5 873L2263.5 7.5Z",
-        "selected": false
-      },
-      {
-        "color": "green",
-        "disabled": false,
-        "id": "sector-8",
-        "name": "Sektor #8",
-        "path": "M2040 975.5L1858 1122L1842.5 1651V1828L2593 1507.5L2245.5 873L2040 975.5Z",
-        "selected": false
-      },
-      {
-        "color": "green",
-        "disabled": true,
-        "id": "base-aaf-1",
-        "name": "AAF Basis",
-        "path": "M3 7.5V575H720.5V7.5H333.5H3Z",
-        "selected": false
-      },
-      {
-        "color": "green",
-        "disabled": true,
-        "id": "base-aaf-2",
-        "name": "AAF FOB",
-        "path": "M3535 4093H4118V3720H3519.5L3535 4093Z",
-        "selected": false
-      },
-      {
-        "color": "red",
-        "disabled": true,
-        "id": "base-csat-1",
-        "name": "CSAT Basis",
-        "path": "M4118 575V7.5L3427 2.5L3433 575H4118Z",
-        "selected": false
-      },
-      {
-        "color": "red",
-        "disabled": false,
-        "id": "sector-10",
-        "name": "Sektor #10",
-        "path": "M4118 575H3433L3244.5 942L2870.28 1023L2987.5 1507.5H4118V575Z",
-        "selected": false
-      },
-      {
-        "color": "red",
-        "disabled": false,
-        "id": "sector-5",
-        "name": "Sektor #5",
-        "path": "M2748.5 7.5L2792.5 701.5L2870.28 1023L3244.5 942L3433 575L3427 2.5L2748.5 7.5Z",
-        "selected": false
-      },
-      {
-        "color": "red",
-        "disabled": false,
-        "id": "sector-4",
-        "name": "Sektor #4",
-        "path": "M2390 7.5H2263.5L2245.5 873L2485 682.5L2792.5 701.5L2748.5 7.5H2390Z",
-        "selected": false
-      },
-      {
-        "color": "red",
-        "disabled": true,
-        "id": "sector-9",
-        "name": "Sektor #9",
-        "path": "M2245.5 873L2593 1507.5H2987.5L2870.28 1023L2792.5 701.5L2485 682.5L2245.5 873Z",
-        "selected": false
-      },
-      {
-        "color": "green",
-        "disabled": true,
-        "id": "sector-13",
-        "name": "Sektor #13",
-        "path": "M1907.5 2202L2692.5 2230H2914H3094.5L2987.5 1507.5H2593L1842.5 1828L1907.5 2202Z",
-        "selected": false
-      },
-      {
-        "color": "red",
-        "disabled": false,
-        "id": "sector-15",
-        "name": "Sektor #15",
-        "path": "M1165 2142H501.5H257H11.1938V2747.5L472.5 2529L1165 2671L1348 2142H1165Z",
-        "selected": false
-      },
-      {
-        "color": "red",
-        "disabled": false,
-        "id": "sector-16",
-        "name": "Sektor #16",
-        "path": "M1907.5 2202L1670 2142H1348L1165 2671L1408.5 2915.5L1973.07 3147L1848.5 2747.5L1907.5 2202Z",
-        "selected": false
-      },
-      {
-        "color": "red",
-        "disabled": false,
-        "id": "sector-19",
-        "name": "Sektor #19",
-        "path": "M3 3569H401L856.5 3493L1165 2671L472.5 2529L11.1938 2747.5L3 3569Z",
-        "selected": false
-      },
-      {
-        "color": "red",
-        "disabled": false,
-        "id": "sector-21",
-        "name": "Sektor #21",
-        "path": "M2178 3681L2148 3429L1973.07 3147L1408.5 2915.5L1165 2671L856.5 3493L1579 4093H2225L2178 3681Z",
-        "selected": false
-      },
-      {
-        "color": "red",
-        "disabled": false,
-        "id": "sector-20",
-        "name": "Sektor #20",
-        "path": "M401 3569V4093H1579L856.5 3493L401 3569Z",
-        "selected": false
-      },
-      {
-        "color": "red",
-        "disabled": true,
-        "id": "base-csat-2",
-        "name": "CSAT FOB",
-        "path": "M3 4093H401V3569H3V4093Z",
-        "selected": false
-      }
-    ],
-    "adl-schlacht-7-finalschlacht": [
-      {
-        "color": "green",
-        "disabled": false,
-        "id": "sector-23",
-        "name": "Sektor #23",
-        "path": "M3519.5 3720H4118V2794.5L3310 2571L2688.5 2985L2859.5 3231.25L3483 3269.5L3519.5 3720Z",
-        "selected": false
-      },
-      {
-        "color": "green",
-        "disabled": false,
-        "id": "sector-24",
-        "name": "Sektor #24",
-        "path": "M3535 4093L3519.5 3720L3483 3269.5L2859.5 3231.25L3030.5 3477.5L2619 4093H3535Z",
-        "selected": false
-      },
-      {
-        "color": "green",
-        "disabled": false,
-        "id": "sector-22",
-        "name": "Sektor #22",
-        "path": "M2148 3429L2178 3681L2225 4093H2619L3030.5 3477.5L2859.5 3231.25L2688.5 2985L2481.5 2671L2148 3429Z",
-        "selected": false
-      },
-      {
-        "color": "green",
-        "disabled": false,
-        "id": "sector-17",
-        "name": "Sektor #17",
-        "path": "M2692.5 2230L1907.5 2202L1848.5 2747.5L1973.07 3147L2148 3429L2481.5 2671L2914 2230H2692.5Z",
-        "selected": false
-      },
-      {
-        "color": "green",
-        "disabled": false,
-        "id": "sector-18",
-        "name": "Sektor #18",
-        "path": "M4118 2794.5V2191L3275 2230H3094.5H2914L2481.5 2671L2688.5 2985L3310 2571L4118 2794.5Z",
-        "selected": false
-      },
-      {
-        "color": "red",
-        "disabled": false,
-        "id": "sector-14",
-        "name": "Sektor #14",
-        "path": "M3275 2230L4118 2191V1507.5H2987.5L3094.5 2230H3275Z",
-        "selected": false
-      },
-      {
-        "color": "green",
-        "disabled": false,
-        "id": "sector-11",
-        "name": "Sektor #11",
-        "path": "M501.5 2142H1165H1348L1197 1658L592 1758.5L8.66295 1658L11.1938 2142H257H501.5Z",
-        "selected": false
-      },
-      {
-        "color": "green",
-        "disabled": false,
-        "id": "sector-12",
-        "name": "Sektor #12",
-        "path": "M1670 2142L1907.5 2202L1842.5 1828V1651L1858 1122L1197 1658L1348 2142H1670Z",
-        "selected": false
-      },
-      {
-        "color": "green",
-        "disabled": false,
-        "id": "sector-7",
-        "name": "Sektor #7",
-        "path": "M1197 1658L1858 1122V764.5L1678 601.5L1253.58 1002.5L1225 1029.5L1197 1517.5V1658Z",
-        "selected": false
-      },
-      {
-        "color": "green",
-        "disabled": false,
-        "id": "sector-6",
-        "name": "Sektor #6",
-        "path": "M8.66295 1658L592 1758.5L1197 1658V1517.5L1225 1029.5L450 1457L5.93344 1136L8.66295 1658Z",
-        "selected": false
-      },
-      {
-        "color": "green",
-        "disabled": false,
-        "id": "sector-1",
-        "name": "Sektor #1",
-        "path": "M720.5 575H3L5.93344 1136L450 1457L1225 1029.5L1253.58 1002.5L720.5 575Z",
-        "selected": false
-      },
-      {
-        "color": "green",
-        "disabled": false,
-        "id": "sector-2",
-        "name": "Sektor #2",
-        "path": "M720.5 7.5V575L1253.58 1002.5L1678 601.5L1510.5 7.5H720.5Z",
-        "selected": false
-      },
-      {
-        "color": "green",
-        "disabled": false,
-        "id": "sector-3",
-        "name": "Sektor #3",
-        "path": "M2263.5 7.5H1510.5L1678 601.5L1858 764.5V1122L2040 975.5L2245.5 873L2263.5 7.5Z",
-        "selected": false
-      },
-      {
-        "color": "red",
-        "disabled": false,
-        "id": "sector-8",
-        "name": "Sektor #8",
-        "path": "M2040 975.5L1858 1122L1842.5 1651V1828L2593 1507.5L2245.5 873L2040 975.5Z",
-        "selected": false
-      },
-      {
-        "color": "green",
-        "disabled": true,
-        "id": "base-aaf-1",
-        "name": "AAF Basis",
-        "path": "M3 7.5V575H720.5V7.5H333.5H3Z",
-        "selected": false
-      },
-      {
-        "color": "green",
-        "disabled": true,
-        "id": "base-aaf-2",
-        "name": "AAF FOB",
-        "path": "M3535 4093H4118V3720H3519.5L3535 4093Z",
-        "selected": false
-      },
-      {
-        "color": "red",
-        "disabled": true,
-        "id": "base-csat-1",
-        "name": "CSAT Basis",
-        "path": "M4118 575V7.5L3427 2.5L3433 575H4118Z",
-        "selected": false
-      },
-      {
-        "color": "red",
-        "disabled": false,
-        "id": "sector-10",
-        "name": "Sektor #10",
-        "path": "M4118 575H3433L3244.5 942L2870.28 1023L2987.5 1507.5H4118V575Z",
-        "selected": false
-      },
-      {
-        "color": "red",
-        "disabled": false,
-        "id": "sector-5",
-        "name": "Sektor #5",
-        "path": "M2748.5 7.5L2792.5 701.5L2870.28 1023L3244.5 942L3433 575L3427 2.5L2748.5 7.5Z",
-        "selected": false
-      },
-      {
-        "color": "red",
-        "disabled": false,
-        "id": "sector-4",
-        "name": "Sektor #4",
-        "path": "M2390 7.5H2263.5L2245.5 873L2485 682.5L2792.5 701.5L2748.5 7.5H2390Z",
-        "selected": false
-      },
-      {
-        "color": "red",
-        "disabled": false,
-        "id": "sector-9",
-        "name": "Sektor #9",
-        "path": "M2245.5 873L2593 1507.5H2987.5L2870.28 1023L2792.5 701.5L2485 682.5L2245.5 873Z",
-        "selected": false
-      },
-      {
-        "color": "red",
-        "disabled": false,
-        "id": "sector-13",
-        "name": "Sektor #13",
-        "path": "M1907.5 2202L2692.5 2230H2914H3094.5L2987.5 1507.5H2593L1842.5 1828L1907.5 2202Z",
-        "selected": false
-      },
-      {
-        "color": "red",
-        "disabled": false,
-        "id": "sector-15",
-        "name": "Sektor #15",
-        "path": "M1165 2142H501.5H257H11.1938V2747.5L472.5 2529L1165 2671L1348 2142H1165Z",
-        "selected": false
-      },
-      {
-        "color": "red",
-        "disabled": false,
-        "id": "sector-16",
-        "name": "Sektor #16",
-        "path": "M1907.5 2202L1670 2142H1348L1165 2671L1408.5 2915.5L1973.07 3147L1848.5 2747.5L1907.5 2202Z",
-        "selected": false
-      },
-      {
-        "color": "red",
-        "disabled": false,
-        "id": "sector-19",
-        "name": "Sektor #19",
-        "path": "M3 3569H401L856.5 3493L1165 2671L472.5 2529L11.1938 2747.5L3 3569Z",
-        "selected": false
-      },
-      {
-        "color": "red",
-        "disabled": false,
-        "id": "sector-21",
-        "name": "Sektor #21",
-        "path": "M2178 3681L2148 3429L1973.07 3147L1408.5 2915.5L1165 2671L856.5 3493L1579 4093H2225L2178 3681Z",
-        "selected": false
-      },
-      {
-        "color": "red",
-        "disabled": false,
-        "id": "sector-20",
-        "name": "Sektor #20",
-        "path": "M401 3569V4093H1579L856.5 3493L401 3569Z",
-        "selected": false
-      },
-      {
-        "color": "red",
-        "disabled": true,
-        "id": "base-csat-2",
-        "name": "CSAT FOB",
-        "path": "M3 4093H401V3569H3V4093Z",
-        "selected": false
-      }
-    ]
+    }
   },
   "players": {
     "adl": {
       "Ebc3YO5TgptTmYFRHb94eFcdwgzz": {
-        "defaultFactionId": "sword",
+        "defaultFactionId": "arf",
         "displayName": "Otter Orange",
         "fireAuthUid": "Ebc3YO5TgptTmYFRHb94eFcdwgzz",
         "photoUrl": "https://i.picsum.photos/id/993/64/64.jpg?hmac=vJrx4xxtExhV-7e5pMmegR_Mtc5NEe9vCB9tGaLsnKo"
       },
       "XmetJQ6RIKZWaY6ABCnY75k4MdcH": {
-        "defaultFactionId": "retired",
+        "defaultFactionId": "sword",
         "displayName": "Olive Panda",
         "fireAuthUid": "XmetJQ6RIKZWaY6ABCnY75k4MdcH",
         "photoUrl": "https://i.picsum.photos/id/73/64/64.jpg?hmac=MXrqt5DPnrNsrPdYjWvwlNTh5Z7y9Q1lus9ZEFhTjBg"
@@ -4127,10 +1430,8 @@
       "qvEP3e50hY0fgXyMfs8VOpDR59ke": {
         "displayName": "Raccoon Grass",
         "fireAuthUid": "qvEP3e50hY0fgXyMfs8VOpDR59ke",
-        "photoUrl": "https://i.picsum.photos/id/217/64/64.jpg?hmac=tk_My6l8590gWSa3KVWodsiTaEMnQ-pCIeBA_-RI-w4"
-      },
-      "undefined": {
-        "defaultFactionId": "retired"
+        "photoUrl": "https://i.picsum.photos/id/217/64/64.jpg?hmac=tk_My6l8590gWSa3KVWodsiTaEMnQ-pCIeBA_-RI-w4",
+        "role": "eventManager"
       }
     }
   }

@@ -128,7 +128,7 @@
   <div class="row debriefing">
     <section *optHasPlayerRole="{minimumRole: 'eventManager', campaignId: battle.campaignId}">
       <h3 class="mat-headline">Debriefing</h3>
-      <opt-debriefing [battleId]="battle.battleId"></opt-debriefing>
+      <opt-debriefing [battle]="battle"></opt-debriefing>
     </section>
   </div>
 </ng-container>

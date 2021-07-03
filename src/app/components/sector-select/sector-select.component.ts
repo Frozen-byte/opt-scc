@@ -1,13 +1,14 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { AngularFireDatabase } from '@angular/fire/database';
 import { Battle } from '../../route-outlets/battle/battle.types';
+import { SideId } from '../../route-outlets/campaign/campaign.component';
 
 export interface Sector {
-  color: 'red' | 'green';
+  occupant: SideId;
   disabled: boolean;
   selected: boolean;
-  name: string;
-  id: string;
+  sectorName: string;
+  sectorId: string;
   path: string; // SVG Draw Command
 }
 
@@ -24,8 +25,8 @@ export class SectorSelectComponent implements OnInit {
   public sectors?: Sector[];
 
   @Input() battleId?: Battle['battleId'];
-  @Input() selectedSector?: Sector['id'];
-  @Output() selectedSectorChange = new EventEmitter<Sector['id']>();
+  @Input() selectedSector?: Sector['sectorId'];
+  @Output() selectedSectorChange = new EventEmitter<Sector['sectorId']>();
 
   constructor(public db: AngularFireDatabase) {}
 
@@ -50,7 +51,7 @@ export class SectorSelectComponent implements OnInit {
   onClick($event: MouseEvent, sector: Sector): void {
     if (!this.disabled && !sector.disabled) {
       this.selectedSector =
-        this.selectedSector === sector.id ? undefined : sector.id;
+        this.selectedSector === sector.sectorId ? undefined : sector.sectorId;
       this.selectedSectorChange.next(this.selectedSector);
     }
   }

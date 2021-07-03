@@ -11,6 +11,7 @@
     mat-flat-button
     [href]="STEAM_AUTHENTICATE_URL"
     target="_blank"
+    (click)="emulatedAuth($event)"
   >
     <img
       mat-ripple

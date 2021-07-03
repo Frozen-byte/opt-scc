@@ -1,55 +1,78 @@
-import {
-  Component,
-  EventEmitter,
-  Input,
-  OnChanges,
-  OnDestroy,
-  SimpleChanges,
-} from '@angular/core';
-import { Battle } from '../../route-outlets/battle/battle.types';
+import { Component, Input } from '@angular/core';
+import { Battle, BattleFaction } from '../../route-outlets/battle/battle.types';
 import { BattleListService } from '../../services/battle-list.service';
-import { UntilDestroy, untilDestroyed } from '@ngneat/until-destroy';
-import { pluck, switchMap } from 'rxjs/operators';
+import { first, pluck, switchMap, withLatestFrom } from 'rxjs/operators';
+import { SectorService } from '../../services/sector.service';
 
-@UntilDestroy()
+type BattleWinner = BattleFaction | null;
+
 @Component({
-  selector: 'opt-debriefing',
+  selector: 'opt-debriefing[battle]',
   templateUrl: './debriefing.component.html',
   styleUrls: ['./debriefing.component.scss'],
 })
-export class DebriefingComponent implements OnChanges, OnDestroy {
-  @Input() battleId?: Battle['battleId'];
-  changes$ = new EventEmitter<SimpleChanges>();
-  public factions: Battle['factions'] = [];
+export class DebriefingComponent {
+  @Input() battle!: Battle;
 
-  constructor(public battleListService: BattleListService) {
-    this.changes$
-      .pipe(
-        pluck('battleId'),
-        switchMap((battleId) =>
-          this.battleListService.getBattle(battleId?.currentValue)
-        ),
-        untilDestroyed(this)
-      )
-      .subscribe((battle) => {
-        this.factions = battle?.factions ?? [];
-      });
-  }
-
-  ngOnDestroy(): void {
-    this.changes$.complete();
-  }
-
-  ngOnChanges(changes: SimpleChanges): void {
-    this.changes$.next(changes);
-  }
+  constructor(
+    private battleListService: BattleListService,
+    private sectorService: SectorService
+  ) {}
 
   submitDebriefingFormGroup(): void {
-    if (this.battleId) {
+    if (this.battle) {
       this.battleListService.patchBattle({
-        battleId: this.battleId,
-        factions: this.factions,
+        battleId: this.battle.battleId,
+        factions: this.battle.factions,
       });
     }
+    // Update Sector for next Battle
+    this.battleListService
+      .getNextBattle(this.battle.battleDate)
+      .valueChanges()
+      .pipe(
+        first(), // we only need the first event
+        pluck(0), // first of Array (should be the only one by filter)
+        withLatestFrom(this.sectorService.getBattleMap(this.battle.battleId)),
+        switchMap(([nextBattle, currentBattleMap]) => {
+          const winnerFaction = this.calculateBattleWinnerFaction(
+            this.battle.factions
+          );
+
+          if (winnerFaction) {
+            this.battle.factions.forEach(({ factionAttackingSector }) => {
+              // ATTENTION mutating the object may causes side-effects
+              currentBattleMap[factionAttackingSector].occupant =
+                winnerFaction.factionSide;
+              currentBattleMap[factionAttackingSector].selected = false;
+            });
+          }
+
+          return this.sectorService.patchBattleMap(
+            nextBattle.battleId,
+            currentBattleMap
+          );
+        })
+      )
+      .subscribe();
+  }
+
+  /*
+    returns `null` on a tie or the faction with the highest score
+   */
+  calculateBattleWinnerFaction(factions: BattleFaction[]): BattleWinner {
+    let maxScore = 0;
+    let winnerFaction: BattleWinner = null;
+
+    factions.forEach((currentFaction) => {
+      if (maxScore === currentFaction.factionBattleScore) {
+        winnerFaction = null;
+      } else if (maxScore < currentFaction.factionBattleScore) {
+        winnerFaction = currentFaction;
+        maxScore = currentFaction.factionBattleScore;
+      }
+    });
+
+    return winnerFaction;
   }
 }
