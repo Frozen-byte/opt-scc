@@ -123,12 +123,15 @@ export class BattleListService {
   }
 
   saveDebriefing(currentBattle: Battle): Promise<void[]> {
+    const nextBattle$ = this.getNextBattle(currentBattle.battleDate);
+
     return Promise.all([
       this.patchBattle({
         battleId: currentBattle.battleId,
         factions: currentBattle.factions,
+        battleStatus: 'decided',
       }),
-      this.getNextBattle(currentBattle.battleDate)
+      nextBattle$
         .pipe(
           withLatestFrom(
             this.sectorService
@@ -142,6 +145,16 @@ export class BattleListService {
               nextBattle,
               currentBattleMap
             )
+          )
+        )
+        .toPromise(),
+      nextBattle$
+        .pipe(
+          switchMap((nextBattle) =>
+            this.patchBattle({
+              battleId: nextBattle.battleId,
+              battleStatus: 'planning',
+            })
           )
         )
         .toPromise(),
