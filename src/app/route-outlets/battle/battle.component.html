@@ -1,4 +1,10 @@
 <ng-container *ngIf="battle$ | async as battle">
+  <div class="row ">
+    <section class="battle-navigation">
+      <a mat-flat-button [routerLink]="prevBattleLink$ | async" class="navigate-before"><mat-icon>navigate_before</mat-icon> Zurück</a>
+      <a mat-flat-button [routerLink]="nextBattleLink$ | async" class="navigate-next">Nächste <mat-icon>navigate_next</mat-icon></a>
+    </section>
+  </div>
   <div class="row">
     <section class="header">
       <h2 class="mat-subheading-2">{{ battle.campaignName }}</h2>

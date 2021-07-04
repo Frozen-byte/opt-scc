@@ -1,9 +1,15 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import {
+  Component,
+  EventEmitter,
+  Input,
+  OnChanges,
+  Output,
+  SimpleChanges,
+} from '@angular/core';
 import { BattleId } from '../../route-outlets/battle/battle.types';
 import { SideId } from '../../route-outlets/campaign/campaign.component';
 import { SectorService } from '../../services/sector.service';
-import { isDefinedGuard } from '../../toolbelt';
-import { filter } from 'rxjs/operators';
+import { switchMap } from 'rxjs/operators';
 
 export type SectorId = string;
 export interface Sector {
@@ -25,14 +31,22 @@ export interface Sector {
   templateUrl: './sector-select.component.html',
   styleUrls: ['./sector-select.component.scss'],
 })
-export class SectorSelectComponent implements OnInit {
-  public sectors?: Sector[];
+export class SectorSelectComponent implements OnChanges {
+  public sectors: Sector[] = [];
 
   @Input() battleId!: BattleId;
+  battleId$ = new EventEmitter<BattleId>();
+
   @Input() selectedSector?: SectorId;
   @Output() selectedSectorChange = new EventEmitter<SectorId>();
 
-  constructor(public sectorService: SectorService) {}
+  constructor(public sectorService: SectorService) {
+    this.battleId$
+      .pipe(switchMap((battleId) => this.sectorService.getBattleMap(battleId)))
+      .subscribe((battleMap) => {
+        this.sectors = battleMap ? Object.values(battleMap) : [];
+      });
+  }
 
   private _disabled = false;
 
@@ -45,11 +59,8 @@ export class SectorSelectComponent implements OnInit {
     this._disabled = v !== undefined;
   }
 
-  ngOnInit(): void {
-    this.sectorService
-      .getBattleMap(this.battleId)
-      .pipe(filter(isDefinedGuard))
-      .subscribe((battleMap) => (this.sectors = Object.values(battleMap)));
+  ngOnChanges(changes: SimpleChanges): void {
+    this.battleId$.emit(changes.battleId?.currentValue);
   }
 
   onClick($event: MouseEvent, sector: Sector): void {

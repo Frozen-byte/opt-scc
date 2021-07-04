@@ -69,13 +69,15 @@ export class SectorService {
     );
 
     // tiny hack that checks for pre-existing attacking Sectors to save some time in dev
-    Object.values(nextBattle.factions).forEach(
-      ({ factionAttackingSector: nextBattleFactionAttackingSector }) => {
-        if (nextBattleFactionAttackingSector) {
-          nextBattleMap[nextBattleFactionAttackingSector].selected = true;
+    if (nextBattle?.factions) {
+      Object.values(nextBattle.factions).forEach(
+        ({ factionAttackingSector: nextBattleFactionAttackingSector }) => {
+          if (nextBattleFactionAttackingSector) {
+            nextBattleMap[nextBattleFactionAttackingSector].selected = true;
+          }
         }
-      }
-    );
+      );
+    }
 
     return this.setBattleMap(nextBattle.battleId, nextBattleMap);
   }

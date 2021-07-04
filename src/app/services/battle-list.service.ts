@@ -81,15 +81,6 @@ export class BattleListService {
     return this.db.object<Battle>(`battles/${battle.battleId}`).update(battle);
   }
 
-  getNextBattle(date: DATE_ISO8601): Observable<Battle> {
-    return this.db
-      .list<Battle>(`battles`, (ref) =>
-        ref.orderByChild('battleDate').startAfter(date).limitToFirst(1)
-      )
-      .valueChanges()
-      .pipe(pluck(0)); // limitToFirst return an Array with one Element
-  }
-
   saveAttackingSector(
     battle: Battle,
     factionId: FactionId,
@@ -155,5 +146,29 @@ export class BattleListService {
         )
         .toPromise(),
     ]);
+  }
+
+  /*
+    Return the nearest Battle by date in the future
+  */
+  getNextBattle(date: DATE_ISO8601): Observable<Battle> {
+    return this.db
+      .list<Battle>(`battles`, (ref) =>
+        ref.orderByChild('battleDate').startAfter(date).limitToFirst(1)
+      )
+      .valueChanges()
+      .pipe(pluck(0)); // limitToFirst(0) returns an Array with one Element
+  }
+
+  /*
+   Return the nearest Battle by date in the past
+  */
+  getPreviousBattle(date: DATE_ISO8601): Observable<Battle> {
+    return this.db
+      .list<Battle>(`battles`, (ref) =>
+        ref.orderByChild('battleDate').endBefore(date).limitToLast(1)
+      )
+      .valueChanges()
+      .pipe(pluck(0)); // limitToLast(0) returns an Array with one Element
   }
 }
