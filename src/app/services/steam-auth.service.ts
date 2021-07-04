@@ -48,7 +48,7 @@ export const STEAM_VERIFY_URL = 'https://steam.byte.pm/api/steam/verify';
 export interface Player {
   fireAuthUid: string;
   displayName: string;
-  photoUrl: string;
+  photoUrl: Hyperlink;
   defaultFactionId: FactionId;
   role: PLAYER_ROLE;
 }

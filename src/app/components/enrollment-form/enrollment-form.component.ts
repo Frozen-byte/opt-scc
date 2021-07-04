@@ -8,12 +8,13 @@ import {
 import { FormControl, FormGroup } from '@angular/forms';
 import { BattleId } from '../../route-outlets/battle/battle.types';
 import { FactionId } from '../../route-outlets/campaign/campaign.component';
+import { Hyperlink } from '../../toolbelt';
 
 export interface Enrollment {
   battleId: BattleId;
   userId: string;
   displayName: string;
-  photoUrl: string;
+  photoUrl: Hyperlink;
   status: 'yes' | 'no' | 'maybe' | 'pending';
   factionId?: FactionId;
   comment?: string;
