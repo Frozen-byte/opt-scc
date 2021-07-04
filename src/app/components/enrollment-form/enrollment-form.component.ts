@@ -6,16 +6,16 @@ import {
   SimpleChanges,
 } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
-import { Battle } from '../../route-outlets/battle/battle.types';
-import { Faction } from '../../route-outlets/campaign/campaign.component';
+import { BattleId } from '../../route-outlets/battle/battle.types';
+import { FactionId } from '../../route-outlets/campaign/campaign.component';
 
 export interface Enrollment {
-  battleId: Battle['battleId'];
+  battleId: BattleId;
   userId: string;
   displayName: string;
   photoUrl: string;
   status: 'yes' | 'no' | 'maybe' | 'pending';
-  factionId?: Faction['factionId'];
+  factionId?: FactionId;
   comment?: string;
 }
 

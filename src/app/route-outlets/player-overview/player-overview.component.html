@@ -5,18 +5,18 @@
 >
   <section class="bootcamp">
     <h2>Rekruten&nbsp;<span>({{list1.length}})</span></h2>
-    <opt-player-list #list1 campaignId="adl" factionId="bootcamp"></opt-player-list>
+    <opt-player-list #list1 [campaignId]="campaignId" factionId="bootcamp"></opt-player-list>
   </section>
   <section class="faction">
     <h2>ARF&nbsp;<span>({{list2.length}})</span></h2>
-    <opt-player-list #list2 campaignId="adl" factionId="arf"></opt-player-list>
+    <opt-player-list #list2 [campaignId]="campaignId" factionId="arf"></opt-player-list>
   </section>
   <section class="faction">
     <h2>SWORD&nbsp;<span>({{list3.length}})</span></h2>
-    <opt-player-list #list3 campaignId="adl" factionId="sword"></opt-player-list>
+    <opt-player-list #list3 [campaignId]="campaignId" factionId="sword"></opt-player-list>
   </section>
   <section class="retired">
     <h2>Inaktiv&nbsp;<span>({{list4.length}})</span></h2>
-    <opt-player-list #list4 campaignId="adl" factionId="retired"></opt-player-list>
+    <opt-player-list #list4 [campaignId]="campaignId" factionId="retired"></opt-player-list>
   </section>
 </div>

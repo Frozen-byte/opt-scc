@@ -1,12 +1,15 @@
 import { Injectable } from '@angular/core';
-import { Battle } from '../route-outlets/battle/battle.types';
-import { Sector } from '../components/sector-select/sector-select.component';
+import { BattleId } from '../route-outlets/battle/battle.types';
+import {
+  Sector,
+  SectorId,
+} from '../components/sector-select/sector-select.component';
 import { AngularFireDatabase } from '@angular/fire/database';
 import { Observable } from 'rxjs';
 import { isDefinedGuard } from '../toolbelt';
 import { filter } from 'rxjs/operators';
 
-export type BattleMap = Record<Sector['sectorId'], Sector>;
+export type BattleMap = Record<SectorId, Sector>;
 
 @Injectable({
   providedIn: 'root',
@@ -14,17 +17,23 @@ export type BattleMap = Record<Sector['sectorId'], Sector>;
 export class SectorService {
   constructor(private db: AngularFireDatabase) {}
 
-  patchBattleMap(
-    battleId: Battle['battleId'],
-    sectors: BattleMap
+  patchSector(
+    battleId: BattleId,
+    sector: Partial<Sector> & { sectorId: SectorId }
   ): Promise<void> {
-    return this.db.object<BattleMap>(`maps/${battleId}`).update(sectors);
+    return this.db
+      .object<Sector>(`maps/${battleId}/${sector.sectorId}`)
+      .update(sector);
   }
 
-  getBattleMap(battleId: Battle['battleId']): Observable<BattleMap> {
+  getBattleMap(battleId: BattleId): Observable<BattleMap> {
     return this.db
       .object<BattleMap>(`maps/${battleId}`)
       .valueChanges()
       .pipe(filter(isDefinedGuard));
+  }
+
+  setBattleMap(battleId: BattleId, battleMap: BattleMap): Promise<void> {
+    return this.db.object<BattleMap>(`maps/${battleId}`).set(battleMap);
   }
 }

@@ -1,20 +1,55 @@
 import { Injectable } from '@angular/core';
-import { map } from 'rxjs/operators';
-import { Battle } from '../route-outlets/battle/battle.types';
+import { first, map, pluck, switchMap, withLatestFrom } from 'rxjs/operators';
+import {
+  Battle,
+  BattleFaction,
+  BattleId,
+} from '../route-outlets/battle/battle.types';
 import { AngularFireDatabase, AngularFireList } from '@angular/fire/database';
 import { Observable } from 'rxjs';
-import { DATE_ISO8601 } from '../route-outlets/campaign/campaign.component';
+import {
+  DATE_ISO8601,
+  FactionId,
+} from '../route-outlets/campaign/campaign.component';
+import { SectorId } from '../components/sector-select/sector-select.component';
+import { SectorService } from './sector.service';
 
 function sortBattlesByDate(a: Battle, b: Battle): number {
   // ISO Date sorts Lexicographically https://stackoverflow.com/a/12192544
   return a.battleDate < b.battleDate ? -1 : a.battleDate > b.battleDate ? 1 : 0;
 }
 
+type BattleWinner = BattleFaction | null;
+
+/*
+  returns `null` on a tie or the faction with the highest score
+ */
+function calculateBattleWinnerFaction(
+  factions: Battle['factions']
+): BattleWinner {
+  let maxScore = 0;
+  let winnerFaction: BattleWinner = null;
+
+  Object.values(factions).forEach((currentFaction) => {
+    if (maxScore === currentFaction.factionBattleScore) {
+      winnerFaction = null;
+    } else if (maxScore < currentFaction.factionBattleScore) {
+      winnerFaction = currentFaction;
+      maxScore = currentFaction.factionBattleScore;
+    }
+  });
+
+  return winnerFaction;
+}
+
 @Injectable({
   providedIn: 'root',
 })
 export class BattleListService {
-  constructor(public db: AngularFireDatabase) {}
+  constructor(
+    private db: AngularFireDatabase,
+    private sectorService: SectorService
+  ) {}
 
   getBattles(campaignId: Battle['campaignId']): Observable<Battle[]> {
     return this.db
@@ -25,7 +60,7 @@ export class BattleListService {
       .pipe(map((battles) => battles.sort(sortBattlesByDate)));
   }
 
-  getBattle(battleId: Battle['battleId']): Observable<Battle | null> {
+  getBattle(battleId: BattleId): Observable<Battle | null> {
     return this.db.object<Battle>(`battles/${battleId}`).valueChanges();
   }
 
@@ -33,7 +68,7 @@ export class BattleListService {
    * battleID is required for the partial Battle object you pass
    */
   patchBattle(
-    battle: Partial<Battle> & Required<{ battleId: Battle['battleId'] }>
+    battle: Partial<Battle> & Required<{ battleId: BattleId }>
   ): Promise<void> {
     return this.db.object<Battle>(`battles/${battle.battleId}`).update(battle);
   }
@@ -42,5 +77,88 @@ export class BattleListService {
     return this.db.list<Battle>(`battles`, (ref) =>
       ref.orderByChild('battleDate').startAfter(date).limitToFirst(1)
     );
+  }
+
+  saveAttackingSector(
+    battle: Battle,
+    factionId: FactionId,
+    factionAttackingSector: SectorId
+  ): Promise<void[]> {
+    if (!battle) {
+      return Promise.reject('missing campaignId');
+    } else if (!factionId) {
+      return Promise.reject('missing factionId');
+    }
+
+    const patchQueue: Promise<void>[] = [];
+
+    // unset current sector
+    if (battle.factions[factionId].factionAttackingSector) {
+      patchQueue.push(
+        this.sectorService.patchSector(battle.battleId, {
+          sectorId: battle.factions[factionId].factionAttackingSector,
+          selected: false,
+        })
+      );
+    }
+
+    // set new sector
+    patchQueue.push(
+      this.db
+        .object(
+          `battles/${battle.battleId}/factions/${factionId}/factionAttackingSector`
+        )
+        .set(factionAttackingSector)
+    );
+    patchQueue.push(
+      this.sectorService.patchSector(battle.battleId, {
+        sectorId: factionAttackingSector,
+        selected: true,
+      })
+    );
+
+    return Promise.all(patchQueue);
+  }
+
+  saveDebriefing(battle: Battle): Promise<void[]> {
+    return Promise.all([
+      this.patchBattle({
+        battleId: battle.battleId,
+        factions: battle.factions,
+      }),
+      this.updateNextBattleSectors(battle),
+    ]);
+  }
+
+  private updateNextBattleSectors(battle: Battle): Promise<void> {
+    return this.getNextBattle(battle.battleDate)
+      .valueChanges()
+      .pipe(
+        first(), // we only need the first event
+        pluck(0), // first of Array (should be the only one by filter),
+        withLatestFrom(this.sectorService.getBattleMap(battle.battleId)),
+        switchMap(([nextBattle, battleMap]) => {
+          const winnerFaction = calculateBattleWinnerFaction(battle.factions);
+
+          if (winnerFaction) {
+            Object.values(battle.factions).forEach(
+              ({ factionAttackingSector }) => {
+                battleMap[factionAttackingSector] = {
+                  ...battleMap[factionAttackingSector],
+                  sectorId: factionAttackingSector,
+                  occupant: winnerFaction.factionSide,
+                  selected: false,
+                };
+              }
+            );
+          }
+
+          return this.sectorService.setBattleMap(
+            nextBattle.battleId,
+            battleMap
+          );
+        })
+      )
+      .toPromise();
   }
 }

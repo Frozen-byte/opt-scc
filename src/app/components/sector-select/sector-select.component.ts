@@ -1,14 +1,15 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { AngularFireDatabase } from '@angular/fire/database';
-import { Battle } from '../../route-outlets/battle/battle.types';
+import { BattleId } from '../../route-outlets/battle/battle.types';
 import { SideId } from '../../route-outlets/campaign/campaign.component';
 
+export type SectorId = string;
 export interface Sector {
   occupant: SideId;
   disabled: boolean;
   selected: boolean;
   sectorName: string;
-  sectorId: string;
+  sectorId: SectorId;
   path: string; // SVG Draw Command
 }
 
@@ -17,16 +18,16 @@ export interface Sector {
  * @prop {Sector} selectedSector - currently selected Sector
  */
 @Component({
-  selector: 'opt-sector-select',
+  selector: 'opt-sector-select[battleId]',
   templateUrl: './sector-select.component.html',
   styleUrls: ['./sector-select.component.scss'],
 })
 export class SectorSelectComponent implements OnInit {
   public sectors?: Sector[];
 
-  @Input() battleId?: Battle['battleId'];
-  @Input() selectedSector?: Sector['sectorId'];
-  @Output() selectedSectorChange = new EventEmitter<Sector['sectorId']>();
+  @Input() battleId!: BattleId;
+  @Input() selectedSector?: SectorId;
+  @Output() selectedSectorChange = new EventEmitter<SectorId>();
 
   constructor(public db: AngularFireDatabase) {}
 
@@ -37,7 +38,7 @@ export class SectorSelectComponent implements OnInit {
     return this._disabled;
   }
 
-  set disabled(v: boolean) {
+  set disabled(v: boolean | string) {
     this._disabled = v !== undefined;
   }
 

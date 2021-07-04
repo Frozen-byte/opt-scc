@@ -1,9 +1,9 @@
 import { DATE_ISO8601, Faction } from '../campaign/campaign.component';
-import { Sector } from '../../components/sector-select/sector-select.component';
+import { SectorId } from '../../components/sector-select/sector-select.component';
 
 export interface BattleFaction extends Faction {
   factionBattleScore: number;
-  factionAttackingSector: Sector['sectorId'];
+  factionAttackingSector: SectorId;
 }
 
 /**
@@ -14,8 +14,10 @@ export interface BattleFaction extends Faction {
  */
 export type BattleStatus = 'decided' | 'fighting' | 'planning' | 'scheduled';
 
+export type BattleId = string;
+
 export interface Battle {
-  battleId: string;
+  battleId: BattleId;
   battleName: string;
   battleDate: DATE_ISO8601;
   battleStatus: BattleStatus;
@@ -23,5 +25,5 @@ export interface Battle {
   campaignId: string;
   battleDuration: number;
   weather: string;
-  factions: BattleFaction[];
+  factions: Record<string, BattleFaction>; // string is FactionId. keyvalue pipe does not work with PartialRecord typings
 }

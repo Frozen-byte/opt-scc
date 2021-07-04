@@ -1,10 +1,10 @@
-<p mat-dialog-title>Angriffssektor wählen!</p>
+<p matDialogTitle>Angriffssektor wählen!</p>
 
 <mat-dialog-content>
-  <opt-sector-select [battleId]="data.battleId"></opt-sector-select>
+  <opt-sector-select [battleId]="data.battle.battleId" (selectedSectorChange)="selectedSectorId = $event"></opt-sector-select>
 </mat-dialog-content>
 
 <mat-dialog-actions>
-  <button color="primary" mat-button mat-dialog-close>Speichern</button>
-  <button mat-button mat-dialog-close>Schließen</button>
+  <button color="primary" mat-button (click)="save()">Speichern</button>
+  <button mat-button matDialogClose>Schließen</button>
 </mat-dialog-actions>

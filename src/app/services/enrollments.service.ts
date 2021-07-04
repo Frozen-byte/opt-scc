@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Enrollment } from '../components/enrollment-form/enrollment-form.component';
 import { AngularFireDatabase, QueryFn } from '@angular/fire/database';
 import { Observable } from 'rxjs';
-import { Battle } from '../route-outlets/battle/battle.types';
+import { BattleId } from '../route-outlets/battle/battle.types';
 
 @Injectable({
   providedIn: 'root',
@@ -24,7 +24,7 @@ export class EnrollmentsService {
   }
 
   getEnrollment(
-    battleId: Battle['battleId'],
+    battleId: BattleId,
     userId: Enrollment['userId']
   ): Observable<Enrollment | null> {
     return this.db

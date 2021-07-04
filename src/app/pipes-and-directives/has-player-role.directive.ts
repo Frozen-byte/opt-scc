@@ -63,10 +63,10 @@ export class HasPlayerRoleDirective implements OnChanges {
         untilDestroyed(this)
       )
       .subscribe(([playerRole, { minimumRole }]) => {
+        this.viewContainer.clear();
+
         if (PLAYER_ROLE_WEIGHT[playerRole] >= PLAYER_ROLE_WEIGHT[minimumRole]) {
           this.viewContainer.createEmbeddedView(this.templateRef);
-        } else {
-          this.viewContainer.clear();
         }
       });
   }

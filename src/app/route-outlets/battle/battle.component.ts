@@ -33,13 +33,9 @@ export class BattleComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  openSectorSelectDialog(battleId: Battle['battleId']): void {
-    const dialogRef = this.dialog.open(BattleSectorSelectDialogComponent, {
-      data: { battleId },
-    });
-
-    dialogRef.afterClosed().subscribe((result) => {
-      console.log(`Dialog result: ${result}`);
+  openSectorSelectDialog(battle: Battle): void {
+    this.dialog.open(BattleSectorSelectDialogComponent, {
+      data: { battle },
     });
   }
 }

@@ -20,13 +20,13 @@
       <h3 class="mat-headline">Wahl der Seite</h3>
       <mat-card appearance="outlined" class="mat-elevation-z0">
         <mat-card-content>
-          <p *ngFor="let faction of battle.factions">
-            <span class="faction-{{ faction.factionId }}">
-              {{ faction.factionName }}
+          <p *ngFor="let faction of battle.factions | keyvalue">
+            <span class="faction-{{ faction.value.factionId }}">
+              {{ faction.value.factionName }}
             </span>
             spielt die
-            <span class="side-{{ faction.factionSide }}">
-              {{ faction.factionSide }}
+            <span class="side-{{ faction.value.factionSide }}">
+              {{ faction.value.factionSide }}
             </span>
           </p>
         </mat-card-content>
@@ -37,20 +37,19 @@
       <h3 class="mat-headline">Wahl des Sektors</h3>
       <mat-card appearance="outlined" class="mat-elevation-z0">
         <mat-card-content>
-          <p *ngFor="let faction of battle.factions">
-            <span class="faction-{{ faction.factionId }}">{{
-              faction.factionName
+          <p *ngFor="let faction of battle.factions | keyvalue">
+            <span class="faction-{{ faction.value.factionId }}">{{
+              faction.value.factionName
             }}</span>
-            greift Sektor <span>{{ faction.factionAttackingSector }}</span> an
+            greift Sektor <span>{{ faction.value.factionAttackingSector }}</span> an
           </p>
-
           <button
             class="mat-elevation-z1"
             mat-raised-button
             matTooltip="Sektorenkarte öffnen"
           >
             <opt-sector-select
-              (click)="openSectorSelectDialog(battle.battleId)"
+              (click)="openSectorSelectDialog(battle)"
               [battleId]="battle.battleId"
               [disabled]="true"
             ></opt-sector-select>
@@ -117,10 +116,10 @@
       ></opt-enroll-for-battle>
     </section>
 
-    <section class="enrollment" *ngFor="let faction of battle.factions">
+    <section class="enrollment" *ngFor="let faction of battle.factions | keyvalue">
       <opt-battle-enrollments
         [battleId]="battle.battleId"
-        [factionId]="faction.factionId"
+        [factionId]="faction.value.factionId"
       ></opt-battle-enrollments>
     </section>
   </div>
