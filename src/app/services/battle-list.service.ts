@@ -1,11 +1,18 @@
 import { Injectable } from '@angular/core';
-import { first, map, pluck, switchMap, withLatestFrom } from 'rxjs/operators';
+import {
+  filter,
+  first,
+  map,
+  pluck,
+  switchMap,
+  withLatestFrom,
+} from 'rxjs/operators';
 import {
   Battle,
   BattleFaction,
   BattleId,
 } from '../route-outlets/battle/battle.types';
-import { AngularFireDatabase, AngularFireList } from '@angular/fire/database';
+import { AngularFireDatabase } from '@angular/fire/database';
 import { Observable } from 'rxjs';
 import {
   DATE_ISO8601,
@@ -13,6 +20,7 @@ import {
 } from '../route-outlets/campaign/campaign.component';
 import { SectorId } from '../components/sector-select/sector-select.component';
 import { SectorService } from './sector.service';
+import { isDefinedGuard } from '../toolbelt';
 
 function sortBattlesByDate(a: Battle, b: Battle): number {
   // ISO Date sorts Lexicographically https://stackoverflow.com/a/12192544
@@ -24,7 +32,7 @@ type BattleWinner = BattleFaction | null;
 /*
   returns `null` on a tie or the faction with the highest score
  */
-function calculateBattleWinnerFaction(
+export function calculateBattleWinnerFaction(
   factions: Battle['factions']
 ): BattleWinner {
   let maxScore = 0;
@@ -73,10 +81,13 @@ export class BattleListService {
     return this.db.object<Battle>(`battles/${battle.battleId}`).update(battle);
   }
 
-  getNextBattle(date: DATE_ISO8601): AngularFireList<Battle> {
-    return this.db.list<Battle>(`battles`, (ref) =>
-      ref.orderByChild('battleDate').startAfter(date).limitToFirst(1)
-    );
+  getNextBattle(date: DATE_ISO8601): Observable<Battle> {
+    return this.db
+      .list<Battle>(`battles`, (ref) =>
+        ref.orderByChild('battleDate').startAfter(date).limitToFirst(1)
+      )
+      .valueChanges()
+      .pipe(pluck(0)); // limitToFirst return an Array with one Element
   }
 
   saveAttackingSector(
@@ -120,45 +131,29 @@ export class BattleListService {
     return Promise.all(patchQueue);
   }
 
-  saveDebriefing(battle: Battle): Promise<void[]> {
+  saveDebriefing(currentBattle: Battle): Promise<void[]> {
     return Promise.all([
       this.patchBattle({
-        battleId: battle.battleId,
-        factions: battle.factions,
+        battleId: currentBattle.battleId,
+        factions: currentBattle.factions,
       }),
-      this.updateNextBattleSectors(battle),
+      this.getNextBattle(currentBattle.battleDate)
+        .pipe(
+          withLatestFrom(
+            this.sectorService
+              .getBattleMap(currentBattle.battleId)
+              .pipe(filter(isDefinedGuard))
+          ),
+          first(),
+          switchMap(([nextBattle, currentBattleMap]) =>
+            this.sectorService.setNextBattleMap(
+              currentBattle,
+              nextBattle,
+              currentBattleMap
+            )
+          )
+        )
+        .toPromise(),
     ]);
-  }
-
-  private updateNextBattleSectors(battle: Battle): Promise<void> {
-    return this.getNextBattle(battle.battleDate)
-      .valueChanges()
-      .pipe(
-        first(), // we only need the first event
-        pluck(0), // first of Array (should be the only one by filter),
-        withLatestFrom(this.sectorService.getBattleMap(battle.battleId)),
-        switchMap(([nextBattle, battleMap]) => {
-          const winnerFaction = calculateBattleWinnerFaction(battle.factions);
-
-          if (winnerFaction) {
-            Object.values(battle.factions).forEach(
-              ({ factionAttackingSector }) => {
-                battleMap[factionAttackingSector] = {
-                  ...battleMap[factionAttackingSector],
-                  sectorId: factionAttackingSector,
-                  occupant: winnerFaction.factionSide,
-                  selected: false,
-                };
-              }
-            );
-          }
-
-          return this.sectorService.setBattleMap(
-            nextBattle.battleId,
-            battleMap
-          );
-        })
-      )
-      .toPromise();
   }
 }

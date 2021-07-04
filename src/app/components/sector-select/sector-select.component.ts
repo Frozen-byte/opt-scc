@@ -1,7 +1,9 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { AngularFireDatabase } from '@angular/fire/database';
 import { BattleId } from '../../route-outlets/battle/battle.types';
 import { SideId } from '../../route-outlets/campaign/campaign.component';
+import { SectorService } from '../../services/sector.service';
+import { isDefinedGuard } from '../../toolbelt';
+import { filter } from 'rxjs/operators';
 
 export type SectorId = string;
 export interface Sector {
@@ -10,6 +12,7 @@ export interface Sector {
   selected: boolean;
   sectorName: string;
   sectorId: SectorId;
+  playedCount: number;
   path: string; // SVG Draw Command
 }
 
@@ -29,7 +32,7 @@ export class SectorSelectComponent implements OnInit {
   @Input() selectedSector?: SectorId;
   @Output() selectedSectorChange = new EventEmitter<SectorId>();
 
-  constructor(public db: AngularFireDatabase) {}
+  constructor(public sectorService: SectorService) {}
 
   private _disabled = false;
 
@@ -43,10 +46,10 @@ export class SectorSelectComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.db
-      .list<Sector>(`maps/${this.battleId}`)
-      .valueChanges()
-      .subscribe((v) => (this.sectors = v));
+    this.sectorService
+      .getBattleMap(this.battleId)
+      .pipe(filter(isDefinedGuard))
+      .subscribe((battleMap) => (this.sectors = Object.values(battleMap)));
   }
 
   onClick($event: MouseEvent, sector: Sector): void {
